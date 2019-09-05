@@ -10,8 +10,8 @@
 		<title>{{ data.title }}</title>
 		<meta name="description" content="{{ data.description }}">
 
-		<meta name="application-name" content="{{ data.title }}">
-		<link rel="manifest" href="/webappmanifest.json">
+		{# <meta name="application-name" content="{{ data.title }}">
+		<link rel="manifest" href="/webappmanifest.json"> #}
 
 		<!-- Icons, platform-specific theme stuff, etc.: -->
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/_assets/img/icon-152.png">
@@ -62,57 +62,43 @@
 	</head>
 	<body>
 
-		<img src="/_assets/img/w.svg" class="w-logo" alt="">
 		<main role="main" id="main"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 
 			<div class="body">
-				<header class="head">
-					<h1 class="hed txt-shaded">{{ subhed | safe }}</h1>
+			    
+				<header>
+        			<h1>The Personal Disquisition of <span class="shaded">Zach Jewell</span></h1>
+    			</header>
+
+				<div class="intro">
 					<p class="lede">{{ lede | safe }}</p>
-				</header>
+					<ul class="menu">
+        				{%- for nav in collections.nav | reverse -%}
+        					<li class="menu-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
+        				{%- endfor -%}
+      				</ul>
+				</div>
 
-				<section class="sub sublede">
-					{{ layoutContent | safe }}
-				</section>
+				    <section class="sub">
+      					<div class="content">
+							<h2 class="head shaded">{{ section.data.title | safe }}</h2>
+							{{ layoutContent | safe }}
+						</div>
+					</section>
 
-				{% set sections = collections.sections | reverse %}
-				{%- for section in sections-%}
-					{% if section.data.pageClass == "contact" %}
-					{% include "contact.njk" %}
-					{% else %}
-					{% include "section.njk" %}
-					{% endif %}
-				{%- endfor -%}
 			</div>
 		</main>
 
 
-		<footer class="site-foot">
+		<footer class="foot">
 			<p>Built with <a href="https://www.11ty.io/">Eleventy</a>. The source is available on <a href="https://github.com/Wilto/hire.wil.to">GitHub</a>.</p>
 			<p>For questions, comments, or problems using the site, <a href="https://github.com/Wilto/hire.wil.to/issues">report an issue</a>.</p>
 		</footer>
 
-		<script>
+		{# <script>
 			if( 'serviceWorker' in navigator && window.location.hostname !== "localhost" ) {
 				navigator.serviceWorker.register('sw.js');
 			}
-		</script>
-
-		<script>
-			var _paq = _paq || [];
-			_paq.push(['trackPageView']);
-			_paq.push(['enableLinkTracking']);
-			(function() {
-				if( !navigator.onLine ) {
-					return;
-				}
-				var u="https://analytics.wiltomakesfood.com/";
-				_paq.push(['setTrackerUrl', u+'piwik.php']);
-				_paq.push(['setSiteId', '4']);
-				
-				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-			})();
-		</script>
+		</script> #}
 	</body>
 </html>

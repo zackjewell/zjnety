@@ -1,7 +1,7 @@
 {
-  "name": "hire-wilto",
+  "name": "zackjewell.net",
   "version": "0.0.1",
-  "description": "Do it, chicken.",
+  "description": "its like a website",
   "scripts": {
     "dev": "grunt watch & eleventy --serve"
   },
@@ -10,15 +10,15 @@
     "url": "git@github.com:Wilto/hire.wil.to.git"
   },
   "author": {
-    "name": "Mat Marquis",
-    "email": "mat@matmarquis.com",
-    "url": "http://matmarquis.com"
+    "name": "Zack Jewell",
+    "email": "zack.jewell@gmail.com",
+    "url": "http://zackjewell.net"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Wilto/hire.wil.to/issues"
+    "url": "https://github.com/zackjewell"
   },
-  "homepage": "https://hire.wil.to",
+  "homepage": "http://zackjewell.net",
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "grunt-cli": "^1.3.2",
