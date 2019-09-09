@@ -1,15 +1,21 @@
 ---
 pageClass: books
-title: "I do a lot of writing."
+title: "What have you worked on?"
 order: 2
 img: books.gif
 alt: Covers of the books Image Performance and JavaScript for Web Designers, side by side.
 ---
 
-I wrote [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers) a few years ago, now. It’s paced for anyone taking their first steps into the world of JavaScript development, but in-depth enough for anyone looking to understand JavaScript’s inner workings.
+### I design and build websites. 
+I have a unique background where I have worked for companies both large and small. This gives me a unique perspective on how to work with people and teams. I work well in all types of environments. I am deeply knowledgable about a lot of topics inside the design and development world (and outside.) I have worked with regional credit unions and banks to interior designers. This has given me a unique view and experience. 
 
-I wrote [Image Performance](https://abookapart.com/products/image-performance) just last year. It’s a deep-dive into a subject that’s easy to take for granted, but difficult to master: putting images on the web. It covers everything from the inner workings of image formats and compression methods to responsive image markup to automation.
+You can check out some of my selected work [here](#).
 
-Before writing two books of my own, I wrote the _Robust, Responsible, Responsive Web Design_ chapter of [Smashing Book 4](https://www.smashingmagazine.com/smashing-book-4-new-perspectives/), and two chapters on JavaScript for the fourth edition of Jennifer Robbins’ _[Learning Web Design](https://www.learningwebdesign.com/)_.
+#### Responsive Web Design
+I started my web design career right as Responsive Web Design was bursting (flexing?) onto the world wide web. I have worked on many web projects and the vast majority have been responsive web sites. Every website should be available to as many devices and services as it can. My goal is to make every website accessible to as many people as I can. 
 
-Fingers crossed, maybe someday I’ll add [a cookbook](https://wiltomakesfood.com) to the list.
+#### Performance
+Have you ever been to a website and notice it loading slow? Or fail to load at all (a personal favorite)? Is it one of the 43 Javascript files the site has maybe it is giant [image of a salad](https://twitter.com/wilto/status/63284673723375616?lang=en)? I aim to make websites load as fast as possible. I look at how every site loads and what I can do to make it better. When building a new site Performance is one of the first items I think about.
+
+#### Companies I have worked with
+Crossfit Arsenal, NeoFight Pro, One Tree Press, Mario Russo Salon, Rakks, Water Taxi of Fort Lauderdale, Unipower, Barnsley Gardens Resort, Black Dolphin Inn, Bogue Watch, Sisters Cove/Nest Homes, New Seabury, Rough Hollow Lakeway, Browns Landing, Daily Precast, Peckham Industries, Modern Funding, DebtX, Combat Zone Wrestling, PCT Credit Union, Riverworks Credit Union, Mechanics Cooperative Bank, Strategis, Holyoke Credit Union, Luso Credit Union
