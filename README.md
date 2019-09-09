@@ -1,7 +1,13 @@
-# Okay, so.
+# Oh god this is so much
 
-Clone this sucker, run `npm install`, and you’re in business. 
+Clone this sucker, run `npm install`, For now: 
+* `grunt`/`grunt watch` for your CSS concat/minification and `sw.js` uglification.
+* `eleventy --serve` to run the site.
 
-For now: 
-1. `grunt`/`grunt watch` for your CSS concat/minification and `sw.js` uglification.
-2. `eleventy --serve` to run the site.
+
+## Stuff I need to Clean up
+
+* `.eleventy.js` reformat and commenting
+* rewrite of `webappmanifest.njk`
+* rewrite of `sw.js`
+
