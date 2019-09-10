@@ -71,7 +71,7 @@ h1, h2, h3, .intro p, .menu { font-family: helvetica, sans-serif; }
 p { font-family: Georgia, serif; }
 
 .shaded { 
-    background: linear-gradient(-180deg,#b4465f 0,#6a1b72 100%);
+    background: linear-gradient(-180deg,#701279 0,#33146d 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)
