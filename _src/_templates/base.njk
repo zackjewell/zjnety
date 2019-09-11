@@ -81,12 +81,19 @@
       				</ul>
 				</div>
 
-				    <section class="sub">
-      					<div class="content">
-							<h2 class="head shaded">{{ section.data.title | safe }}</h2>
-							{{ layoutContent | safe }}
-						</div>
-					</section>
+				<section class="sub">
+					{{ layoutContent | safe }}
+				</section>
+
+				{% set sections = collections.sections | reverse %}
+				{%- for section in sections-%}
+					{% if section.data.pageClass == "contact" %}
+					{% include "contact.njk" %}
+					{% else %}
+					{% include "section.njk" %}
+					{% endif %}
+				{%- endfor -%}
+			</div>
 
 			</div>
 		</main>
