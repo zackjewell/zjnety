@@ -2,8 +2,8 @@
 pageClass: books
 title: "What have you worked on?"
 order: 2
-img: books.gif
-alt: Covers of the books Image Performance and JavaScript for Web Designers, side by side.
+img: sites.png
+alt: 
 ---
 
 ### I design and build websites. 
