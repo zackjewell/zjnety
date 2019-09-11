@@ -64,7 +64,7 @@
 	</head>
 	<body>
 
-		<main role="main" id="main"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+		<main role="main">
 
 			<div class="body">
 			    
@@ -87,11 +87,7 @@
 
 				{% set sections = collections.sections | reverse %}
 				{%- for section in sections-%}
-					{% if section.data.pageClass == "contact" %}
-					{% include "contact.njk" %}
-					{% else %}
 					{% include "section.njk" %}
-					{% endif %}
 				{%- endfor -%}
 			</div>
 
@@ -99,15 +95,14 @@
 		</main>
 
 
-		<footer class="foot">
-			<p>Built with <a href="https://www.11ty.io/">Eleventy</a>. The source is available on <a href="https://github.com/Wilto/hire.wil.to">GitHub</a>.</p>
-			<p>For questions, comments, or problems using the site, <a href="https://github.com/Wilto/hire.wil.to/issues">report an issue</a>.</p>
+		<footer>
+
 		</footer>
 
-		{# <script>
+		<script>
 			if( 'serviceWorker' in navigator && window.location.hostname !== "localhost" ) {
 				navigator.serviceWorker.register('sw.js');
 			}
-		</script> #}
+		</script> 
 	</body>
 </html>
