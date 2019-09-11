@@ -2,8 +2,6 @@
 pageClass: work
 title: "I like building websites."
 order: 1
-tags: nav
-navtitle: Work
 layout: base.njk
 ---
 
