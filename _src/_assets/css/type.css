@@ -1,54 +1,48 @@
-/* Adelle Sans */
-/* @font-face {
-    font-family: 'AdelleSans';
-    src: url('/_assets/fonts/AdelleSans-Bold.woff2') format('woff2'),
-        url('/_assets/fonts/AdelleSans-Bold.woff') format('woff');
+/* load some fonts yo */
+@font-face {
+    font-family: 'fira-sans';
+    src: url('/_assets/fonts/fira-sans-regular.woff2') format('woff2'),
+         url('/_assets/fonts/fira-sans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'fira-sans';
+    src: url('/_assets/fonts/fira-sans-800.woff2') format('woff2'),
+         url('/_assets/fonts/fira-sans-800.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'AdelleSans';
-    src: url('/_assets/fonts/AdelleSans-Light.woff2') format('woff2'),
-        url('/_assets/fonts/AdelleSans-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} */
 
-/* Tiempos Text */
-/* @font-face {
-    font-family: 'Tiempos';
-    src: url('/_assets/fonts/TiemposTextWeb-Regular.woff2') format('woff2'),
-        url('/_assets/fonts/TiemposTextWeb-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+    font-family: 'fira-sans';
+    src: url('/_assets/fonts/fira-sans-800italic.woff2') format('woff2'),
+         url('/_assets/fonts/fira-sans-800italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
     font-display: swap;
 }
+
 @font-face {
-    font-family: 'Tiempos';
-    src: url('/_assets/fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
-        url('/_assets/fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+    font-family: 'fira-sans';
+    src: url('/_assets/fonts/fira-sans-italic.woff.woff2') format('woff2'),
+         url('/_assets/fonts/fira-sans-italic.woff.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-} */
+}
 
-/* Tiempos Headline */
-/* @font-face {
-    font-family: 'TiemposHed';
-    src: url('/_assets/fonts/TiemposHeadline-Regular.woff2') format('woff2'),
-        url('/_assets/fonts/TiemposHeadline-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} */
+h1, h2, h3, .intro p, .menu, p { font-family:'fira-sans', helvetica, sans-serif; }
 
 header h1 {
     /*font-size: 3em;*/
-    font-family: helvetica, sans-serif;
+    font-family: 'fira-sans', helvetica, sans-serif;
     font-size: 2.5em;
-    grid-column: 1;
+    font-weight: bold;
     text-align: left;
+    grid-column: 1;
     margin: 0 0 1em 0;
     justify-self: start;
     writing-mode: vertical-lr;
@@ -56,19 +50,20 @@ header h1 {
 }
 
 .intro p {
-font-size: 1em;
-text-transform: uppercase;
-font-weight: bold;
-border-top: 2px solid #3b3b3b;
-border-bottom: 2px solid #3b3b3b;
-padding: 0.3125em 0;
-margin: 0;
-grid-column: 3;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-top: 2px solid #3b3b3b;
+    border-bottom: 2px solid #3b3b3b;
+    padding: 0.3125em 0;
+    margin: 0;
+    grid-column: 3;
 }
 
-h1, h2, h3, .intro p, .menu { font-family: helvetica, sans-serif; }
-
-p { font-family: Georgia, serif; }
+.content p {
+    font-size: 1.15em;
+    line-height: 1.5;
+}
 
 .shaded { 
     background: linear-gradient(-180deg,#701279 0,#33146d 100%);
@@ -77,13 +72,8 @@ p { font-family: Georgia, serif; }
     -webkit-text-fill-color: rgba(0,0,0,.15)
 }
 
+/* 
 @media screen and (min-width: 57.75em) {
-    /*
     .sub .content { grid-column: 10/span 15; }
-    */ 
-}
-  
-  .content p {
-      font-size: 1.15em;
-      line-height: 1.5;
-  }
+} 
+*/
