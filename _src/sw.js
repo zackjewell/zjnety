@@ -11,8 +11,8 @@ https://www.filamentgroup.com/
 (function() {
 	"use strict";
 
-	const version = "777";
-	const cacheName = version + "::wiltomakesfood:";
+	const version = "1";
+	const cacheName = version + "::zackjewell:";
 
 	const staticCacheName = cacheName + "static";
 	const pagesCacheName = cacheName + "pages";
@@ -21,16 +21,17 @@ https://www.filamentgroup.com/
 	const offlinePages = [
 		"/"
 	];
+
 	const staticAssets = [
-		'/_assets/fonts/TiemposHeadline-Regular.woff',
-		'/_assets/fonts/TiemposHeadline-Regular.woff2',
-		'/_assets/fonts/AdelleSans-Light.woff2',
-		'/_assets/fonts/TiemposTextWeb-Regular.woff2',
-		'/_assets/fonts/TiemposTextWeb-RegularItalic.woff2',
-		'/_assets/fonts/AdelleSans-Bold.woff2',
-		'/_assets/fonts/AdelleSans-Light.woff',
-		'/_assets/fonts/TiemposTextWeb-Regular.woff',
-		'/_assets/fonts/TiemposTextWeb-RegularItalic.woff',
+		'/_assets/fonts/fira-sans-regular.woff',
+		'/_assets/fonts/fira-sans-regular.woff2',
+		'/_assets/fonts/fira-sans-800.woff',
+		'/_assets/fonts/fira-sans-800.woff2',
+		'/_assets/fonts/fira-sans-800italic.woff',
+		'/_assets/fonts/fira-sans-800italic.woff2',
+		'/_assets/fonts/fira-sans-italic.woff.woff',
+		'/_assets/fonts/fira-sans-italic.woff.woff2',
+		'/_assets/css/all.css',
 		'/_assets/css/globals.css',
 		'/_assets/css/layout.css',
 		'/_assets/css/type.css'
