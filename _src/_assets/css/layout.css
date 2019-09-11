@@ -1,7 +1,4 @@
-.sub { 
-	grid-column: 2/span 15;
-	grid-row: 2;
-  }
+.sub { 	grid-column: 2/span 15; }
 
 .head { 
 	padding: 0;
