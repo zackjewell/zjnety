@@ -28,13 +28,20 @@
 
 @font-face {
     font-family: 'fira-sans';
-    src: url('/_assets/fonts/fira-sans-italic.woff.woff2') format('woff2'),
-         url('/_assets/fonts/fira-sans-italic.woff.woff') format('woff');
+    src: url('/_assets/fonts/fira-sans-italic.woff2') format('woff2'),
+         url('/_assets/fonts/fira-sans-italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 h1, h2, h3, h4, .intro p, .menu, p { font-family:'fira-sans', helvetica, sans-serif; }
+
+h1, h2, h3, h4 { color: #33146d; }
+
+em {
+    font-family:'fira-sans', helvetica, sans-serif;
+    font-style: italic;
+}
 
 header h1 {
     font-family: 'fira-sans', helvetica, sans-serif;
