@@ -12,13 +12,13 @@
   "author": {
     "name": "Zack Jewell",
     "email": "zack.jewell@gmail.com",
-    "url": "http://zackjewell.net"
+    "url": "https://zackjewell.net"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zackjewell"
   },
-  "homepage": "http://zackjewell.net",
+  "homepage": "https://zackjewell.net",
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "grunt-cli": "^1.3.2",
