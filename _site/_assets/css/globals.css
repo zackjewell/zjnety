@@ -1,0 +1,40 @@
+
+[aria-hidden="true"] { display: none; }
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body { color: #3b3b3b; margin: 0;padding: 0;}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(15,1fr);
+  width: 90vw;
+  max-width: 1400px;
+  padding: 3%;
+  margin: 0 auto;
+}
+
+
+
+a {
+	color: #6a1b72;
+	transition: color .15s linear, -webkit-text-fill-color .15s linear, text-decoration-color .5s linear;
+	text-decoration: none;
+}
+/* a:hover {} */
+
+@supports( text-decoration-color: #12073f ) {
+	a {
+		text-decoration: underline;
+		text-decoration-color: #12073f;
+		border-bottom: none;
+	}
+	a:hover {
+		text-decoration: underline;
+		text-decoration-color: #cb4335;
+		border-bottom: none;
+	}
+}
