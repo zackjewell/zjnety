@@ -17,19 +17,16 @@ body { color: #3b3b3b; margin: 0;padding: 0;}
   margin: 0 auto;
 }
 
-
-
 a {
-	color: #6a1b72;
+	color: #2E1969;
 	transition: color .15s linear, -webkit-text-fill-color .15s linear, text-decoration-color .5s linear;
 	text-decoration: none;
 }
-/* a:hover {} */
 
-@supports( text-decoration-color: #12073f ) {
+@supports( text-decoration-color: #2E1969 ) {
 	a {
 		text-decoration: underline;
-		text-decoration-color: #12073f;
+		text-decoration-color: #2E1969;
 		border-bottom: none;
 	}
 	a:hover {

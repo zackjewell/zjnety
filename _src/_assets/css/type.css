@@ -36,7 +36,7 @@
 
 h1, h2, h3, h4, .intro p, .menu, p { font-family:'fira-sans', helvetica, sans-serif; }
 
-h1, h2, h3, h4 { color: #33146d; }
+h1, h2, h3, h4 { color: #2E1969; }
 
 em {
     font-family:'fira-sans', helvetica, sans-serif;
@@ -90,7 +90,7 @@ header h1 {
 }
 
 .shaded { 
-    background: linear-gradient(-180deg,#701279 0,#33146d 100%);
+    background: linear-gradient(-180deg,#701279 0,#2E1969 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)
@@ -98,7 +98,7 @@ header h1 {
 
 .sub:nth-of-type(2) {
     font-size: 1.35em;
-    background: linear-gradient(-180deg,#701279 0,#33146d 100%);
+    background: linear-gradient(-180deg,#701279 0,#2E1969 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)
