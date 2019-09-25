@@ -96,6 +96,14 @@ header h1 {
     -webkit-text-fill-color: rgba(0,0,0,.15)
 }
 
+.sub:nth-of-type(2) {
+    font-size: 1.35em;
+    background: linear-gradient(-180deg,#701279 0,#33146d 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0,0,0,.15)
+}
+
 /* 
 @media screen and (min-width: 57.75em) {
     .sub .content { grid-column: 10/span 15; }
