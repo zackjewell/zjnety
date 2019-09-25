@@ -17,3 +17,6 @@ Have you ever been to a website and notice it loading slowly? Or failing to load
 
 ### What else do I enjoy?
 When I am not working I can be found at the gym (I’m a certified CrossFit trainer), at the movies and diving into various side projects. I love designing t-shirts, going on photography shoots and helping out around my community.  I am always looking for new and interesting ways to use and further develop my skills.
+
+### People I Have Worked With
+CrossFit Arsenal, NeoFight Pro, One Tree Press, Mario Russo Salon, Rakks, Water Taxi of Fort Lauderdale, Unipower, Barnsley Gardens Resort, Black Dolphin Inn, Bogue Watch, Sisters Cove/Nest Homes, New Seabury, Rough Hollow Lakeway, Browns Landing, Daily Precast, Peckham Industries, Modern Funding, DebtX, Combat Zone Wrestling, PCT Credit Union, Riverworks Credit Union, Mechanics Cooperative Bank, Strategis, Holyoke Credit Union, Luso Credit Union
