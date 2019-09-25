@@ -45,7 +45,7 @@ em {
 
 header h1 {
     font-family: 'fira-sans', helvetica, sans-serif;
-    font-size: 2.5em;
+    font-size: 2.75em;
     font-weight: bold;
     text-align: left;
     grid-column: 1;
@@ -55,7 +55,12 @@ header h1 {
     height: 7em;
 }
 
-.intro p {
+.section-head h2 { font-size: 1.75em; }
+
+.section-head h2,
+.copy h3 { margin: 1em 0 0.5em 0;}
+
+.lede {
     font-size: 1em;
     text-transform: uppercase;
     font-weight: bold;
@@ -66,9 +71,22 @@ header h1 {
     grid-column: 3;
 }
 
-.content p {
+.intro p {
+    margin: 0; 
+}
+
+.definition {
+    margin: 1.5em 0 0 0;
+}
+.definition h2 {
+    font-size: 1.5em;
+    margin: 0 0 0 0;
+}
+
+.copy p {
     font-size: 1.15em;
-    line-height: 1.5;
+    line-height: 1.5em;
+    margin: 0 0 1em 0;
 }
 
 .shaded { 

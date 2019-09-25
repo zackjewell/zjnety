@@ -5,8 +5,13 @@ order: 1
 layout: base.njk
 ---
 
-My experience has been in end-to-end design and development. I have helped jump-start projects, assisted in creating and maintaining websites, apps and experiences and come in and help guide projects through the final stages. I have also taken projects from concept to flushed out expereinces. 
+My experience has provided me with the opportunity to work with a wide range of clients, always with a focus on design and development. This background gives me a valuable perspective on how to work with different types of teams and individuals. I perform well in a variety of environments, and I am deeply knowledgeable about a lot of topics inside the design and development world. My experience ranges from small one-off projects with solo entrepreneurs to complex projects with large corporations. I am passionate about design and development that drives results. You can check out some of my selected work here.
 
-Overall, My goal is to create and work on the web and are accessible regardless of browser type, device and connection speed. What does that mean? I like fast websites that everyone can look at one anything. Phone? Totally. TV? Sure. Smart fridge? Why not. I am always learning and bettering myself to make the web a better place. I have also taken websites and made them function on browsers as old as IE6. That was _fun._
+### Responsive Web Design
+I started my web design career as Responsive Web Design was bursting onto the World Wide Web. I have worked on many web projects and the vast majority have been responsive web sites. I want to build sites that follow best practices and are as accessible to as many people as they can be. I also have extensive experience building/maintaining pattern libraries and working with existing code bases and branding guidelines. 
 
-If this is something you are looking for or can help with drop me a [line](mailto:zack.jewell@gmail.com) and by line I mean e-mail. I am not a fish...I think.
+### Performance
+Have you ever been to a website and notice it loading slowly? Or failing to load at all (a personal favorite)? Is it being caused by one of the various Javascript files the site is trying to load, maybe the giant image of a salad that someone didn’t compress is taking forever.? I aim to make websites load as fast as possible. I look at how every site loads and what I can do to make it better. When building a new site performance is one of the first items I consider.
+
+### What else do I enjoy?
+When I am not working I can be found at the gym (I’m a certified CrossFit trainer), at the movies and diving into various side projects. I love designing t-shirts, going on photography shoots and helping out around my community.  I am always looking for new and interesting ways to use and further develop my skills.
