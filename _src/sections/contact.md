@@ -1,5 +1,5 @@
 ---
-pageClass: talk
+pageClass: contact
 title: ""
 order: 4
 ---

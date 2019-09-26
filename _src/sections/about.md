@@ -1,5 +1,5 @@
 ---
-pageClass: work
+pageClass: about
 title: "I like building websites."
 order: 2
 layout: base.njk
