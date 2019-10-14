@@ -28,7 +28,7 @@
   }
 
   .section-contact {
-    grid-column: 1/span 11;
+    grid-column: 1/span 5;
   }
 }
 
@@ -85,9 +85,8 @@
 @media screen and (min-width: 64em) {
   .section-work img {
     width: auto;
-    margin-left: 2.5%;
+    margin: 0 -10em 5em 0;
     max-width: 40em;
-    margin-right: -10em;
     float: right
   }
 }
