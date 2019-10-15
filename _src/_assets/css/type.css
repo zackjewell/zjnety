@@ -54,7 +54,11 @@ header h1 {
     height: 7em;
     margin: 0;
 }
-
+@media screen and (min-width: 25.75em) {
+    header h1 {
+      font-size: 2.75em; 
+    }
+}
 .section-head h2 { font-size: 1.75em; }
 
 .section-head h2,
@@ -90,15 +94,23 @@ header h1 {
 }
 
 .shaded { 
-    background: linear-gradient(-180deg,#701279 0,#2E1969 100%);
+    background: linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image: -webkit-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image:    -moz-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image:     -ms-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image:      -o-linear-gradient(180deg,#701279 0,#2E1969 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)
 }
 
-.sub:nth-of-type(2) {
-    font-size: 1.35em;
-    background: linear-gradient(-180deg,#701279 0,#2E1969 100%);
+.sub:nth-of-type(2) p {
+    font-size: 1.5em;
+    background: linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image: -webkit-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image: -moz-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image: -ms-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background-image: -o-linear-gradient(180deg,#701279 0,#2E1969 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)

@@ -29,6 +29,7 @@ body {
 	.body {
 		display: grid;
 		grid-template-columns: repeat(5,1fr);
+		grid-column-gap: 1em;
 		margin: 0 auto;
 	}
 }
