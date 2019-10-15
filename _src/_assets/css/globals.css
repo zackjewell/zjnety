@@ -1,4 +1,3 @@
-
 [aria-hidden="true"] { display: none; }
 
 *, *:before, *:after {
@@ -25,7 +24,6 @@ body {
     min-height: 100vh;
     height: auto;
 }
-
 
 @media screen and (min-width: 23.5em) {
 	.body {
