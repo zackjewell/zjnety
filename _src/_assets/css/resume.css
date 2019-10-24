@@ -1,0 +1,11 @@
+.section-resume h2 {
+    grid-column: 1;
+}
+
+.section-resume p {
+    grid-column: 2;
+}
+
+.section-resume {
+    grid-column: 2/span 11;
+}
