@@ -1,5 +1,6 @@
 ---
-layout: base.njk
+layout: resume.njk
+pageClass: resume
 subhed: "I am a Web Designer and Front-end Developer."
 lede: "Designer, Developer, Coffee drinker"
 ---
