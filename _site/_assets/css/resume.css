@@ -1,5 +1,15 @@
-.section-resume h4 { font-style: italic; }
-
-.section-resume {
-    grid-column: 2/span 4;
+.resume-info { 
+    grid-column: 2/span 3; 
+    margin: 0 0 2em 0;
 }
+.resume-descript { 
+    grid-column: 5/11;
+    margin: 0 0 2em 0;
+}
+
+.resume-info h2,
+.resume-info h3,
+.resume-info h4 { margin: 0 0 0.5em 0; }
+
+.resume-info h4 { font-style: italic; }
+
