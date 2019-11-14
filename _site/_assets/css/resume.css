@@ -1,15 +1,32 @@
-.resume-info { 
-    grid-column: 2/span 3; 
-    margin: 0 0 2em 0;
-}
-.resume-descript { 
-    grid-column: 5/11;
-    margin: 0 0 2em 0;
-}
+.resume-info {  margin: 0 0 2em 0; }
+
+.resume-descript { margin: 0 0 2em 0; }
 
 .resume-info h2,
-.resume-info h3,
 .resume-info h4 { margin: 0 0 0.5em 0; }
+
+.resume-info h3 { margin: 0 0 0.25em 0; }
 
 .resume-info h4 { font-style: italic; }
 
+.job { grid-column: 1/span 10;}
+
+.job:nth-of-type(1), 
+.job:nth-of-type(2),
+.job:nth-of-type(3), 
+.job:nth-of-type(4), 
+.job:nth-of-type(5), 
+.job:nth-of-type(6), 
+.job:nth-of-type(7) { grid-column: 2/11; }
+
+
+@media screen and (min-width: 48em) {
+    .job:nth-of-type(1) { grid-column: 2/11; }
+    .job:nth-of-type(2) { grid-column: 3/11; }
+    .job:nth-of-type(3) { grid-column: 2/11; }
+    .job:nth-of-type(4) { grid-column: 3/11; }
+    .job:nth-of-type(5) { grid-column: 2/11; }
+    .job:nth-of-type(6) { grid-column: 3/11; }
+    .job:nth-of-type(7) { grid-column: 1/5; }
+    .job:nth-of-type(8) { grid-column: 5/11; }
+}

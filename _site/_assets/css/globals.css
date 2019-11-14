@@ -25,6 +25,8 @@ body {
     height: auto;
 }
 
+.intro { margin-bottom: 3em; }
+
 @media screen and (min-width: 23.5em) {
 	.body {
 		display: grid;
