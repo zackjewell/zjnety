@@ -88,7 +88,7 @@
 					</div>	
 					
 					{% if img %}
-						<img src="/_assets/img/{{ img }}"{% if fullbleed %} class="fullbleed"{% endif %} alt="{{alt}}">
+						<img src="/_assets/img/work/{{ img }}" alt="{{ img-alt }}">
 					{% endif %}
 					
 					<div class="copy">
@@ -96,11 +96,11 @@
 					</div>
 					
 					{% if interior %}
-						<img src="/_assets/img/{{ interior }}"{% if fullbleed %} class="fullbleed"{% endif %} alt="{{alt}}">
+						<img src="/_assets/img/work/{{ interior }}" alt="{{ interior-alt }}">
 					{% endif %}
 					
 					{% if secondary %}
-						<img src="/_assets/img/{{ secondary }}"{% if fullbleed %} class="fullbleed"{% endif %} alt="{{alt}}">
+						<img src="/_assets/img/work/{{ secondary }}" alt="{{ secondary-alt }}">
 					{% endif %}
 
 				</section>
