@@ -2,6 +2,9 @@
 pageClass: dailey-precast
 layout: casestudy.njk
 title: Dailey Precast
+img:
+interior:
+secondary:
 lede: "Designer, Developer, Coffee drinker"
 ---
 

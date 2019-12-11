@@ -2,6 +2,9 @@
 pageClass: carla-neggers
 layout: casestudy.njk
 title: Carla Neggers
+img:
+interior:
+secondary:
 lede: "Designer, Developer, Coffee drinker"
 ---
 
