@@ -3,8 +3,11 @@ pageClass: carla-neggers
 layout: casestudy.njk
 title: Carla Neggers
 img:
+img-alt:
 interior:
+interior-alt:
 secondary:
+secondary-alt:
 lede: "Designer, Developer, Coffee drinker"
 ---
 

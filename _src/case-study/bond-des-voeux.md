@@ -3,8 +3,11 @@ pageClass: bond-des-voeux
 layout: casestudy.njk
 title: Bond and Des Voeux
 img:
+img-alt:
 interior:
+interior-alt:
 secondary:
+secondary-alt:
 lede: "Designer, Developer, Coffee drinker"
 ---
 
