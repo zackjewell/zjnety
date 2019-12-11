@@ -26,6 +26,8 @@
 
   .section-contact { grid-column: 6/10; }
   
+  .case { grid-column: 2/11; }
+
   .section-work img {
     max-width: 100%;
     width: 130%;

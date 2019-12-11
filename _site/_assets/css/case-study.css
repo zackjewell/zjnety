@@ -1,0 +1,7 @@
+.case { grid-column: 2/11; }
+
+.case p { color: brown; }
+
+@media screen and (min-width: 48em) { 
+    .case:nth-of-type(1) { grid-column: 2/11; }
+}
