@@ -38,15 +38,6 @@ h1, h2, h3, h4, .intro p, .menu, p { font-family:'fira-sans', helvetica, sans-se
 
 h1, h2, h3, h4 { color: #2E1969; }
 
-.case ul {
-    list-style: none;
-    margin: 5px 0;
-    padding: 0;
-    font-family:'fira-sans', helvetica, sans-serif;
-    font-style: italic;
-}
-
-
 em {
     font-family:'fira-sans', helvetica, sans-serif;
     font-style: italic;
