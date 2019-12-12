@@ -34,7 +34,7 @@
     font-style: italic;
 }
 
-h1, h2, h3, h4, .intro p, .menu, p { font-family:'fira-sans', helvetica, sans-serif; }
+h1, h2, h3, h4, .intro p, .menu, p, ul { font-family:'fira-sans', helvetica, sans-serif; }
 
 h1, h2, h3, h4 { color: #2E1969; }
 
