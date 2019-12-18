@@ -7,9 +7,6 @@ alt:
 ---
 
 ### I design and build websites.
-My experience has provided me with the opportunity to work with a wide range of clients, always with a focus on design and development. This background gives me a valuable perspective on how to work with different types of teams and individuals. I perform well in a variety of environments, and I am deeply knowledgeable about a lot of topics inside the design and development world. My experience ranges from small one-off projects with solo entrepreneurs to complex projects with large corporations. I am passionate about design and development that drives results. I can more work samples upon a request.
-
-### Responsive Web Design
 I started my web design career as Responsive Web Design was bursting onto the World Wide Web. I have worked on many web projects and the vast majority have been responsive web sites. I want to build sites that follow best practices and are as accessible to as many people as they can be. I also have extensive experience building/maintaining pattern libraries and working with existing code bases and branding guidelines. 
 
 ### Performance
