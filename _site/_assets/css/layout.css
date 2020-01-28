@@ -28,7 +28,8 @@ ul {
   .intro { grid-column: 2/6; }
 
   .section-about,
-  .intro { grid-column: 1/11; }
+  .intro,
+  .uses { grid-column: 1/11; }
 
   .section-start { grid-column: 1/11; }
 
@@ -38,7 +39,7 @@ ul {
 @media screen and (min-width: 39.0625em) {
   .intro { grid-column: 2/11; }
 
-  .section-about { grid-column: 3/11; }
+  .section-about, .uses { grid-column: 3/11; }
 
   .section-start { grid-column: 4/11; }
 
