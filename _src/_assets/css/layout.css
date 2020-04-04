@@ -43,16 +43,14 @@ ul {
 
   .section-start { grid-column: 4/11; }
 
-  .section-work { grid-column: 3/span 8; }
+  .section-work { grid-column: 3/11; }
 
-  .section-contact { grid-column: 6/10; }
+  .section-contact { grid-column: 3/6; }
   
   .case { grid-column: 2/11; }
 
   .section-work img {
-    max-width: 100%;
-    width: 130%;
-    margin: 2em 0;
+  
   }
 }
 
@@ -80,33 +78,23 @@ ul {
 }
 
 .section-work img {
-  max-width: 100%;
-  width: 100%;
-  margin: 2em 0;
+
 }
 
 @media screen and (min-width: 39.0625em) {
   .section-work img {
-    max-width: 120%;
-    width: 120%;
-    margin: 2em 0;
+    
   }
 }
 
 @media screen and (min-width: 64em) {
   .section-work img {
-    width: auto;
-    margin: 0 5em 3em 0;
-    max-width: 40em;
-    float: left;
+    
   }
 }
 
 @media screen and (min-width: 90em) {
   .section-work img {
-    width: auto;
-    margin: 0 5em 7em 0;
-    max-width: 40em;
-    float: right;
+    
   }
 }
