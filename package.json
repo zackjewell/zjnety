@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Wilto/hire.wil.to.git"
+    "url": "git@github.com:zackjewell/zjnety.git"
   },
   "author": {
     "name": "Zack Jewell",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://zackjewell.net",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy": "^0.10.0",
     "grunt-cli": "^1.3.2",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
