@@ -93,6 +93,25 @@ p {
     margin: 0 0 1em 0;
 }
 
+.section-case-studies h2 { 
+    margin: 0;
+    color: #ffffff; 
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.section-case-studies .shaded { background:  none; }
+
+.section-case-studies ul li {
+    margin-bottom: 0.5em;
+}
+
+.section-case-studies ul li a { 
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 .shaded { 
     background: linear-gradient(180deg,#701279 0,#2E1969 100%);
     background-image: -webkit-linear-gradient(180deg,#701279 0,#2E1969 100%);
