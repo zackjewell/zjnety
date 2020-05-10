@@ -53,3 +53,10 @@ body {
 		border-bottom: none;
 	}
 }
+
+/* @media (prefers-color-scheme: dark) {
+	body {
+		background: #3b3b3b; 
+		color: #f1f1ec;
+	}
+} */
