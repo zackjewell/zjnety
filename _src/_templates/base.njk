@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="fonts">
+<html lang="en" class="fonts" color-mode="light">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,15 @@
 				] 
 			}
 		</script>
+
+		<script>
+			if (
+				localStorage.getItem("color-mode") === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches && !localStorage.getItem("color-mode"))
+			) {
+				document.documentElement.setAttribute("color-mode", "dark");
+			}
+		</script>
+
 
 		<!-- Twitter/Slack cards: -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -105,6 +114,8 @@
 
 			</footer>
 		</main>
+
+		<script type="text/javascript" src="main.js"></script>
 
 		<script>
 			if( 'serviceWorker' in navigator && window.location.hostname !== "localhost" ) {

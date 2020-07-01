@@ -123,6 +123,19 @@ p {
     -webkit-text-fill-color: rgba(0,0,0,.15)
 }
 
+@media (prefers-color-scheme: dark) {
+	.shaded { 
+		background: linear-gradient(180deg,#E632C4 0,#6638F0 100%);
+		background-image: -webkit-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
+		background-image:    -moz-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
+		background-image:     -ms-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
+		background-image:      -o-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: rgba(0,0,0,.15)
+	}
+}
+
 .sub:nth-of-type(2) p {
     font-size: 1.5em;
     background: linear-gradient(180deg,#701279 0,#2E1969 100%);
