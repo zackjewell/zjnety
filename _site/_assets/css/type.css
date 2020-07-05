@@ -36,7 +36,7 @@
 
 h1, h2, h3, h4, .intro p, .menu, p, ul { font-family:'fira-sans', helvetica, sans-serif; }
 
-h1, h2, h3, h4 { color: #2E1969; }
+h1, h2, h3, h4 { color: var(--primary); }
 
 em {
     font-family:'fira-sans', helvetica, sans-serif;
@@ -68,8 +68,8 @@ header h1 {
     font-size: 1em;
     text-transform: uppercase;
     font-weight: bold;
-    border-top: 2px solid #3b3b3b;
-    border-bottom: 2px solid #3b3b3b;
+    border-top: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
     padding: 0.3125em 0;
     margin: 0;
     grid-column: 3;
@@ -113,11 +113,11 @@ p {
 }
 
 .shaded { 
-    background: linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image: -webkit-linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image:    -moz-linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image:     -ms-linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image:      -o-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background: var(--gradient);
+    background-image: -webkit-var(--gradient);
+    background-image:    -moz-var(--gradient);
+    background-image:     -ms-var(--gradient);
+    background-image:      -o-var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)
@@ -125,11 +125,11 @@ p {
 
 @media (prefers-color-scheme: dark) {
 	.shaded { 
-		background: linear-gradient(180deg,#E632C4 0,#6638F0 100%);
-		background-image: -webkit-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
-		background-image:    -moz-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
-		background-image:     -ms-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
-		background-image:      -o-linear-gradient(180deg,#E632C4 0,#6638F0 100%);
+		background: var(--gradient);
+        background-image: -webkit-var(--gradient);
+        background-image:    -moz-var(--gradient);
+        background-image:     -ms-var(--gradient);
+        background-image:      -o-var(--gradient);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: rgba(0,0,0,.15)
@@ -138,11 +138,11 @@ p {
 
 .sub:nth-of-type(2) p {
     font-size: 1.5em;
-    background: linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image: -webkit-linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image: -moz-linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image: -ms-linear-gradient(180deg,#701279 0,#2E1969 100%);
-    background-image: -o-linear-gradient(180deg,#701279 0,#2E1969 100%);
+    background: var(--gradient);
+    background-image: -webkit-var(--gradient);
+    background-image:    -moz-var(--gradient);
+    background-image:     -ms-var(--gradient);
+    background-image:      -o-var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0,0,0,.15)

@@ -25,11 +25,11 @@ ul {
 .case h2 { margin-bottom: 0.5em; }
 
 .section-case-studies {
-  background: linear-gradient(180deg,#701279 0,#2E1969 100%);
-  background-image: -webkit-linear-gradient(180deg,#701279 0,#2E1969 100%);
-  background-image:    -moz-linear-gradient(180deg,#701279 0,#2E1969 100%);
-  background-image:     -ms-linear-gradient(180deg,#701279 0,#2E1969 100%);
-  background-image:      -o-linear-gradient(180deg,#701279 0,#2E1969 100%);
+  background: var(--gradient);
+  background-image: -webkit-var(--gradient);
+  background-image:    -moz-var(--gradient);
+  background-image:     -ms-var(--gradient);
+  background-image:      -o-var(--gradient);
   padding: 2.5em;
   margin: 1em;
   text-align: center; 
