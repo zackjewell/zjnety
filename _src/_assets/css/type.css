@@ -48,10 +48,6 @@ header h1 {
     font-size: 3em;
     font-weight: bold;
     text-align: left;
-    grid-column: 1;
-    justify-self: start;
-    writing-mode: vertical-lr;
-    height: 7em;
     margin: 0;
 }
 @media screen and (min-width: 25.75em) {
@@ -110,30 +106,6 @@ p {
 .section-case-studies ul li a { 
     color: #ffffff;
     text-decoration: underline;
-}
-
-.shaded { 
-    background: var(--gradient);
-    background-image: -webkit-var(--gradient);
-    background-image:    -moz-var(--gradient);
-    background-image:     -ms-var(--gradient);
-    background-image:      -o-var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0,0,0,.15)
-}
-
-@media (prefers-color-scheme: dark) {
-	.shaded { 
-		background: var(--gradient);
-        background-image: -webkit-var(--gradient);
-        background-image:    -moz-var(--gradient);
-        background-image:     -ms-var(--gradient);
-        background-image:      -o-var(--gradient);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: rgba(0,0,0,.15)
-	}
 }
 
 .sub:nth-of-type(2) p {
