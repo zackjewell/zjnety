@@ -22,7 +22,7 @@
 :root[color-mode="dark"] .dark--hidden { display: none; }
 
 footer .color-mode__btn {
-	font-family:'fira-sans', helvetica, sans-serif;
+	font-family: 'Supreme', helvetica, sans-serif;
 	float: right;
     appearance: none;
     padding: 6px;
