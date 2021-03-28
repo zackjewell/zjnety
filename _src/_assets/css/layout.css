@@ -35,37 +35,32 @@ ul {
   text-align: center; 
 }
 
-@media screen and (min-width: 23.5em) {
-  .intro { grid-column: 2/6; }
+header { grid-column: 1/2; }
+.sub { grid-column: 1/2 ;}
 
-  .section-about,
-  .intro,
-  .section-start,
-  .section-work,
-  .section-case-studies { grid-column: 1/11; }
+@media screen and (min-width: 31.25em) {
+  .sub { grid-column: 1/6;}
 }
 
-@media screen and (min-width: 39.0625em) {
-  .intro { grid-column: 3/11; }
-
-  .section-about, .uses { grid-column: 3/11; }
-
-  .section-about,
-  .uses,
-  .section-start,
-  .section-work { grid-column: 4/11; }
-
-  .section-case-studies { grid-column: 4/9; }
-
-  .section-contact { grid-column: 3/7; }
-  
-  .case { grid-column: 4/11; }
+@media screen and (min-width: 39.125em) {
+  header { grid-column: 1/11; }
+  .sub { grid-column: 2/10;}
 }
 
-@media screen and (min-width: 25.75em) {
-  header h1 { font-size: 2.75em; }
-
-  header { grid-column: 1; }
+@media screen and (min-width: 48.875em) {
+  header { 
+    text-align: center;
+    grid-column: 2/10; 
+  }
+  header h1 { 
+    padding: 0.125em 0;
+    text-align: center;
+    font-size: 3em; 
+  }
+  img {
+    float: right;
+    margin: 1em;
+  }
 }
 
 .menu {

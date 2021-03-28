@@ -1,20 +1,20 @@
 /* load some fonts yo */
 @font-face {
     font-family: 'Supreme';
-    src: url('_assets/fonts/Supreme-Variable.woff2') format('woff2'),
-         url('_assets/fonts/Supreme-Variable.woff') format('woff'),
-         url('_assets/fonts/Supreme-Variable.eot') format('eot'),
-         url('_assets/fonts/Supreme-Variable.ttf') format('ttf');
+    src: url('../fonts/Supreme-Variable.woff2') format('woff2'),
+         url('../fonts/Supreme-Variable.woff') format('woff'),
+         url('../fonts/Supreme-Variable.eot') format('eot'),
+         url('../fonts/Supreme-Variable.ttf') format('ttf');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Supreme';
-    src: url('_assets/fonts/Supreme-VariableItalic.woff2') format('woff2'),
-         url('_assets/fonts/Supreme-VariableItalic.woff') format('woff'),
-         url('_assets/fonts/Supreme-VariableItalic.eot') format('eot'),
-         url('_assets/fonts/Supreme-VariableItalic.ttf') format('ttf');
+    src: url('../fonts/Supreme-VariableItalic.woff2') format('woff2'),
+         url('../fonts/Supreme-VariableItalic.woff') format('woff'),
+         url('../fonts/Supreme-VariableItalic.eot') format('eot'),
+         url('../fonts/Supreme-VariableItalic.ttf') format('ttf');
     font-style: italic;
     font-display: swap;
 }
@@ -27,7 +27,6 @@ em {
     font-family:'Supreme', helvetica, sans-serif;
     font-style: italic;
 }
-
 
 header h1 {
     background: var(--gradient);
@@ -104,7 +103,7 @@ p {
     text-decoration: underline;
 }
 
-.sub:nth-of-type(2) p {
+.sub:first-of-type p {
     font-size: 1.5em;
     background: var(--gradient);
     background-image: -webkit-var(--gradient);

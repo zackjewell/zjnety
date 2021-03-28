@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="fonts">
+<html lang="en" class="fonts" color-mode="light">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,15 @@
 			}
 		</script>
 
+		<script>
+			if (
+				localStorage.getItem("color-mode") === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches && !localStorage.getItem("color-mode"))
+			) {
+				document.documentElement.setAttribute("color-mode", "dark");
+			}
+		</script>
+
+
 		<!-- Twitter/Slack cards: -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@zackjewell">
@@ -51,39 +60,36 @@
 		<meta property="og:description" content="Designer, Developer, Coffee drinker">
 
 
-		<meta name="twitter:image" content="http://zackjewell.net/_assets/img/card.png">
+		<meta name="twitter:image" content="/_assets/img/card.png">
 		<meta name="twitter:image:alt" content="I like websites">
-		<meta property="og:image" content="http://zackjewell.net/_assets/img/card.png">
+		<meta property="og:image" content="/_assets/img/card.png">
 		<meta property="og:image:alt" content="I like websites">
 
 		<meta name="author" content="Zack Jewell">
-
+		
 		<link rel="stylesheet" type="text/css" href="/_assets/css/all.css">
-		<link rel="stylesheet" type="text/css" href="/_assets/css/resume.css">
 	</head>
+	
 	<body>
-		
 		<main role="main">
-		
+		<main role="main">
             <div class="body">
-                <header>
-                    <h1>The Personal Disquisition of <span class="shaded">Zach Jewell</span></h1>
-                </header>
+                
+						
+<header>
+	<h1 class="shaded">The Personal Disquisition of<br> Zachary Jewell</h1>
+	<div class="intro">
+		<p class="lede">Designer, Developer, Coffee drinker</p>
+		<ul class="menu"></ul>
+	</div>
+</header>
 
-                <div class="intro">
-                    <p class="lede">Designer, Developer, Coffee drinker</p>
-                    <ul class="menu"></ul>
-                </div>
-
-				<section class="case sub-dailey-precast" role="region" aria-labelledby="date-dailey-precast" aria-describedby="place-dailey-precast">
-					
+				<section class="sub sub-dailey-precast" role="region" aria-labelledby="date-dailey-precast" aria-describedby="place-dailey-precast">
 					<div class="section-head">
 						<h2 class="section-hed shaded" id="place-dailey-precast">Dailey Precast</h4>
 					</div>	
 					
-					
 						<img class="study-img" src="/_assets/img/work/dailey_primary.jpg" alt="NaN">
-					
 					
 					<div class="copy">
 						<h2>Role</h2>
@@ -103,23 +109,64 @@
 
 					</div>
 					
-					
 						<img class="study-img" src="/_assets/img/work/dailey_interior.jpg" alt="NaN">
-					
 					
 					
 						<img class="study-img" src="/_assets/img/work/dailey_secondary.jpg" alt="NaN">
 					
-
 				</section>
-
 		</main>
     	
-        <script>
-			if( 'serviceWorker' in navigator && window.location.hostname !== "localhost" ) {
-				navigator.serviceWorker.register('sw.js');
+			<footer>
+			 	<p>&copy; 2020 Me. Zack. Don't steal my shit.	
+					<button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
+						Toggle Light Mode
+						<svg aria-hidden="true">
+							<title>Light Mode</title>
+							<use href="#sun"></use>
+						</svg>
+					</button>
+					<button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
+						Toggle Dark Mode
+						<svg aria-hidden="true">
+							<title>Dark Mode</title>
+							<use href="#moon"></use>
+						</svg>
+					</button>
+			  	</p>
+			</footer>
+		</main>
+
+		<script>
+			if (window.CSS && CSS.supports("color", "var(--primary)")) {
+			var toggleColorMode = function toggleColorMode(e) {
+				// Switch to Light Mode
+				if (e.currentTarget.classList.contains("light--hidden")) {
+				// Sets the custom html attribute
+				document.documentElement.setAttribute("color-mode", "light"); // Sets the user's preference in local storage
+
+				localStorage.setItem("color-mode", "light");
+				return;
+				}
+				/* Switch to Dark Mode
+				Sets the custom html attribute */
+				document.documentElement.setAttribute("color-mode", "dark"); // Sets the user's preference in local storage
+
+				localStorage.setItem("color-mode", "dark");
+			}; // Get the buttons in the DOM
+
+			var toggleColorButtons = document.querySelectorAll(".color-mode__btn"); // Set up event listeners
+
+			toggleColorButtons.forEach(function(btn) {
+				btn.addEventListener("click", toggleColorMode);
+			});
+			} else {
+			// If the feature isn't supported, then we hide the toggle buttons
+			var btnContainer = document.querySelector(".color-mode__header");
+			btnContainer.style.display = "none";
 			}
-		</script> 
-	
-    </body>
+		</script>
+
+	</body>
 </html>
+

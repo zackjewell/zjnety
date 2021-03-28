@@ -8,7 +8,7 @@ interior: bond_interior.jpg
 interior-alt: a screenshot of an interior page
 secondary: bond_secondary.jpg
 secondary-alt: a screenshot of the blog
-lede: "Designer, Developer, Coffee drinker"
+lede: "DESIGNER, DEVELOPER, COFFEE DRINKER, AND SOME OTHER STUFF"
 ---
 
 ### Role 

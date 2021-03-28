@@ -2,7 +2,7 @@
 	"use strict";
 
 	const version = "2";
-	const cacheName = version + "::hirewilto:";
+	const cacheName = version + "::hirezack:";
 
 	const staticCacheName = cacheName + "static";
 	const pagesCacheName = cacheName + "pages";
@@ -12,7 +12,7 @@
 		"/"
 	];
 	const staticAssets = [
-		'/_assets/css/fonts/TiemposTextWeb-Regular.woff2'
+		'/_assets/fonts/Supreme-Variable.woff2'
 	];
 
 	function updateStaticCache() {

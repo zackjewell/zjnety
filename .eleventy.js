@@ -10,15 +10,6 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
-	// Prior work experience
-	eleventyConfig.addCollection("exp", function(collection) {
-		return collection.getAllSorted().filter(function(item) {
-			return item.inputPath.match(/^\.\/_src\/exp\//) !== null;
-		}).sort(function(a, b) {
-			return a.data.start - b.data.start;
-		});
-	});
-
 	eleventyConfig.addPassthroughCopy("_src/_assets");
 	eleventyConfig.addPassthroughCopy("_src/sw.js");
 
