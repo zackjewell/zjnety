@@ -1,18 +1,16 @@
 		
 {% include "head.njk" %}
 
-	<div class="body">
+	<div class="body {{ pageClass }}">
 
 		{% include "header.njk" %}
 
-		<section class="sub {{ pageClass }}">
-			{{ layoutContent | safe }}
-		</section>
 		{% set sections = collections.sections | reverse %}
 		{%- for section in sections-%}
 			{% include "section.njk" %}
 		{%- endfor -%}
 
+		{% include "footer.njk" %}
+
 	</div>
 
-{% include "footer.njk" %}

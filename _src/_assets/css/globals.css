@@ -75,8 +75,14 @@ body {
 }
 
 footer {
+	margin-top: 2em;
+}
+
+footer span {
+	font-size: 0.875em;
 	text-align: left;
 }
+
 
 
 /* @media (prefers-color-scheme: dark) {

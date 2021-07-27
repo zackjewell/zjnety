@@ -25,6 +25,7 @@ ul {
 .case h2 { margin-bottom: 0.5em; }
 
 .section-case-studies {
+
   background: var(--gradient);
   background-image: -webkit-var(--gradient);
   background-image:    -moz-var(--gradient);

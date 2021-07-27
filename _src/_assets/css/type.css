@@ -103,7 +103,7 @@ p {
     text-decoration: underline;
 }
 
-.sub:first-of-type p {
+.section-start p {
     font-size: 1.5em;
     background: var(--gradient);
     background-image: -webkit-var(--gradient);
