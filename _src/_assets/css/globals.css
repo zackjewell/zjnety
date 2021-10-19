@@ -3,10 +3,10 @@
 :root[color-mode="light"] {
 	--tertiary: #F1F1EC;
 	--primary: #333BC1;
-	--secondary: #55C8B6;
+	--secondary: #de2ee4;
 	--text: #1C1C1C;
 	--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
-	--gradient: linear-gradient(226.96deg, #55C8B6 0%, #333BC1 97.59%);
+	--gradient: linear-gradient(226.96deg, #de2ee4 0%, #333BC1 97.59%);
 }
 :root[color-mode="light"] .light--hidden { display: none; }
   
@@ -30,9 +30,7 @@ footer .color-mode__btn {
     color: var(--tertiary);
     background-color: var(--text);
     border: none;
- }
-
-
+}
 
 *, *:before, *:after {
 	box-sizing: border-box;
@@ -74,16 +72,14 @@ body {
 	.body { grid-template-columns: repeat(10,1fr); }
 }
 
-footer {
-	margin-top: 2em;
+footer { 
+	margin: 2em 0;
 }
 
 footer span {
 	font-size: 0.875em;
 	text-align: left;
 }
-
-
 
 /* @media (prefers-color-scheme: dark) {
 	.lede {

@@ -8,10 +8,7 @@
 .study-img { margin-bottom: 2.8125em; }
 
 .study-img:nth-of-type(2) { margin-top: 2.8125em; }
-
-.case ul:nth-of-type(2) {
-  margin-bottom: 2.8125em;
-}
+.case ul:nth-of-type(2) { margin-bottom: 2.8125em; }
 
 ul {
   list-style: none;
@@ -25,7 +22,6 @@ ul {
 .case h2 { margin-bottom: 0.5em; }
 
 .section-case-studies {
-
   background: var(--gradient);
   background-image: -webkit-var(--gradient);
   background-image:    -moz-var(--gradient);
