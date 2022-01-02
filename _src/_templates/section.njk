@@ -1,11 +1,13 @@
-<section class="section-{{ section.data.pageClass }} sub">
-	<div class="section-head">
-		<h2 class="shaded">{{ section.data.title | safe }}</h2>
-	</div>
+<section class="sub {{ section.data.pageClass }}">
+	
+	<h2 class="shaded">{{ section.data.title | safe }}</h2>
+	
 	{% if section.data.img %}
-	<img src="/_assets/img/{{ section.data.img }}"{% if section.data.fullbleed %} class="fullbleed"{% endif %} alt="{{ section.data.alt}}" width="{{ section.data.width }}" height="{{ section.data.width }}">
+		<img src="/_assets/img/{{ section.data.img }}"{% if section.data.fullbleed %} class="fullbleed"{% endif %} alt="{{ section.data.alt}}" width="{{ section.data.width }}" height="{{ section.data.width }}">
 	{% endif %}
+	
 	<div class="copy">
 		{{ section.data.content | safe }}
 	</div>
+
 </section>

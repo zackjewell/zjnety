@@ -21,7 +21,7 @@ ul {
 
 .case h2 { margin-bottom: 0.5em; }
 
-.section-case-studies {
+.case-studies {
   background: var(--gradient);
   background-image: -webkit-var(--gradient);
   background-image:    -moz-var(--gradient);
@@ -32,31 +32,21 @@ ul {
   text-align: center; 
 }
 
-header { grid-column: 1/5; }
-.sub { grid-column: 1/2 ;}
-
-@media screen and (min-width: 31.25em) {
-  .sub { grid-column: 1/6;}
-}
+header, 
+.sub { grid-column: 1/10 ;}
 
 @media screen and (min-width: 39.125em) {
-  header { grid-column: 1/11; }
-  .sub { grid-column: 2/10;}
+  .sub { grid-column: 4/8;}
 }
 
 @media screen and (min-width: 48.875em) {
   header { 
-    text-align: center;
-    grid-column: 2/10; 
+    grid-column: 3/9; 
   }
-  header h1 { 
-    padding: 0.125em 0;
-    text-align: center;
-    font-size: 3em; 
-  }
+  
   img {
     float: right;
-    margin: 1em;
+    margin: -5em -15em 1em 1em;
   }
 }
 

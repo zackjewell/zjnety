@@ -1,14 +1,28 @@
 [aria-hidden="true"] { display: none; }
 
-:root {
-	--tertiary: #F1F1EC;
-	--primary: #333BC1;
-	--secondary: #de2ee4;
-	--text: #1C1C1C;
-	--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
-	--gradient: linear-gradient(226.96deg, #de2ee4 0%, #333BC1 97.59%);
+@media (prefers-color-scheme: light) {
+	:root {
+		--tertiary: #F5A227;
+		--primary: #333BC1;
+		--secondary: #ae9aaf;
+		--text: #1C1C1C;
+		--body-bg: #ffffff;
+		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
+		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));;
+	}
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+		--tertiary: #f8f697;
+		--primary: #55C8B6;
+		--secondary: #333BC1;
+		--text: #f1f1ee;
+		--body-bg: #000000;
+		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
+		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));;
+	}
+}
 
 *, *:before, *:after {
 	box-sizing: border-box;
@@ -26,13 +40,84 @@ a {
 
 body {
 	color: var(--text); 
-	background: var(--tertiary);
+	background: var(--gradient);
 	margin: 0 auto;
-	padding: 1.2em;
+	padding: 1em 0 0 0;
     position: relative;
     min-width: 100%;
     min-height: 100vh;
     height: auto;
+}
+
+main { 
+	background-color: var(--body-bg); 
+	padding: 0.5em;
+}
+
+h1 { 
+	font-family: 'Supreme', helvetica, sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: left;
+	position: relative;
+	font-style: italic;
+	overflow: hidden;
+}
+	
+h1:before {
+	content: "";
+	background-size: cover;
+	border-radius: 50%;
+	mix-blend-mode: luminosity;
+}
+
+@media screen and (min-width: 48.875em) {
+	h1 { height: 4.5em; }
+}
+
+h1 span {
+	display: block;
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+	
+h1 span:after {
+	content: "";
+	position: absolute;
+	height: 5px;
+	top: 50%;
+	right: 75%;
+	left: 0;
+	filter: blur(5px);
+}
+	
+.first {
+	color: var(--primary);
+	text-shadow: 0 0 0.5em var(--primary);
+}
+
+.first:after {
+	right: 95%;
+	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--primary), rgba(0, 255, 255, 0))
+}
+
+.second {
+	color: var(--tertiary);
+	text-shadow: 0 0 0.5em var(--tertiary);
+}
+
+.second:after {
+	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--tertiary), rgba(0, 255, 255, 0))
+}
+
+
+.third {
+	color: var(--secondary);
+	text-shadow: 0 0 0.5em var(--secondary);
+}
+
+.third:after {
+	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--secondary), rgba(0, 255, 255, 0))
 }
 
 .intro { margin-bottom: 3em; }
@@ -57,63 +142,4 @@ footer {
 footer span {
 	font-size: 0.875em;
 	text-align: left;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --site-theme: "dark"
-    }
-
-    :root:not([data-site-theme]) {
-        --color--background: hsl(0, 0%, 11.8%);
-        --color--background-raw: 30, 30, 30;
-        --color--background-alt: hsl(0, 0%, 27%);
-        --color--background-footer: hsl(0, 0%, 11%);
-        --color--text: hsl(0, 0%, 93%);
-        --color--text-alt: hsl(0, 0%, 84%);
-        --color--accent-primary: hsl(200, 75%, 64%);
-        --color--accent-primary-fuller: hsl(181, 75%, 64%);
-        --color--accent-primary-faded: hsl(234, 23%, 74%);
-        --color--logo-active: var(--color--text);
-        --color--logo-current: var(--color--text);
-        --color--logo-wordmark-current: var(--color--text);
-        --color--msg-important: hsl(202.4, 100%, 65.9%);
-        --nav--active-bg: linear-gradient(to top, rgba(var(--color--background-raw), 1) 50%, rgba(var(--color--background-raw), 0.0) 100%), url( "/dist/img/relief.svg" )
-    }
-}
-
-[data-site-theme=dark] {
-	--tertiary: #1C1C1C;
-	--primary: #55C8B6;
-	--secondary: #333BC1;
-	--text: #f1f1ec;
-	--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
-	--gradient: linear-gradient(226.96deg, #55C8B6 0%, #333BC1 97.59%);
-}
-
-[data-site-theme=light] {
-	--tertiary: #F1F1EC;
-	--primary: #333BC1;
-	--secondary: #de2ee4;
-	--text: #1C1C1C;
-	--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
-	--gradient: linear-gradient(226.96deg, #de2ee4 0%, #333BC1 97.59%);
-}
-:root[color-mode="light"] .light--hidden { display: none; }
-
-
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--tertiary: #1C1C1C;
-		--primary: #55C8B6;
-		--secondary: #333BC1;
-		--text: #f1f1ec;
-		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
-		--gradient: linear-gradient(226.96deg, #55C8B6 0%, #333BC1 97.59%);
-	}
-
-	:root {
-		--site-theme: "dark"
-	}
 }

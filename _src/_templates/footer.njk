@@ -1,52 +1,5 @@
-			<footer class="sub">
-			 	<p><span>&copy; 2020 Me. Zack. Don't steal my shit.</span>
-					<button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
-						Toggle Light Mode
-						<svg aria-hidden="true">
-							<title>Light Mode</title>
-							<use href="#sun"></use>
-						</svg>
-					</button>
-					<button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
-						Toggle Dark Mode
-						<svg aria-hidden="true">
-							<title>Dark Mode</title>
-							<use href="#moon"></use>
-						</svg>
-					</button>
-			  	</p>
-			</footer>
-		</main>
 
-		<script>
-			if (window.CSS && CSS.supports("color", "var(--primary)")) {
-			var toggleColorMode = function toggleColorMode(e) {
-				// Switch to Light Mode
-				if (e.currentTarget.classList.contains("light--hidden")) {
-				// Sets the custom html attribute
-				document.documentElement.setAttribute("color-mode", "light"); // Sets the user's preference in local storage
-				localStorage.setItem("color-mode", "light");
-				return;
-				}
-				/* Switch to Dark Mode
-				Sets the custom html attribute */
-				document.documentElement.setAttribute("color-mode", "dark"); // Sets the user's preference in local storage
-
-				localStorage.setItem("color-mode", "dark");
-			}; // Get the buttons in the DOM
-
-			var toggleColorButtons = document.querySelectorAll(".color-mode__btn"); // Set up event listeners
-
-			toggleColorButtons.forEach(function(btn) {
-				btn.addEventListener("click", toggleColorMode);
-			});
-			} else {
-			// If the feature isn't supported, then we hide the toggle buttons
-			var btnContainer = document.querySelector(".color-mode__header");
-			btnContainer.style.display = "none";
-			}
-		</script>
-
-	</body>
-</html>
-
+<footer class="sub">
+	<p><span>&copy; 2020 All Rights Reserved. By Me Zack. Don't steal my shit.</span></p>
+	<button class="btn-toggle">Toggle Color Scheme</button>
+</footer>
