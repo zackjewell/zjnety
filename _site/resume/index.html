@@ -10,6 +10,10 @@
 <meta name="description" content="I like websites">
 
 <meta name="application-name" content="Zack Jewell | Designer of all things web and web related">
+
+<meta name="theme-color" content="#333BC1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#55C8B6" media="(prefers-color-scheme: dark)">
+
 <link rel="manifest" href="/webappmanifest.json">
 
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/_assets/img/icons/icon-152.png">
@@ -18,13 +22,10 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/_assets/img/icons/icon-114.png">
 <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/_assets/img/icons/icon-167.png">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/_assets/img/icons/icon-180.png">
-
 <meta name="msapplication-TileImage" content="/_assets/img/icons/icon-144.png">
-<meta name="theme-color" content="#333BC1" media="(orefers-color-scheme: light)">
-<meta name="theme-color" content="#55C8B6" media="(orefers-color-scheme: dark)">
 <link rel="icon" type="image/png" href="/_assets/img/icons/icon-32.png" sizes="32x32">
 
-<script type="text/javascript" src="/_assets/js/main.js"></script>
+
 
 <script type="application/ld+json">
 	{
@@ -166,5 +167,10 @@
 
 <footer class="sub">
 	<p><span>&copy; 2020 All Rights Reserved. By Me Zack. Don't steal my shit.</span></p>
-	<button class="btn-toggle">Toggle Color Scheme</button>
+    <label class="theme-switch" for="checkbox">
+    	<input type="checkbox" id="checkbox" />
+    	<div class="slider round"></div>
+  	</label>
+    <em>Enable Dark Mode!</em>
 </footer>
+<script type="text/javascript" src="/_assets/js/main.js"></script>
