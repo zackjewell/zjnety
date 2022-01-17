@@ -6,9 +6,11 @@ const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 if (prefersLightScheme) {
     toggleSwitch.checked = false;
     localStorage.setItem('theme', 'light');
+    document.documentElement.setAttribute('data-site-theme', 'light');
 } else {
     toggleSwitch.checked = true;
     localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-site-theme', 'dark');
 }
 
 function switchTheme(e) {
