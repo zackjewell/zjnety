@@ -1,74 +1,63 @@
-<!doctype html>
-<html lang="en" class="fonts" color-mode="light">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<meta property="og:site_name" content="{{ data.title }}">
-		<link rel="canonical" href="https://www.zackjewell.net">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>{{ data.title }}</title>
-		<meta name="description" content="{{ data.description }}">
+<meta property="og:site_name" content="{{ data.title }}">
+<link rel="canonical" href="https://www.zackjewell.net">
 
-		<meta name="application-name" content="{{ data.title }}">
-		<link rel="manifest" href="/webappmanifest.json">
+<title>{{ data.title }}</title>
+<meta name="description" content="{{ data.description }}">
 
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/_assets/img/icons/icon-152.png">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/_assets/img/icons/icon-144.png">
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/_assets/img/icons/icon-120.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/_assets/img/icons/icon-114.png">
-		<link rel="apple-touch-icon-precomposed" sizes="167x167" href="/_assets/img/icons/icon-167.png">
-		<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/_assets/img/icons/icon-180.png">
-		
-		<meta name="msapplication-TileImage" content="/_assets/img/icons/icon-144.png">
-		<meta name="theme-color" content="#33146d">
-		<link rel="icon" type="image/png" href="/_assets/img/icons/icon-32.png" sizes="32x32">
+<meta name="application-name" content="{{ data.title }}">
 
-		<script type="application/ld+json">
-			{
-				"@context": "http://schema.org",
-				"@type": "Organization",
-				"url": "{{ data.url }}",
-				"title": "{{ data.title }}",
-				"author_name": "{{ data.author.name }}",
-				"logo": "{{ data.url }}/_assets/img/card.png",
-				"sameAs" : [
-					"https://twitter.com/zackjewell"
-				] 
-			}
-		</script>
+<meta name="theme-color" content="#333BC1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#55C8B6" media="(prefers-color-scheme: dark)">
 
-		<script>
-			if (
-				localStorage.getItem("color-mode") === "dark" || (window.matchMedia("(prefers-color-scheme: dark)").matches && !localStorage.getItem("color-mode"))
-			) {
-				document.documentElement.setAttribute("color-mode", "dark");
-			}
-		</script>
+<link rel="manifest" href="/webappmanifest.json">
 
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/_assets/img/icons/icon-152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/_assets/img/icons/icon-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/_assets/img/icons/icon-120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/_assets/img/icons/icon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="167x167" href="/_assets/img/icons/icon-167.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/_assets/img/icons/icon-180.png">
+<meta name="msapplication-TileImage" content="/_assets/img/icons/icon-144.png">
+<link rel="icon" type="image/png" href="/_assets/img/icons/icon-32.png" sizes="32x32">
 
-		<!-- Twitter/Slack cards: -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@zackjewell">
-		<meta name="twitter:creator" content="@zackjewell">
-		<meta property="og:site_name" content="{{ data.name }}">
-		<meta name="twitter:title" content="{{ data.title }}">
-		<meta property="og:title" content="{{ data.title }}">
-		<meta property="og:url" content="{{ data.url }}">
+{# <script type="text/javascript" src="/_assets/js/main.js"></script> #}
 
-		<meta name="twitter:description" content="{{ lede }}">
-		<meta property="og:description" content="{{ lede }}">
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"url": "{{ data.url }}",
+		"title": "{{ data.title }}",
+		"author_name": "{{ data.author.name }}",
+		"logo": "{{ data.url }}/_assets/img/card.png",
+		"sameAs" : [
+			"https://twitter.com/zackjewell"
+		] 
+	}
+</script>
+
+<!-- Twitter/Slack cards: -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@zackjewell">
+<meta name="twitter:creator" content="@zackjewell">
+<meta property="og:site_name" content="{{ data.name }}">
+<meta name="twitter:title" content="{{ data.title }}">
+<meta property="og:title" content="{{ data.title }}">
+<meta property="og:url" content="{{ data.url }}">
+
+<meta name="twitter:description" content="{{ lede }}">
+<meta property="og:description" content="{{ lede }}">
 
 
-		<meta name="twitter:image" content="/_assets/img/card.png">
-		<meta name="twitter:image:alt" content="{{ data.description }}">
-		<meta property="og:image" content="/_assets/img/card.png">
-		<meta property="og:image:alt" content="{{ data.description }}">
+<meta name="twitter:image" content="/_assets/img/card.png">
+<meta name="twitter:image:alt" content="{{ data.description }}">
+<meta property="og:image" content="/_assets/img/card.png">
+<meta property="og:image:alt" content="{{ data.description }}">
 
-		<meta name="author" content="{{ data.author.name }}">
-		
-		<link rel="stylesheet" type="text/css" href="/_assets/css/all.css">
-	</head>
-	
-	<body>
-		<main role="main">
+<meta name="author" content="{{ data.author.name }}">
+
+<link rel="stylesheet" type="text/css" href="/_assets/css/all.css">

@@ -21,39 +21,23 @@
 
 body { font-family:'Supreme', helvetica, sans-serif; }
 
-h1, h2, h3, h4 { color: var(--primary); }
+h1, h2, h3, h4 { 
+    color: var(--primary);
+}
 
 em {
     font-family:'Supreme', helvetica, sans-serif;
     font-style: italic;
 }
 
-header h1 {
-    background: var(--gradient);
-    background-image: -webkit-var(--gradient);
-    background-image:    -moz-var(--gradient);
-    background-image:     -ms-var(--gradient);
-    background-image:      -o-var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0,0,0,.15);
-    font-family: 'Supreme', helvetica, sans-serif;
-    font-size: 3em;
-    font-weight: bold;
-    text-align: left;
-
-    margin: 0;
+.section-head h2 { 
+    font-size: 1.75em; 
 }
-
-@media screen and (min-width: 25.75em) {
-    header h1 {
-      font-size: 2.75em; 
-    }
-}
-.section-head h2 { font-size: 1.75em; }
 
 .section-head h2,
-.copy h3 { margin: 1em 0 0.5em 0;}
+.copy h3 { 
+    margin: 1em 0 0.5em 0;
+}
 
 .lede {
     font-size: 1em;
@@ -84,7 +68,7 @@ p {
     margin: 0 0 1em 0;
 }
 
-.section-case-studies h2 { 
+.case-studies h2 { 
     margin: 0;
     color: #ffffff; 
     background-clip: unset;
@@ -92,18 +76,18 @@ p {
     -webkit-text-fill-color: #ffffff;
 }
 
-.section-case-studies .shaded { background:  none; }
+.case-studies .shaded { background:  none; }
 
-.section-case-studies ul li {
+.case-studies ul li {
     margin-bottom: 0.5em;
 }
 
-.section-case-studies ul li a { 
+.case-studies ul li a { 
     color: #ffffff;
     text-decoration: underline;
 }
 
-.section-start p {
+.start p {
     font-size: 1.5em;
     background: var(--gradient);
     background-image: -webkit-var(--gradient);

@@ -1,16 +1,29 @@
-		
-{% include "head.njk" %}
+<!doctype html>
+<html lang="en" class="fonts" data-site-theme="">
+	
+	<head>		
+		{% include "head.njk" %}
+	</head>
+	
+	<body>
+	
+		<main role="main">
+	
+			<div class="body {{ pageClass }}">
+	
+				{% include "header.njk" %}
 
-	<div class="body {{ pageClass }}">
+				{% set sections = collections.sections | reverse %}
+				{%- for section in sections-%}
+					{% include "section.njk" %}
+				{%- endfor -%}
 
-		{% include "header.njk" %}
+				{% include "footer.njk" %}
+	
+			</div>
+	
+		</main>
+	
+	</body>
 
-		{% set sections = collections.sections | reverse %}
-		{%- for section in sections-%}
-			{% include "section.njk" %}
-		{%- endfor -%}
-
-		{% include "footer.njk" %}
-
-	</div>
-
+</html>
