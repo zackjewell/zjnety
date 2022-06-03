@@ -1,106 +1,78 @@
-/* load some fonts yo */
-@font-face {
-    font-family: 'Supreme';
-    src: url('../fonts/Supreme-Variable.woff2') format('woff2'),
-         url('../fonts/Supreme-Variable.woff') format('woff'),
-         url('../fonts/Supreme-Variable.eot') format('eot'),
-         url('../fonts/Supreme-Variable.ttf') format('ttf');
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Supreme';
-    src: url('../fonts/Supreme-VariableItalic.woff2') format('woff2'),
-         url('../fonts/Supreme-VariableItalic.woff') format('woff'),
-         url('../fonts/Supreme-VariableItalic.eot') format('eot'),
-         url('../fonts/Supreme-VariableItalic.ttf') format('ttf');
-    font-style: italic;
-    font-display: swap;
-}
-
-body { font-family:'Supreme', helvetica, sans-serif; }
-
-h1, h2, h3, h4 { 
-    color: var(--primary);
-}
-
-em {
-    font-family:'Supreme', helvetica, sans-serif;
-    font-style: italic;
-}
-
-.section-head h2 { 
-    font-size: 1.75em; 
-}
-
-.section-head h2,
-.copy h3 { 
-    margin: 1em 0 0.5em 0;
-}
-
-.lede {
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-top: 2px solid var(--text);
-    border-bottom: 2px solid var(--text);
-    padding: 0.3125em 0;
-    margin: 0;
-    grid-column: 3;
-}
-
-.intro p {
-    margin: 0; 
-}
-
-.definition {
-    margin: 1.5em 0 0 0;
-}
-.definition h2 {
-    font-size: 1.5em;
-    margin: 0 0 0 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap'); 
 
 p {
+    --mono: "MONO" 1;
+    --casl: "CASL" 0;
+    --wght: "wght" 400;
+    --slnt: "slnt" 0;
+    --CRSV: "CRSV" 0.5;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV); 
+    font-family:'Recursive', helvetica, sans-serif;
     font-size: 1.15em;
     line-height: 1.5em;
     margin: 0 0 1em 0;
 }
 
-.case-studies h2 { 
-    margin: 0;
-    color: #ffffff; 
-    background-clip: unset;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: #ffffff;
+h2, h3, h4 { 
+    font-family:'Recursive', helvetica, sans-serif;
+    color: var(--primary);
+    --mono: "MONO" 1;
+    --casl: "CASL" 0;
+    --wght: "wght" 600;
+    --slnt: "slnt" -10;
+    --CRSV: "CRSV" 0;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
 }
 
-.case-studies .shaded { background:  none; }
-
-.case-studies ul li {
-    margin-bottom: 0.5em;
+h1 { 
+	font-family: 'Recursive', helvetica, sans-serif;
+	font-weight: 900;
+    font-size: 2.75em;
+	text-transform: uppercase;
+	text-align: left;
+	position: relative;
+	font-style: italic;
+	overflow: hidden;
 }
 
-.case-studies ul li a { 
-    color: #ffffff;
-    text-decoration: underline;
+h1:before {
+	content: "";
+	background-size: cover;
+	border-radius: 50%;
+	mix-blend-mode: luminosity;
 }
 
-.start p {
-    font-size: 1.5em;
-    background: var(--gradient);
-    background-image: -webkit-var(--gradient);
-    background-image:    -moz-var(--gradient);
-    background-image:     -ms-var(--gradient);
-    background-image:      -o-var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0,0,0,.15)
+@media screen and (min-width: 48.875em) {
+	h1 { height: 3.85em; }
 }
 
-/* 
-@media screen and (min-width: 57.75em) {
-    .sub .content { grid-column: 10/span 15; }
-} 
-*/
+h1 span {
+	display: block;
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+	
+h1 span:after {
+	content: "";
+	position: absolute;
+	height: 5px;
+	top: 50%;
+	right: 75%;
+	left: 0;
+	filter: blur(5px);
+}
+	
+.first {
+	color: var(--primary);
+	text-shadow: 0 0 0.5em var(--primary);
+}
+
+.first:after {
+	right: 95%;
+	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--primary), rgba(0, 255, 255, 0))
+}
+
+.second {
+	color: var(--tertiary);
+	text-shadow: 0 0 0.5em var(--tertiary);
+}

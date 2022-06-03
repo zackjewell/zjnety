@@ -144,6 +144,12 @@ h1 span:after {
 
 .intro { margin-bottom: 3em; }
 
+.intro p { 
+	margin: 0;
+	border-top: 2px solid var(--text); 
+	border-bottom: 2px solid var(--text);
+}
+
 @media screen and (min-width: 23.5em) {
 	.body {
 		display: grid;

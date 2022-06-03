@@ -1,10 +1,13 @@
+<!doctype html>
+<html lang="en" class="fonts">
+	<head>
+		{% include "head.njk" %}
+	</head>
+	<body>
 		
-{% include "head.njk" %}
-
-	<div class="body">
-
-		{% include "header.njk" %}
-
+		<main role="main">
+            <div class="body">
+				{% include "header.njk" %}	
 				<section class="job">
 					<div class="resume-info">
 						<h2 class="shaded">About</h2>
@@ -88,7 +91,27 @@
 					</div>
 				</section>
 
-            </div>
+				<section class="sub">
+					<div class="resume-info">
+						<h2 class="shaded">References/Accolades</h2>
+					</div>
+					<div class="resume-descript">
+						<p>Advanced skills in HTML5/CSS3, Adobe Creative Design Suite,Intermediate skills in Javascript, SCSS, Advanced skills in photography, Won the DDT Pro Ironman HeavyMetalWeight Title, Rescued a baby from a burning house (legit true)</p>
+					</div>
+				</section>
+
+
+				{% include "footer.njk" %}
+	
+			</div>
+	
 		</main>
     	
-{% include "footer.njk" %}
+        <script>
+			if( 'serviceWorker' in navigator && window.location.hostname !== "localhost" ) {
+				navigator.serviceWorker.register('sw.js');
+			}
+		</script> 
+	
+    </body>
+</html>

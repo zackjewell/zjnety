@@ -1,5 +1,7 @@
+<!doctype html>
+<html lang="en" class="fonts">
+	<head>
 		
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -62,10 +64,12 @@
 <meta name="author" content="Zack Jewell">
 
 <link rel="stylesheet" type="text/css" href="/_assets/css/all.css">
-
-	<div class="body">
-
-				
+	</head>
+	<body>
+		
+		<main role="main">
+            <div class="body">
+						
 <header>
 	<h1>
 		<span class="first">The</span>
@@ -76,8 +80,7 @@
 		<p class="lede">Designer, Developer, Coffee drinker</p>
 		<ul class="menu"></ul>
 	</div>
-</header>
-
+</header>	
 				<section class="job">
 					<div class="resume-info">
 						<h2 class="shaded">About</h2>
@@ -161,13 +164,33 @@
 					</div>
 				</section>
 
-            </div>
-		</main>
-    	
+				<section class="sub">
+					<div class="resume-info">
+						<h2 class="shaded">References/Accolades</h2>
+					</div>
+					<div class="resume-descript">
+						<p>Advanced skills in HTML5/CSS3, Adobe Creative Design Suite,Intermediate skills in Javascript, SCSS, Advanced skills in photography, Won the DDT Pro Ironman HeavyMetalWeight Title, Rescued a baby from a burning house (legit true)</p>
+					</div>
+				</section>
 
+
+				
 <footer class="sub">
 	<p><span>&copy; 2020 All Rights Reserved. By Me Zack. Don't steal my shit.</span></p>
 	<p><small>Party Trick: Toggle the Light/Dark theme on your device. If you don't have that...sorry.</small></p>
     
 </footer>
 
+	
+			</div>
+	
+		</main>
+    	
+        <script>
+			if( 'serviceWorker' in navigator && window.location.hostname !== "localhost" ) {
+				navigator.serviceWorker.register('sw.js');
+			}
+		</script> 
+	
+    </body>
+</html>
