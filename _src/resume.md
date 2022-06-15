@@ -8,6 +8,11 @@ lede: "Designer, Developer, Coffee drinker"
 ## About
 I am a Designer and Developer who thrives in dynamic, fast-paced environments, with strong experience working on teams as well as independently. My projects range from simple print pieces to complex responsive websites and web apps. I am passionate about the multi-device web and exploring the connection between aesthetics and function. I love talking about good design, helping others and I am always looking to learn more and expand my horizons.
 
+## Designer/Front-end Developer
+### Bindable
+#### Feb. 2020 - present
+I mainly work on the implementation of new partner websites and new features on our platform and partner sites. I use our exsisting templates that I customize based on the styles and requests from the partner. Part of my responsiblities also include helping with marketing design requests and helping maintain the front-end of the platform
+
 ## Principal
 ### Zack Jewell Design
 #### Jan. 2007 - present
