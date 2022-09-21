@@ -48,68 +48,37 @@ main {
 	padding: 0.5em;
 }
 	
-h1:before {
-	content: "";
-	background-size: cover;
-	border-radius: 50%;
-	mix-blend-mode: luminosity;
-}
-
-@media screen and (min-width: 48.875em) {
-	h1 { height: 4.5em; }
-}
-
-h1 span {
-	display: block;
-	-webkit-transform: rotate(-2deg);
-	transform: rotate(-2deg);
-}
-	
-h1 span:after {
-	content: "";
-	position: absolute;
-	height: 5px;
-	top: 50%;
-	right: 75%;
-	left: 0;
-	filter: blur(5px);
-}
-	
-.first {
-	color: var(--primary);
-	text-shadow: 0 0 0.5em var(--primary);
-}
-
-.first:after {
-	right: 95%;
-	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--primary), rgba(0, 255, 255, 0))
-}
-
-.second {
-	color: var(--tertiary);
-	text-shadow: 0 0 0.5em var(--tertiary);
-}
-
-.second:after {
-	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--tertiary), rgba(0, 255, 255, 0))
-}
-
-
-.third {
-	color: var(--secondary);
-	text-shadow: 0 0 0.5em var(--secondary);
-}
-
-.third:after {
-	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--secondary), rgba(0, 255, 255, 0))
-}
-
 .intro { margin-bottom: 3em; }
 
 .intro p { 
 	margin: 0;
 	border-top: 2px solid var(--text); 
 	border-bottom: 2px solid var(--text);
+}
+
+.menu ul {
+	margin: 0.25em;
+}
+
+.menu ul li {
+	margin: 0 0.5rem;
+}
+.menu ul li:first-child {
+	margin: 0 0.5rem 0 0;
+}
+
+.menu ul li a {
+	color: var(--tertiary);
+    --mono: "MONO" 1;
+    --casl: "CASL" 0;
+    --wght: "wght" 900;
+    --slnt: "slnt" 0;
+    --CRSV: "CRSV" 0;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV); 
+    font-family:'Recursive', helvetica, sans-serif;
+    font-size: 1.05em;
+	text-decoration: none;
+	letter-spacing: 1px;
 }
 
 @media screen and (min-width: 23.5em) {

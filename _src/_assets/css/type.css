@@ -40,7 +40,6 @@ h1 {
 	font-style: italic;
 	overflow: hidden;
 }
-
 h1:before {
 	content: "";
 	background-size: cover;
@@ -49,7 +48,10 @@ h1:before {
 }
 
 @media screen and (min-width: 48.875em) {
-	h1 { height: 3.85em; }
+	h1 { 
+		height: 4.5em;
+		padding: 0.5em 0;
+	}
 }
 
 h1 span {
@@ -63,7 +65,6 @@ h1 span:after {
 	position: absolute;
 	height: 5px;
 	top: 50%;
-	right: 75%;
 	left: 0;
 	filter: blur(5px);
 }
@@ -74,11 +75,24 @@ h1 span:after {
 }
 
 .first:after {
-	right: 95%;
 	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--primary), rgba(0, 255, 255, 0))
 }
 
 .second {
 	color: var(--tertiary);
-	text-shadow: 0 0 0.5em var(--tertiary);
+	text-shadow: 0 0 0.25em var(--tertiary);
+}
+
+.second:after {
+	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--tertiary), rgba(0, 255, 255, 0))
+}
+
+
+.third {
+	color: var(--secondary);
+	text-shadow: 0 0 0.5em var(--secondary);
+}
+
+.third:after {
+	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--secondary), rgba(0, 255, 255, 0))
 }
