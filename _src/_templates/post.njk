@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" class="fonts" data-site-theme="">
+	
+	<head>		
+		{% include "head.njk" %}
+	</head>
+	
+	<body>
+	
+		<main role="main">
+	
+			<div class="body {{ pageClass }}">
+				<section class="sub {{ data.pageClass }}">
+				{% include "header.njk" %}
+
+                <h2>{{ post.data.title }}</h2>
+                <p class="post-meta">
+                    <time>{{ post.data.date }}</time>
+                </p>
+               	{% if post.data.img %}
+		            <img src="/_assets/img/{{ post.data.img }}"{% if post.data.fullbleed %} class="fullbleed"{% endif %} alt="{{ post.data.alt}}" width="{{ post.data.width }}" height="{{ post.data.width }}">
+	            {% endif %}
+                
+                {{ content | safe }}
+				</section>
+				{% include "footer.njk" %}
+	
+			</div>
+	
+		</main>
+	
+	</body>
+
+</html>

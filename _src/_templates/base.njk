@@ -9,7 +9,7 @@
 	
 		<main role="main">
 	
-			<div class="body {{ pageClass }}">
+			<div class="page-content {{ pageClass }}">
 	
 				{% include "header.njk" %}
 
@@ -18,10 +18,17 @@
 					{% include "section.njk" %}
 				{%- endfor -%}
 
+				<div class="sub latest">
+					{% for post in collections.posts %}
+						<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+						<em>{{ post.data.date }}</em>
+					{% endfor %}
+				</div>
+
 				{% include "footer.njk" %}
 	
 			</div>
-	
+			
 		</main>
 	
 	</body>
