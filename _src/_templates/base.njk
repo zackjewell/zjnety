@@ -13,29 +13,10 @@
 	
 				{% include "header.njk" %}
 
-				<section class="sub {{ data.pageClass }}">
-					
-					{% if data.img %}
-						<img src="/_assets/img/{{ data.img }}"{% if data.fullbleed %} class="fullbleed"{% endif %} alt="{{ data.alt}}" width="{{ data.width }}" height="{{ data.width }}">
-					{% endif %}
-	
-					<div class="copy">
-						{{ content | safe }}
-					</div>
-
-					<div class="latest">
-						{% for post in collections.posts %}
-    						<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    						<em>{{ post.data.date }}</em>
-						{% endfor %}
-					</div>
-
-				</section>
-
-				{# {% set sections = collections.sections | reverse %}
+				{% set sections = collections.sections | reverse %}
 				{%- for section in sections-%}
 					{% include "section.njk" %}
-				{%- endfor -%} #}
+				{%- endfor -%}
 
 				{% include "footer.njk" %}
 	

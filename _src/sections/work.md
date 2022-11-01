@@ -1,10 +1,7 @@
 ---
 pageClass: work
-layout: base.njk
 title: "What have I worked on?"
-eleventyNavigation:
-    key: Work
-    order: 3
+order: 3
 img: sites.png
 alt: 
 width: 530

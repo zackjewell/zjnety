@@ -1,28 +1,10 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
-const fs = require("fs");
-
-// const pluginRss = require("@11ty/eleventy-plugin-rss");
-// const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-// const pluginNavigation = require("@11ty/eleventy-navigation");
-
 module.exports = function(eleventyConfig) {
-
 	const CleanCSS = require('clean-css');
-	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-	
+
 	// Index page sections
 	eleventyConfig.addCollection("sections", function(collection) {
 		return collection.getAllSorted().filter(function(item) {
 			return item.inputPath.match(/^\.\/_src\/sections\//) !== null;
-		}).sort(function(a, b) {
-			return b.data.order - a.data.order;
-		});
-	});
-
-	eleventyConfig.addCollection("posts", function(collection) {
-		return collection.getAllSorted().filter(function(item) {
-			return item.inputPath.match(/^\.\/_src\/posts\//) !== null;
 		}).sort(function(a, b) {
 			return b.data.order - a.data.order;
 		});
@@ -35,8 +17,7 @@ module.exports = function(eleventyConfig) {
 		'cssmin',
 		code => new CleanCSS({}).minify(code).styles
 	);
-	
-	
+
 	return {
 		templateFormats: [
 			"md",
@@ -60,5 +41,4 @@ module.exports = function(eleventyConfig) {
 			output: "_site"
 		}
 	};
-
 };
