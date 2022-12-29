@@ -19,6 +19,18 @@ module.exports = function(eleventyConfig) {
 			});
 		});
 
+	
+		const _ = require("lodash");
+
+		eleventyConfig.addCollection("postsByYear", (collection) => {
+		return _.chain(collection.getAllSorted())
+			.groupBy((post) => post.date.getFullYear())
+			.toPairs()
+			.reverse()
+			.value();
+		});
+
+
 	eleventyConfig.addPassthroughCopy("_src/_assets");
 	eleventyConfig.addPassthroughCopy("_src/sw.js");
 

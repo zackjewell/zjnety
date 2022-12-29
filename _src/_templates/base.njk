@@ -19,10 +19,13 @@
 				{%- endfor -%}
 
 				<div class="sub latest">
+					<h2>Latest Post</h2>
 					{% for post in collections.posts %}
-						<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+						<h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
 						<em>{{ post.data.date }}</em>
 					{% endfor %}
+
+					<p>...or check out the <a href="/archive/">Archive</a>
 				</div>
 
 				{% include "footer.njk" %}

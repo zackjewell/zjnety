@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="fonts" data-site-theme="">
+	
+	<head>		
+		{% include "head.njk" %}
+	</head>
+	
+	<body>
+	
+		<main role="main">
+	
+			<div class="page-content {{ pageClass }}">
+
+				{% include "header.njk" %}
+
+				<h2>Archive</h2>
+				<p>A list of everything I have written. I will organize this one day.</p>
+				<ul class="archive">
+					{% set currentYear = "" %}
+					{% for post in collections.posts | reverse %}
+					<li>
+						<h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
+						<p>{{ post.data.description }}</p>
+					</li>
+					{% endfor %}
+				</ul>
+
+				{% include "footer.njk" %}
+
+			</div>
+
+			
+		</main>
+	
+	</body>
+
+</html>
