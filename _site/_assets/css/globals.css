@@ -32,17 +32,6 @@ a {
 	font-style: italic;
 }
 
-body {
-	color: var(--text); 
-	background: var(--gradient);
-	margin: 0 auto;
-	padding: 1em 0 0 0;
-    position: relative;
-    min-width: 100%;
-    min-height: 100vh;
-    height: auto;
-}
-
 main { 
 	background-color: var(--body-bg); 
 	padding: 0.5em;
@@ -112,8 +101,14 @@ h1 span:after {
 	border-bottom: 2px solid var(--text);
 }
 
+.page-content {
+	display: grid;
+	grid-column-gap: 1em;
+	margin: 0 auto;
+}
+
 @media screen and (min-width: 23.5em) {
-	.body {
+	.page-content {
 		display: grid;
 		grid-template-columns: repeat(5,1fr);
 		grid-column-gap: 1em;
@@ -122,7 +117,7 @@ h1 span:after {
 }
 
 @media screen and (min-width: 39.0625em) {
-	.body { grid-template-columns: repeat(10,1fr); }
+	.page-content { grid-template-columns: repeat(10,1fr); }
 }
 
 footer { 
