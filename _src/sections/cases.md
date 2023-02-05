@@ -1,10 +1,12 @@
 ---
 pageClass: case-studies
-title: "Case Studies"
+title: 
 order: 4
 img: 
 alt: 
 ---
+
+## Case Studies
 
 * _[Carla Neggers](/case-study/carla-neggers)_
 * _[Bond and Des Voeux](/case-study/bond-des-voeux)_

@@ -33,6 +33,7 @@ a {
 }
 
 main { 
+	display: grid;
 	background-color: var(--body-bg); 
 	padding: 0.5em;
 }

@@ -23,14 +23,29 @@ ul {
 .case h2 { margin-bottom: 0.5em; }
 
 .case-studies {
-  background: var(--gradient);
-  background-image: -webkit-var(--gradient);
-  background-image:    -moz-var(--gradient);
-  background-image:     -ms-var(--gradient);
-  background-image:      -o-var(--gradient);
+  border: 1em solid var(--tertiary);
   padding: 2.5em;
   margin: 1em;
-  text-align: center; 
+  text-align: center;
+  color: #fff;
+}
+
+.case-studies a {
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.case-studies li {
+  margin-bottom: 0.5em;
+}
+
+.case-studies .shaded {
+  display: none;
+}
+
+.case-studies h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .page-content {
@@ -55,4 +70,25 @@ ul {
     float: right;
     margin: -5em -15em 1em 1em;
   }
+}
+
+.latest  h3 {
+  margin-bottom: 0.25em;
+}
+.latest p {
+  margin-top: 1em;
+}
+
+#post-header {
+  margin-bottom: 4em;
+}
+
+#post-header h3 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: bold;
+  margin: 0;
+}
+
+.archive {
+  margin-top: 4em;
 }
