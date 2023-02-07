@@ -10,6 +10,27 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
+		//Add Posts Collection
+		eleventyConfig.addCollection("posts", function(collection) {
+			return collection.getAllSorted().filter(function(item) {
+				return item.inputPath.match(/^\.\/_src\/posts\//) !== null;
+			}).sort(function(a, b) {
+				return b.data.order - a.data.order;
+			});
+		});
+
+	
+		const _ = require("lodash");
+
+		eleventyConfig.addCollection("postsByYear", (collection) => {
+		return _.chain(collection.getAllSorted())
+			.groupBy((post) => post.date.getFullYear())
+			.toPairs()
+			.reverse()
+			.value();
+		});
+
+
 	eleventyConfig.addPassthroughCopy("_src/_assets");
 	eleventyConfig.addPassthroughCopy("_src/sw.js");
 

@@ -1,27 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap'); 
-
-p, label, button {
-    --mono: "MONO" 1;
-    --casl: "CASL" 0;
-    --wght: "wght" 400;
-    --slnt: "slnt" 0;
-    --CRSV: "CRSV" 0.5;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV); 
-    font-family:'Recursive', helvetica, sans-serif;
-    font-size: 1.15em;
-    line-height: 1.5em;
-    margin: 0 0 1em 0;
+@font-face {
+	font-family:"iAWriterMonoS", 'Courier New', Courier, monospace;
+	src: url('./_assets/fonts/iAWriterMonoS-Regular.eot'); 
+	src: url('./_assets/fonts/iAWriterMonoS-Regular.woff');
+	src: url('./_assets/fonts/iAWriterMonoS-Regular.woff2');  
+}
+@font-face {
+	font-family:"iAWriterMonoS", 'Courier New', Courier, monospace;
+	font-weight: bold;
+	src: url('./_assets/fonts/iAWriterMonoS-Bold.eot'); 
+	src: url('./_assets/fonts/iAWriterMonoS-Bold.woff');
+	src: url('./_assets/fonts/iAWriterMonoS-Bold.woff2');   
+} 
+@font-face {
+	font-family:"iAWriterMonoS", 'Courier New', Courier, monospace;
+	font-style: italic;
+	src: url('./_assets/fonts/iAWriterMonoS-Italic.eot'); 
+	src: url('./_assets/fonts/iAWriterMonoS-Italic.woff');
+	src: url('./_assets/fonts/iAWriterMonoS-Italic.woff2');   
 }
 
-h2, h3, h4 { 
-    font-family:'Recursive', helvetica, sans-serif;
-    color: var(--primary);
-    --mono: "MONO" 1;
-    --casl: "CASL" 0;
-    --wght: "wght" 600;
-    --slnt: "slnt" -10;
-    --CRSV: "CRSV" 0;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+@font-face {
+	font-family:"iAWriterMonoS", 'Courier New', Courier, monospace;
+	font-style: italic;
+	src: url('./_assets/fonts/iAWriterMonoS-Italic.eot'); 
+	src: url('./_assets/fonts/iAWriterMonoS-Italic.woff');
+	src: url('./_assets/fonts/iAWriterMonoS-Italic.woff2');   
+}
+
+@font-face {
+	font-family:"iAWriterMonoS", 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-style: italic;
+	src: url('./_assets/fonts/iAWriterMonoS-BoldItalic.eot'); 
+	src: url('./_assets/fonts/iAWriterMonoS-BoldItalic.woff');
+	src: url('./_assets/fonts/iAWriterMonoS-BoldItalic.woff2');   
+}
+
+:root {
+	--font: "iAWriterMonoS", 'Courier New', Courier, monospace;
 }
 
 .resume-info h2, .resume-info h3 { 
@@ -29,16 +45,17 @@ h2, h3, h4 {
 }
 .resume-info h3, h4 { margin-top: 0; }
 
+body {
+	font-family: var(--font);
+}
 
 h1 { 
-	font-family: 'Recursive', helvetica, sans-serif;
-	font-weight: 900;
-    font-size: 2.75em;
+	font-weight: bold;
+    font-size: 2.25em;
 	text-transform: uppercase;
 	text-align: left;
 	position: relative;
 	font-style: italic;
-	overflow: hidden;
 }
 
 h1:before {
@@ -81,4 +98,22 @@ h1 span:after {
 .second {
 	color: var(--tertiary);
 	text-shadow: 0 0 0.5em var(--tertiary);
+}
+
+h2, h3 {
+	color: var(--tertiary);
+}
+
+p {
+	font-size: clamp(1.1875rem, 1.12rem + 0.33vw, 1.375rem);
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+a {
+	color: var(--text);
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset:.2ex
+}
 }

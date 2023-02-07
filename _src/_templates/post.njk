@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="fonts" data-site-theme="">
+	
+	<head>		
+		{% include "head.njk" %}
+	</head>
+	
+	<body>
+	
+		<main role="main">
+	
+			<div class="page-content post {{ pageClass }}">
+	
+				{% include "header.njk" %}
+
+				<div class="sub">
+					<header id="post-header">
+						<h3>{{ title }}</h3>
+						<em>{{ page.date.toUTCString('') }}</em>
+					</header>
+					{{content | safe}}
+				</div>
+
+				{% include "footer.njk" %}
+	
+			</div>
+			
+		</main>
+	
+	</body>
+
+</html>

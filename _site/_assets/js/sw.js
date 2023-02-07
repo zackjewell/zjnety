@@ -1,8 +1,18 @@
+
+/*
+This is a modified version of Ethan Marcotte’s SW (https://ethanmarcotte.com/theworkerofservices.js), which was a modified version of Jeremy Keith’s service worker (https://adactio.com/serviceworker.js), with a few additional edits borrowed from Filament Group’s. (https://www.filamentgroup.com/sw.js)
+
+Thanks to both Jeremy and Filament Group for this, and everything else they do.
+
+https://adactio.com/about/
+https://www.filamentgroup.com/
+*/
+
 (function() {
 	"use strict";
 
-	const version = "2";
-	const cacheName = version + "::hirezack:";
+	const version = "1";
+	const cacheName = version + "::zackjewell:";
 
 	const staticCacheName = cacheName + "static";
 	const pagesCacheName = cacheName + "pages";
@@ -11,8 +21,20 @@
 	const offlinePages = [
 		"/"
 	];
+
 	const staticAssets = [
-		'/_assets/fonts/Supreme-Variable.woff2'
+		'/_assets/fonts/fira-sans-regular.woff',
+		'/_assets/fonts/fira-sans-regular.woff2',
+		'/_assets/fonts/fira-sans-800.woff',
+		'/_assets/fonts/fira-sans-800.woff2',
+		'/_assets/fonts/fira-sans-800italic.woff',
+		'/_assets/fonts/fira-sans-800italic.woff2',
+		'/_assets/fonts/fira-sans-italic.woff',
+		'/_assets/fonts/fira-sans-italic.woff2',
+		'/_assets/css/all.css',
+		'/_assets/css/globals.css',
+		'/_assets/css/layout.css',
+		'/_assets/css/type.css'
 	];
 
 	function updateStaticCache() {

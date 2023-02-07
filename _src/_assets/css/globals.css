@@ -1,8 +1,8 @@
 html[data-theme="light"] {
 	--tertiary: #F5A227;
-	--primary: #333BC1;
+	--primary: #089ce7;
 	--secondary: #f200ff;
-	--text: #1C1C1C;
+	--text: #212121;
 	--body-bg: #ffffff;
 	--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
 	--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
@@ -11,9 +11,9 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
 	--tertiary: #f8f697;
 	--primary: #55C8B6;
-	--secondary: #333BC1;
+	--secondary: #089ce7;
 	--text: #f1f1ee;
-	--body-bg: #000000;
+	--body-bg: #212121;
 	--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
 	--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));;
 }
@@ -27,23 +27,8 @@ img {
 	height: auto;
 }
 
-a {	
-	color: var(--secondary); 
-	font-style: italic;
-}
-
-body {
-	color: var(--text); 
-	background: var(--gradient);
-	margin: 0 auto;
-	padding: 1em 0 0 0;
-    position: relative;
-    min-width: 100%;
-    min-height: 100vh;
-    height: auto;
-}
-
 main { 
+	display: grid;
 	background-color: var(--body-bg); 
 	padding: 0.5em;
 }
@@ -112,17 +97,10 @@ h1 span:after {
 	border-bottom: 2px solid var(--text);
 }
 
-@media screen and (min-width: 23.5em) {
-	.body {
-		display: grid;
-		grid-template-columns: repeat(5,1fr);
-		grid-column-gap: 1em;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (min-width: 39.0625em) {
-	.body { grid-template-columns: repeat(10,1fr); }
+.page-content {
+	display: grid;
+	grid-column-gap: 1em;
+	margin: 0 auto;
 }
 
 footer { 
