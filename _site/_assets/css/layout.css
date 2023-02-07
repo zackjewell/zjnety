@@ -54,7 +54,13 @@ ul {
 	padding: 1em 0 0 0;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 23.5em) {
+	.page-content {
+		display: grid;
+		grid-template-columns: repeat(10,1fr);
+		grid-column-gap: 1em;
+		margin: 0 auto;
+	}
 
   header { 
     grid-column: 2/span 8; 
@@ -65,11 +71,14 @@ ul {
   .sub:nth-of-type(2), .sub:nth-of-type(4) { grid-column: 2/span 5;}
   .sub:nth-of-type(3), .sub:nth-of-type(5) { grid-column: 3/span 5;}
 
-
   img {
     float: right;
     margin: -5em -15em 1em 1em;
   }
+}
+
+@media screen and (min-width: 50em) {
+
 }
 
 .latest  h3 {
