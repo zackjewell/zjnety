@@ -25,7 +25,7 @@ const setPreference = () => {
 
 const reflectPreference = () => {
   document.firstElementChild
-    .setAttribute('data-theme', theme.value)
+    .setAttribute('data-site-theme', theme.value)
 
   document
     .querySelector('#theme-toggle')
