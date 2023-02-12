@@ -9,6 +9,7 @@ module.exports = function(grunt) {
 			src: [
 				'_src/_assets/css/type.css',
 				'_src/_assets/css/globals.css',
+				'_src/_assets/css/normalize.css',
 				'_src/_assets/css/layout.css'
 				
 			],
