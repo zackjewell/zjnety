@@ -129,7 +129,7 @@ h1 span:after {
 	background: linear-gradient(to right, rgba(0, 255, 255, 0), var(--secondary), rgba(0, 255, 255, 0))
 }
 
-.intro { margin-bottom: 3em; }
+header { margin-bottom: 3em; }
 
 .intro p { 
 	margin: 0;
@@ -163,9 +163,8 @@ footer span {
 	font-size: 0.85em;
 	--icon-fill: rgb(69, 77, 84);
 	--icon-fill-hover: rgb(34, 38, 42);
-	background: var(--text);
-	border: 1px solid var(--text);
-	color: var(--body-bg);
+	background: #212121;
+	color: #ffffff;
 	border-radius: 5px;
 	padding: 2px;
 	cursor: pointer;

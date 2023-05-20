@@ -102,13 +102,18 @@ h1 span:after {
 
 h2, h3 {
 	color: var(--tertiary);
+	margin: 0 0 0.25em 0;
 }
 
 p {
 	font-size: clamp(1.1875rem, 1.12rem + 0.33vw, 1.375rem);
 	font-weight: 400;
 	line-height: 1.6;
+	margin: 0 0 1em 0;
 }
+
+p:last-of-type { margin: 0 0 0 0; }
+
 
 a {
 	color: var(--text);
@@ -116,4 +121,15 @@ a {
     text-decoration-thickness: 2px;
     text-underline-offset:.2ex
 }
+
+.archive h3 {
+	font-size: clamp(1.17em, 33vw, 1.33em);
+}
+
+.archive p {
+	margin: 0.25em 0;
+}
+
+.archive a {
+	text-align: right;
 }
