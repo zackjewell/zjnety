@@ -1,33 +1,17 @@
-:root {
-	--site-theme: "light";
-	--tertiary: #F5A227;
-	--primary: #089ce7;
-	--secondary: #f200ff;
-	--text: #212121;
-	--body-bg: #ffffff;
-	--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
-	--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
-		--site-theme: "dark";
-		--tertiary: #f8f697;
-		--primary: #55C8B6;
-		--secondary: #089ce7;
-		--text: #f1f1ee;
+		/* #55c8b7 */
+		--primary: hsla(171, 51%, 56%, 1);
+		--primary: oklch(76.24% 0.107 181.99);
+		/* #089ce7 */
+		--secondary: hsla(200, 93%, 47%, 1);
+		--secondary: oklch(66.23% 0.153 241.12);
+		/* #f8f697 */
+		--tertiary: hsla(59, 87%, 78%, 1);
+		--tertiary: oklch(95.42% 0.117 107.38);
+		--text: #fff;
 		--body-bg: #212121;
 		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
-		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
-	}
-	:root[data-site-theme="light"] {
-		--site-theme: "light";
-		--tertiary: #F5A227;
-		--primary: #089ce7;
-		--secondary: #f200ff;
-		--text: #212121;
-		--body-bg: #ffffff;
-		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
 		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
 	}
 }
@@ -35,22 +19,18 @@
 @media (prefers-color-scheme: light) {
 	:root {
 		--site-theme: "light";
-		--tertiary: #F5A227;
-		--primary: #089ce7;
-		--secondary: #f200ff;
+		/* #089ce7 */
+		--primary: hsla(200, 93%, 47%, 1);
+		--primary: oklch(66.23% 0.153 241.12);
+		/* #f201ff */
+		--secondary: hsla(297, 100%, 50%, 1);
+		--secondary: oklch(68.23% 0.318 325.52);
+		/* #f5a226 */
+		--tertiary: hsla(36, 91%, 55%, 1);
+		--tertiary: oklch(77.66% 0.158 70.3);
 		--text: #212121;
 		--body-bg: #ffffff;
 		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
-		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
-	}
-	:root[data-site-theme="dark"] {
-		--site-theme: "dark";
-		--tertiary: #f8f697;
-		--primary: #55C8B6;
-		--secondary: #089ce7;
-		--text: #f1f1ee;
-		--body-bg: #212121;
-		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
 		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
 	}
 }
