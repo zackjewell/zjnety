@@ -20,6 +20,7 @@
 						{% for post in collections.posts | reverse %}
 						<li>
 							<h3><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h3>
+							<p>{{ post.data.date }}</p>
 							<p>{{ post.data.description }}</p>
 							<a href="{{ post.url | url }}">Continue reading</a>
 						</li>
