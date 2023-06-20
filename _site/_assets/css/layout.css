@@ -68,8 +68,8 @@ ul {
 
   .sub:first-of-type { grid-column: 3/span 5;}
   
-  .sub:nth-of-type(2), .sub:nth-of-type(4) { grid-column: 2/span 5;}
-  .sub:nth-of-type(3), .sub:nth-of-type(5) { grid-column: 3/span 5;}
+ .sub { grid-column: 2/span 5;}
+  .sub:nth-of-type(3), .sub:nth-of-type(5) { grid-column: 3/span 5;} */
 
   .sub:has(img) img {
     float: right;
