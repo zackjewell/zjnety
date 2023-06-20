@@ -1,7 +1,7 @@
 ---
 pageClass: contact
 title: "Let’s talk"
-order: 5
+order: 4
 ---
 
 Ask me about how I can help you and your company and ask me won a wrestling championship…— No really. I did. I can provide video.

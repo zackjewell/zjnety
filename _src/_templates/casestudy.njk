@@ -1,17 +1,31 @@
-{% include "head.njk" %}
+<!doctype html>
+<html lang="en" class="fonts" data-site-theme="">
+	
+	<head>		
+		{% include "head.njk" %}
+	</head>
+	
+	<body>
+	
 		<main role="main">
-            <div class="body">
-                
+	
+			<div class="page-content {{ pageClass }}">
+	
 				{% include "header.njk" %}
 
-				<section class="sub sub-{{ pageClass }}" role="region" aria-labelledby="date-{{ pageClass }}" aria-describedby="place-{{ pageClass }}">
-					<div class="section-head">
-						<h2 class="section-hed shaded" id="place-{{ pageClass }}">{{ title | safe }}</h4>
-					</div>	
+				<div class="sub section-head">
+					<h2 class="section-hed shaded" id="place-{{ pageClass }}">{{ title | safe }}</h4>
+				</div>
+				{% if about %}
+					<figure>
+						<img class="about-img" src="/_assets/img/{{ img }}" alt="{{ img-alt }}">
+						<figcaption>{{ img-alt }}</figcaption>
+					</figure>
+				{% endif  %}
 					{% if img %}
 						<img class="study-img" src="/_assets/img/work/{{ img }}" alt="{{ img-alt }}">
 					{% endif %}
-					<div class="copy">
+					<div class="sub copy">
 						{{ content | safe }}
 					</div>
 					{% if interior %}
@@ -20,7 +34,13 @@
 					{% if secondary %}
 						<img class="study-img" src="/_assets/img/work/{{ secondary }}" alt="{{ secondary-alt }}">
 					{% endif %}
-				</section>
+
+				{% include "footer.njk" %}
+	
+			</div>
+			
 		</main>
-    	
-{% include "footer.njk" %}
+	
+	</body>
+
+</html>

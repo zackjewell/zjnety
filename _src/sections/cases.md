@@ -1,7 +1,7 @@
 ---
 pageClass: case-studies
 title: 
-order: 4
+order: 3
 img: 
 alt: 
 ---
