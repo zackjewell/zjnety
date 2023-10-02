@@ -1,6 +1,9 @@
 module.exports = function(eleventyConfig) {
 	const CleanCSS = require('clean-css');
 
+	eleventyConfig.addPassthroughCopy({ '_src/robots.txt': '/robots.txt' });
+
+
 	// Index page sections
 	eleventyConfig.addCollection("sections", function(collection) {
 		return collection.getAllSorted().filter(function(item) {
