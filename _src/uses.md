@@ -1,6 +1,6 @@
 ---
 pageClass: uses
-layout: casestudy.njk
+layout: interior.njk
 subhed: "I am a Web Designer and Front-end Developer."
 lede: "Designer, Developer, Coffee drinker"
 ---
@@ -16,7 +16,7 @@ I recently found the site [uses.tech](http://uses.tech) and I fell in love with 
 ## Software
 - **Visual Studio Code:** The best. Easy to use. Expandable. I could list the Extensions I use but I keep it pretty simple around here. If you think I am crazy then hit me up and tell me what I should use.
 - **Firefox:** I use this as my main browser. I do most of my browsing and development work here. I will swap to Chrome and Safari when I want/need to test in other things. Might look at Edge too. 
-- **Apple Music:** I used Spotify forever but some app changes and me getting an Apple Watch made me rethink this. I don’t keep a lot of playlists and pretty much just shuffle artists or albums.
+- **Apple Music:** Music. I'd use Spotify but I like this better plus moving playlists over is a complete nightmare.
 - **Figma/Sketch/Illustrator:** I go between all of these. I use Figma the most because it is incredibly easy to use and runs in a browser. Something about using the thing I am designing for…makes sense you know? Illustrator is a great tool for some things and I have the occasional print project that pops up and this is invaluable.
 - **Discord/Slack:** Great for communication and interacting with communities and my friends.
 - **1Password:** Much like Things I have a hard time remembering my life before this. The Firefox Extension is the best version too.
