@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or metadata.title }}</title>
   <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
+  {# Creates inline CSS #}
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}

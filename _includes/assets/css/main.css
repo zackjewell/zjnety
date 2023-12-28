@@ -1,0 +1,15 @@
+/* Main Styles Go Here. Also in inline.css */
+
+/* Its 2024 why do I need this still? */
+*, *:before, *:after { box-sizing: border-box; }
+
+img, picture {
+	max-width: 100%;
+	height: auto;
+}
+
+main { 
+	display: grid;
+	background-color: var(--body-bg); 
+	padding: 0.5em;
+}
