@@ -1,6 +1,28 @@
 <footer>
-  <small>
-    Created by <a href="https://danurbanowicz.com">Dan Urbanowicz</a>.
-    Check out the <a href="{{ pkg.repository.url }}">GitHub project</a>. Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
-  </small>
+  {# <ul class="modes-list">
+    <li>
+      <input id="system-button" type="radio" name="theme-chooser" value="auto">
+      <label for="mode-toggle-auto">
+        SYSTEM ICON
+      </label>
+    </li>
+    <li>
+      <input id="light-button" type="radio" name="theme-chooser" value="light">
+      <label for="mode-toggle-light">
+        light ICON
+      </label>
+    </li>
+    <li>
+      <input id="dark-button" type="radio" name="theme-chooser" value="dark">
+      <label for="mode-toggle-dark">
+        dark ICON
+      </label>
+    </li>
+  </ul> #}
 </footer>
+
+{# Create inline JS #}
+  {# {% set js %}
+    {% include "assets/js/inline.js" %}
+  {% endset %}
+  <script>{{ js | jsmin | safe }}</script> #}
