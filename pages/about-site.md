@@ -1,13 +1,12 @@
 ---
-layout: layouts/home.njk
-title: Home
-date: 2016-01-01T00:00:00.000Z
-permalink: /
+title: About This Site
+metaDescription: This is a sample meta description. If one is not present in your page/post's front matter, the default metadata.description will be used instead.
+date: 2017-01-01T00:00:00.000Z
+permalink: /about/index.html
 eleventyNavigation:
-  key: Home
-  order: 0
+  key: About This Site
+  order: 1
 ---
-# Welcome
 
 This is a template for building a simple blog website with the [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com).
 
@@ -20,3 +19,8 @@ For more info on installation and usage, view the [project repo]({{ pkg.reposito
 Or click the button below to deploy your own copy of this project to Netlify.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+
+<small>
+  Created by <a href="https://danurbanowicz.com">Dan Urbanowicz</a>.
+  Check out the <a href="{{ pkg.repository.url }}">GitHub project</a>. Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
+</small>
