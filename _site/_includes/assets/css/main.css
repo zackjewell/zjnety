@@ -107,3 +107,21 @@ nav ul li .active {
 	border-left: 3px solid var(--tertiary);
 	padding-left: 5px;
 }
+
+.post {
+	margin-block-end: 2.25em;
+}
+
+.post h2 {
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+}
+
+.post h2 a {
+	color: var(--primary);
+	margin-block-start: 0;
+}
+
+.post p {
+	margin-block-start: 0;
+}
