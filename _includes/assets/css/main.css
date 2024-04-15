@@ -36,74 +36,22 @@ body {
 	}
 }
 
-/* Type Styles */
-.site-title {
-    font-size: clamp(1.5em, 5vw, 1.7em);
-    line-height: 1.25em;
-    background-color: var(--text);
-	transform: skew(-5deg) rotate(-5deg);
-}
-.site-title a {
-    color: var(--body-bg);
-    text-decoration: none;
-}
-
 @media screen and (min-width: 40em) {
 	header {
 		position: fixed;
 		width: 20vw;
 		max-width: 220px;
-		padding: 1em;
+		padding: 4em 1em;
 	}	
 
 	.container {
 		display: grid;
 		grid-template-columns: minmax(220px,20vw) 1fr;
+		margin-left: 2rem;
 	}
 	 .container main {
 		max-width: 80vw;
 		grid-column-start: 2;
 		position: relative;
-		margin-left: 2rem;
 	 }
-	
-	nav {
-		display: block;
-		font-size: 1.1em;
-
-	}
-
-	nav ul {
-		display: grid;
-		grid-template-columns: none;
-	}
-}
-
-
-/* Nav Garbo */
-
-nav {
-	margin-top: 4ch;
-}
-
-nav ul {
-	justify-content: flex-start;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-nav ul li {
-	padding-left: 0.65em;
-	margin-block-end: 0.5em;
-}
-
-nav ul li a {
-	text-decoration: none;
-	color: var(--text);
-}
-
-nav ul li .active {
-	border-left: 3px solid var(--tertiary);
-	padding-left: 5px;
 }

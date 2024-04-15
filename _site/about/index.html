@@ -6,16 +6,15 @@
   <meta name="generator" content="Eleventy v2.0.1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark" />
-  
   <title>About This Site</title>
   <meta name="description" content="This is a sample meta description. If one is not present in your page/post&#39;s front matter, the default metadata.description will be used instead.">
   
-  <link rel="stylesheet" as="style" href="../_includes/assets/css/main.css" />
-  <link rel="preload" as="style" href="../_includes/assets/css/main.css" />
+  <link rel="stylesheet" as="style" href="_includes/assets/css/main.css" />
+  <link rel="preload" as="style" href="_includes/assets/css/main.css" />
 
   
   
-  <style>@import url(https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);:root{--font:"Spectral","Times New Roman",Times,Baskerville,Georgia,serif;--gap:1.5em;--fluid-gap:clamp(0.75em, 3vw, 1.5em)}@media (prefers-color-scheme:dark){:root{--tertiary:#f8f697;--primary:#55C8B6;--secondary:#089ce7;--text:#f1f1ee;--body-bg:#212121;--box-shadow:20px 20px 60px #1d1d1d,-20px -20px 60px #272727;--gradient:linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary))}}@media (prefers-color-scheme:light){:root{--tertiary:#F5A227;--primary:#089ce7;--secondary:#f200ff;--text:#212121;--body-bg:#ffffff;--box-shadow:20px 20px 60px #cacaca,-20px -20px 60px #ffffff;--gradient:linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary))}}body{font-size:100%;font-family:var(--font)}</style>
+  <style>@font-face{font-family:iAWriterMonoS,'Courier New',Courier,monospace;src:url('../fonts/iAWriterMonoS-Regular.eot');src:url('../fonts/iAWriterMonoS-Regular.woff');src:url('../fonts/iAWriterMonoS-Regular.woff2')}@font-face{font-family:iAWriterMonoS,'Courier New',Courier,monospace;font-weight:700;src:url('../fonts/iAWriterMonoS-Bold.eot');src:url('../fonts/iAWriterMonoS-Bold.woff');src:url('../fonts/iAWriterMonoS-Bold.woff2')}@font-face{font-family:iAWriterMonoS,'Courier New',Courier,monospace;font-style:italic;src:url('../fonts/iAWriterMonoS-Italic.eot');src:url('../fonts/iAWriterMonoS-Italic.woff');src:url('../fonts/iAWriterMonoS-Italic.woff2')}@font-face{font-family:iAWriterMonoS,'Courier New',Courier,monospace;font-weight:700;font-style:italic;src:url('../fonts/iAWriterMonoS-BoldItalic.eot');src:url('../fonts/iAWriterMonoS-BoldItalic.woff');src:url('../fonts/iAWriterMonoS-BoldItalic.woff2')}:root{--font:"iAWriterMonoS",'Courier New',Courier,monospace;--gap:1.5em;--fluid-gap:clamp(0.75em, 3vw, 1.5em)}@media (prefers-color-scheme:dark){:root{--tertiary:#f8f697;--primary:#55C8B6;--secondary:#089ce7;--text:#f1f1ee;--body-bg:#212121;--box-shadow:20px 20px 60px #1d1d1d,-20px -20px 60px #272727;--gradient:linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary))}}@media (prefers-color-scheme:light){:root{--tertiary:#F5A227;--primary:#089ce7;--secondary:#f200ff;--text:#212121;--body-bg:#ffffff;--box-shadow:20px 20px 60px #cacaca,-20px -20px 60px #ffffff;--gradient:linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary))}}body{font-size:100%;font-family:var(--font)}nav{display:flex}nav ul{align-items:left;display:flex;flex-wrap:wrap;gap:calc(var(--fluid-gap)/ 2) var(--gap);list-style-type:none;padding-left:0}nav ul li{margin-bottom:calc(var(--gap)/ 2)}nav ul a{color:var(--accent)}</style>
 
 </head>
 
@@ -23,20 +22,20 @@
 	<body>
 
 		<header>
-			<h1 class="site-title">
+			<em>
 				<a href="/">The Personal Disquisition of Zachary Jewell</a>
-			</h1>
+			</em>
 			<nav>
   
   <ul>
       <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about/" data-current="current item">About This Site</a>
+      </li>
+      <li>
         <a href="/blog/">Blog</a>
-      </li>
-      <li>
-        <a href="/about-me/">About Me</a>
-      </li>
-      <li>
-        <a href="/about/" class="active">About This Site</a>
       </li>
       <li>
         <a href="/contact/">Contact</a>
@@ -50,12 +49,6 @@
 			<main>
 				<h1>About This Site</h1>
 
-<p>This is a template for building a simple blog website with the <a href="https://www.11ty.dev">Eleventy static site generator</a>, with deployment to <a href="https://www.netlify.com">Netlify</a>.</p>
-<p>Includes <a href="https://www.decapcms.org">Decap CMS</a> for WYSIWYG content editing, and <a href="https://www.netlify.com/docs/form-handling">Netlify Forms</a> for processing your site's form data.</p>
-<p><a href="/admin/">Log in to the Decap CMS dashboard</a></p>
-<p>For more info on installation and usage, view the <a href="https://github.com/danurbanowicz/eleventy-netlify-boilerplate">project repo</a> on GitHub.</p>
-<p>Or click the button below to deploy your own copy of this project to Netlify.</p>
-<p><a href="https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a></p>
 <p>&lt;small&gt;<br>
 Created by &lt;a href=&quot;<a href="https://danurbanowicz.com">https://danurbanowicz.com</a>&quot;&gt;Dan Urbanowicz&lt;/a&gt;.<br>
 Check out the &lt;a href=&quot;<a href="https://github.com/danurbanowicz/eleventy-netlify-boilerplate">https://github.com/danurbanowicz/eleventy-netlify-boilerplate</a>&quot;&gt;GitHub project&lt;/a&gt;. Built with &lt;a href=&quot;<a href="https://www.11ty.dev/">https://www.11ty.dev/</a>&quot;&gt;Eleventy v2.0.1&lt;/a&gt;<br>
