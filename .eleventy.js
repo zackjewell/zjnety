@@ -75,6 +75,8 @@ module.exports = function(eleventyConfig) {
   //   return content;
   // });
 
+
+  eleventyConfig.addPassthroughCopy({ 'static/robots.txt': '/robots.txt' });
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("static/img");
