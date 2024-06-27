@@ -5,8 +5,12 @@ date: 2017-01-01T00:00:00.000Z
 permalink: /about-this-site/index.html
 eleventyNavigation:
   key: About This Site
-  order: 1
+  order: 2
 ---
+
+This website is built on Eleventy static site generator hosted on Netlify. I used the Netlify boilerplate template. It was a good starting point for what I wanted to do with this site.
+
+The template included decap cms to help with updat
 
 This is a template for building a simple blog website with the [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com).
 

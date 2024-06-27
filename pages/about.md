@@ -8,8 +8,8 @@ eleventyNavigation:
   order: 1
 ---
 
+![bear](https://placebear.com/400/300)
 
-  <small>
-    Created by <a href="https://danurbanowicz.com">Dan Urbanowicz</a>.
-    Check out the <a href="{{ pkg.repository.url }}">GitHub project</a>. Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
-  </small>
+Hey. Hi. I am Zachary or Zack (Why a K? Long story.) I am Web and UI Designer and Developer for [Bindable](https://www.bindable.com). I live in Boston, MA. 
+
+When I am not working I can be found at the gym, at the movies and diving into my photography. I love both digital and film photography and enjoy both. I am always looking for new and interesting ways to use and further develop my skills not only in the web but also as a photographer.

@@ -38,7 +38,7 @@ body {
 
 /* Type Styles */
 .site-title {
-    font-size: clamp(1.5em, 5vw, 1.7em);
+    font-size: clamp(1.45em, 0.5vw, 1.7em);
     line-height: 1.25em;
     background-color: var(--text);
 	transform: skew(-5deg) rotate(-5deg);
@@ -58,7 +58,7 @@ body {
 
 	.container {
 		display: grid;
-		grid-template-columns: minmax(220px,20vw) 1fr;
+		grid-template-columns: minmax(250px, 20vw) 1fr;
 	}
 	 .container main {
 		max-width: 80vw;
