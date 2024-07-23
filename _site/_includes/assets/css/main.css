@@ -141,3 +141,66 @@ nav ul li .active {
 .post p {
 	margin-block-start: 0;
 }
+
+/* Typetura v4.0.1 */
+
+/* Custom property behavior */
+@property --property {
+	syntax: "<integer>";
+	initial-value: 1;
+	inherits: false;
+  }
+  @property --tt-context {
+	syntax: "<length>";
+	initial-value: 100vi;
+	inherits: false;
+  }
+  @property --tt-min {
+	syntax: "<length>";
+	initial-value: 0px;
+	inherits: true;
+  }
+  @property --tt-max {
+	syntax: "<length>";
+	initial-value: 0px;
+	inherits: true;
+  }
+  
+  /* Selectors for Typetura elements */
+  @layer typetura {
+	:where(
+	  .tt,
+	  .rtt,
+	  .typetura,
+	  html
+	) {
+	  /* Use cqi when avalible, if not use vi. */
+	  /* Then normalize all units to run through the delay property */
+	  --tt-context: 100cqi;
+	  --TTCONTEXT: calc(tan(atan2(var(--tt-context,100vi),1px)));
+	  --TTMAX: calc(tan(atan2(var(--tt-max,60rem),1px)));
+	  --TTMIN: calc(tan(atan2(var(--tt-min,0rem),1px)));
+	  
+	  /* Durations need to be registered as <time> to work propertly in shorthand. Simpler and more clear to write individual property/values instead */
+	  animation-name: var(--tt-key, none);
+	  animation-timing-function: var(--tt-ease, linear);
+	  animation-delay: calc(-1s * var(--property) * (var(--TTCONTEXT) - var(--TTMIN)) / (var(--TTMAX) - var(--TTMIN)));
+	  animation-duration: calc(1s * var(--property));
+	  animation-iteration-count: 1;
+	  animation-fill-mode: both;
+	  animation-play-state: paused;
+	}
+	:where(html) {
+	  /* Reset defaults. Browsers like 0px in @property */
+	  --tt-min: 0rem;
+	  --tt-max: 60rem;	
+	}
+	:where(.rtt) {
+	  /* Root Typetura context if you explicitly want the viewport context */
+	  --tt-context: 100vi;
+	}
+	:where(.cq) {
+	  /* A container query class */
+	  container-type: inline-size;
+	}
+  }
