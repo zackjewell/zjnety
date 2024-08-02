@@ -43,10 +43,10 @@ body {
 
 /* Type Styles */
 .site-title {
-    font-size: clamp(1.45em, 0.5vw, 1.7em);
     line-height: var(--line-height);
     background-color: var(--text);
 	transform: skew(-5deg) rotate(-5deg);
+	width: 90cqw;
 }
 .site-title a {
     color: var(--body-bg);
@@ -54,7 +54,6 @@ body {
 }
 
 p {
-	font-size: clamp(1em, 0.25vw, 1.1em);
 	line-height: var(--line-height);
 }
 
@@ -65,8 +64,8 @@ a {
 @media screen and (min-width: 40em) {
 	header {
 		position: fixed;
-		width: 20vw;
-		max-width: 220px;
+		width: 25vw;
+		max-width: 320px;
 		padding: 1em;
 	}	
 
@@ -78,7 +77,7 @@ a {
 		max-width: 50vw;
 		grid-column-start: 2;
 		position: relative;
-		margin-left: 2rem;
+		margin-left: 1.75rem;
 	 }
 	
 	nav {
@@ -91,6 +90,7 @@ a {
 		grid-template-columns: none;
 	}
 }
+
 
 
 /* Nav Garbo */
@@ -143,6 +143,33 @@ nav ul li .active {
 }
 
 /* Typetura v4.0.1 */
+
+/* Custom TT Styles */
+h1.site-title {
+	animation-name: site-title;
+}
+
+@keyframes site-title {
+	from {
+		font-size: 1.5em;
+	}
+	to {
+		font-size: 2em;
+	}
+}
+
+main p {
+	animation-name: content-p;
+}
+
+@keyframes content-p {
+	from {
+		font-size: 1em;
+	}
+	to {
+		font-size: 1.25em;
+	}
+}
 
 /* Custom property behavior */
 @property --property {
