@@ -2,10 +2,10 @@
 title: About Me
 metaDescription: 
 date: 2017-01-01T00:00:00.000Z
-permalink: /about-me/index.html
+permalink: /about-me/
 eleventyNavigation:
   key: About Me
-  order: 1
+  order: 2
 ---
 
 ![bear](https://placebear.com/400/300)
