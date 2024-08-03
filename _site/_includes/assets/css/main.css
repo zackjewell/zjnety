@@ -1,0 +1,233 @@
+/* Main Styles Go Here. Also in inline.css */
+
+/* Its 2024 why do I need this still? */
+*, *:before, *:after { box-sizing: border-box; }
+
+img, picture {
+	max-width: 100%;
+	height: auto;
+}
+body { 
+	background-color: var(--body-bg); 
+	padding: 0.5em;
+}
+
+:root {
+	--line-height: 1.75;
+	--fluid-gap: clamp(0.75rem, 3vw, 1.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--tertiary: #f8f697;
+		--primary: #55C8B6;
+		--secondary: #089ce7;
+		--text: #f1f1ee;
+		--body-bg: #212121;
+		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
+		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--tertiary: #F5A227;
+		--primary: #089ce7;
+		--secondary: #f200ff;
+		--text: #212121;
+		--body-bg: #ffffff;
+		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
+		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+	}
+}
+
+/* Type Styles */
+.site-title {
+    line-height: var(--line-height);
+    background-color: var(--text);
+	transform: skew(-5deg) rotate(-5deg);
+	width: 90cqw;
+}
+.site-title a {
+    color: var(--body-bg);
+    text-decoration: none;
+}
+
+p {
+	line-height: var(--line-height);
+}
+
+a {
+	color: var(--primary);
+}
+
+@media screen and (min-width: 40em) {
+	header {
+		position: fixed;
+		width: 25vw;
+		max-width: 320px;
+		padding: 1em;
+	}	
+
+	.container {
+		display: grid;
+		grid-template-columns: minmax(250px, 20vw) 1fr;
+	}
+	 .container main {
+		max-width: 50vw;
+		grid-column-start: 2;
+		position: relative;
+		margin-left: 1.75rem;
+	 }
+	
+	nav {
+		display: block;
+		font-size: 1.1em;
+	}
+
+	nav ul {
+		display: grid;
+		grid-template-columns: none;
+	}
+}
+
+
+
+/* Nav Garbo */
+
+nav {
+	margin-top: 4ch;
+}
+
+nav ul {
+	justify-content: flex-start;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	padding-left: 0.65em;
+	margin-block-end: 0.5em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+nav ul li .active {
+	border-left: 3px solid var(--tertiary);
+	padding-left: 5px;
+}
+
+.post {
+	margin-block-end: 1.75em;
+}
+@media screen and (min-width: 48.125em) {
+	.post { margin-block-end: 2.25em; }
+}
+
+.post h2 {
+	margin-block-start: 0.5em;
+	margin-block-end: 0.25em;
+}
+
+.post h2 a {
+	color: var(--primary);
+	margin-block-start: 0;
+}
+
+.post p {
+	margin-block-start: 0;
+}
+
+/* Typetura v4.0.1 */
+
+/* Custom TT Styles */
+h1.site-title {
+	animation-name: site-title;
+}
+
+@keyframes site-title {
+	from {
+		font-size: 1.5em;
+	}
+	to {
+		font-size: 2em;
+	}
+}
+
+main p {
+	animation-name: content-p;
+}
+
+@keyframes content-p {
+	from {
+		font-size: 1em;
+	}
+	to {
+		font-size: 1.25em;
+	}
+}
+
+/* Custom property behavior */
+@property --property {
+	syntax: "<integer>";
+	initial-value: 1;
+	inherits: false;
+  }
+  @property --tt-context {
+	syntax: "<length>";
+	initial-value: 100vi;
+	inherits: false;
+  }
+  @property --tt-min {
+	syntax: "<length>";
+	initial-value: 0px;
+	inherits: true;
+  }
+  @property --tt-max {
+	syntax: "<length>";
+	initial-value: 0px;
+	inherits: true;
+  }
+  
+  /* Selectors for Typetura elements */
+  @layer typetura {
+	:where(
+	  .tt,
+	  .rtt,
+	  .typetura,
+	  html
+	) {
+	  /* Use cqi when avalible, if not use vi. */
+	  /* Then normalize all units to run through the delay property */
+	  --tt-context: 100cqi;
+	  --TTCONTEXT: calc(tan(atan2(var(--tt-context,100vi),1px)));
+	  --TTMAX: calc(tan(atan2(var(--tt-max,60rem),1px)));
+	  --TTMIN: calc(tan(atan2(var(--tt-min,0rem),1px)));
+	  
+	  /* Durations need to be registered as <time> to work propertly in shorthand. Simpler and more clear to write individual property/values instead */
+	  animation-name: var(--tt-key, none);
+	  animation-timing-function: var(--tt-ease, linear);
+	  animation-delay: calc(-1s * var(--property) * (var(--TTCONTEXT) - var(--TTMIN)) / (var(--TTMAX) - var(--TTMIN)));
+	  animation-duration: calc(1s * var(--property));
+	  animation-iteration-count: 1;
+	  animation-fill-mode: both;
+	  animation-play-state: paused;
+	}
+	:where(html) {
+	  /* Reset defaults. Browsers like 0px in @property */
+	  --tt-min: 0rem;
+	  --tt-max: 60rem;	
+	}
+	:where(.rtt) {
+	  /* Root Typetura context if you explicitly want the viewport context */
+	  --tt-context: 100vi;
+	}
+	:where(.cq) {
+	  /* A container query class */
+	  container-type: inline-size;
+	}
+  }
