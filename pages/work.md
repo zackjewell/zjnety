@@ -5,7 +5,7 @@ date: 2017-01-01T00:00:00.000Z
 permalink: /work/index.html
 eleventyNavigation:
   key: Work
-  order: 3
+  order: 4
 ---
 
 ## Websites...mostly
