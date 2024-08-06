@@ -126,6 +126,9 @@ footer p {
 		position: relative;
 		margin-left: 1.75rem;
 	 }
+	 .container footer {
+		grid-column-start: 2;
+	 }
 	
 	nav {
 		display: block;
