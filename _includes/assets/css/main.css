@@ -46,7 +46,7 @@ body {
     line-height: var(--line-height);
     background-color: var(--text);
 	transform: skew(-5deg) rotate(-5deg);
-	width: 90cqw;
+	width: 75cqw;
 }
 .site-title a {
     color: var(--body-bg);
@@ -70,10 +70,10 @@ footer {
 	border-top: 1px solid rgba(0,0,0,.2);
 	text-align: right;
 	clear: both;
-	padding: .75em 2em;
+	padding: .75em 4em;
 	align-items: stretch;
 	max-width: 1200px;
-	margin: 5em auto 0 auto;
+	margin: 10em auto 0 auto;
 }
 
 footer>* { flex-grow: 2; }
@@ -123,8 +123,8 @@ footer p {
 	 .container main {
 		max-width: 50vw;
 		grid-column-start: 2;
+		grid-column-gap: 2em;
 		position: relative;
-		margin-left: 1.75rem;
 	 }
 	 .container footer {
 		grid-column-start: 2;
