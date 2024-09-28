@@ -1,5 +1,5 @@
 ---
-title: This is the first example post
+title: Welcome to my Weblog
 metaDescription: Practicing What I Preach
 date: 2024-08-06
 author: Zack

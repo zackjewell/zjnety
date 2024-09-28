@@ -14,6 +14,7 @@ section: post
   {{ layoutContent | safe }}
 
   {% if tags %}
+  <p><strong>Tags:</strong></p>
     <p>
     {% for tag in tags %}
       {%- if tag != "post" -%}
@@ -27,5 +28,5 @@ section: post
 </article>
 
 <nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
+  <a href="{{ '/' | url }}">← Index</a>
 </nav>
