@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 2
 ---
 
-![bear](https://placebear.com/400/300)
+![a photo of zack jewell](../static/img/me.jpg)
 
 Hey. Hi. I am Zachary or Zack (Why a K? Long story.) I am Web and UI Designer and Developer for [Bindable](https://www.bindable.com). I live in Boston, MA. 
 

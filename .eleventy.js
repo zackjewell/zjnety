@@ -1,10 +1,16 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
-const htmlmin = require("html-minifier");
+// const Image = require("@11ty/eleventy-img");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+// const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+
 
 module.exports = function(eleventyConfig) {
+
+
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -19,23 +25,24 @@ module.exports = function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
+
   // Add support for maintenance-free post authors
   // Adds an authors collection using the author key in our post frontmatter
   // Thanks to @pdehaan: https://github.com/pdehaan
-  eleventyConfig.addCollection("authors", collection => {
-    const blogs = collection.getFilteredByGlob("posts/*.md");
-    return blogs.reduce((coll, post) => {
-      const author = post.data.author;
-      if (!author) {
-        return coll;
-      }
-      if (!coll.hasOwnProperty(author)) {
-        coll[author] = [];
-      }
-      coll[author].push(post.data);
-      return coll;
-    }, {});
-  });
+  // eleventyConfig.addCollection("authors", collection => {
+  //   const blogs = collection.getFilteredByGlob("posts/*.md");
+  //   return blogs.reduce((coll, post) => {
+  //     const author = post.data.author;
+  //     if (!author) {
+  //       return coll;
+  //     }
+  //     if (!coll.hasOwnProperty(author)) {
+  //       coll[author] = [];
+  //     }
+  //     coll[author].push(post.data);
+  //     return coll;
+  //   }, {});
+  // });
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -62,19 +69,24 @@ module.exports = function(eleventyConfig) {
     return minified.code;
   });
 
-  // // Minify HTML output
-  // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-  //   if (outputPath.indexOf(".html") > -1) {
-  //     let minified = htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true
-  //     });
-  //     return minified;
-  //   }
-  //   return content;
-  // });
-
+  eleventyConfig.addPlugin(pluginRss, {
+		type: "rss", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts", // iterate over `collections.posts`
+			limit: 10,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "Blog Title",
+			subtitle: "This is a longer description about your blog.",
+			base: "https://example.com/",
+			author: {
+				name: "Your Name",
+				email: "", // Optional
+			}
+		}
+	});
 
   eleventyConfig.addPassthroughCopy({ 'static/robots.txt': '/robots.txt' });
   // Don't process folders with static assets e.g. images
@@ -119,4 +131,6 @@ module.exports = function(eleventyConfig) {
       output: "_site"
     }
   };
+// If you have other `addPlugin` calls, it’s important that UpgradeHelper is added last.
+eleventyConfig.addPlugin(UpgradeHelper);
 };
