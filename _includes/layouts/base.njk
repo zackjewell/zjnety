@@ -1,24 +1,71 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} data-site-theme="" lang="en">
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+		<meta name="generator" content="{{ eleventy.generator }}">
 
-	{% include "components/head.njk" %}
+		<link rel="stylesheet" as="style" href="/css/index.css" />
 
+		{#- Add the heading-anchors web component to the JavaScript bundle #}
+		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+	</head>
 	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header class="cq">
 			<h1 class="site-title tt">
 				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
 			</h1>
-			{% include "components/nav.njk" %}
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li class="nav-item">
+						<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+					</li>
+				{%- endfor %}
+				</ul>
+			</nav>
 		</header>
 
 		<div class="container">
-			<main>
-				{{ layoutContent | safe }}
+			<main id="skip">
+				<heading-anchors>
+					{{ content | safe }}
+				</heading-anchors>
 			</main>
-			{% include "components/footer.njk" %}
 		</div>
 
-	</body>
+		<footer>
+			<div>
+				<address class="me">
+				<div class="me">
+					<dt>Github:</dt>
+					<dd>
+					<a href="https://github.com/zackjewell">https://github.com/zackjewell</a>
+					</dd>
+				</div>
+				<div>
+					<dt>Mastodon:</dt>
+					<dd>
+					<a href="https://mas.to/@ohthatzack">https://mas.to/@ohthatzack</a>
+					</dd>
+				</div>
+				</address>
+			</div>
+			<div>
+				<p>If you see something broken, a problem or something, you can <a href="https://github.com/zackjewell/zjnety/issues">report an issue</a>. Or not, you do you.</p>
+			</div>
+		</footer>
 
+		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+	</body>
 </html>

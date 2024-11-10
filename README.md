@@ -1,138 +1,117 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bbf28a84-4bdb-407b-a2fa-32628d27fa3d/deploy-status)](https://app.netlify.com/sites/eleventy-netlify-boilerplate/deploys)
+# eleventy-base-blog v9
 
-# Eleventy Netlify Boilerplate
+A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
 
-### Click the button below to try it out!
+## Getting Started
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+* [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
 
-## What is it?
-
-A simple template for building a fast, pre-generated HTML website using the [Eleventy](https://www.11ty.dev/) static site generator. With [Decap CMS](https://www.decapcms.org/) (formerly Netlify CMS) baked-in, ready to deploy to [Netlify](https://www.netlify.com) in a couple of clicks.
-
-Use it as a starter for your own Jamstack projects, or as an easy way to get started building websites with Eleventy.
-
-Based on the [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog) repo (see there for additional info on Eleventy usage).
-
-## [Demo Site](https://eleventy-netlify-boilerplate.netlify.app/)
-
-## Features
-
-* Uses Eleventy v2.0.1
-* Sample pages and a blog with tag support
-* Decap CMS with editor previews (thanks [@biilmann](https://github.com/biilmann)!)
-* Scores 100/100/100/100 in Lighthouse performance tests 🔥
-* Maintenance-free post author archives
-* Automatic navigation menus with [Eleventy Navigation](https://www.11ty.dev/docs/plugins/navigation/)
-* Includes a working contact form
-* CSS 2kb minified, inlined for fastest page render
-* Optional pipeline for minified inline JS
-* Pre-builds and minifies your HTML too
-* Uses Markdown files for content
-* Uses Nunjucks (or Liquid) templates for layout
-* 100% Javascript framework free
-* Continuous Deployment workflow via Netlify
-
-## Want to try it out now?
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
-
-Clicking the button above will deploy a copy of the demo website to your Netlify
-account (you can create an account during this process if you don't have one)
-and everything needed for running the CMS:
-
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Decap CMS
-* Process form data with Netlify Forms
-
-### Set Up Authentication
-
-After deploying this project, Netlify Identity will add you as a CMS user and
-will email you an invite. It is not necessary to accept this invite if you wish
-to use an
-[OAuth provider](https://www.netlify.com/docs/identity/#external-provider-login)
-(e.g. Github) to manage authentication for your CMS.
-
-It is recommended to use this method of authentication as it removes the need
-for an email & password to log in to the CMS and is generally more secure. You
-will need to add an OAuth provider in your Netlify app settings under
-"Settings" > "Identity" > "External providers".
-
-Once you've added an OAuth provider, navigate to `/admin` on your site, select your provider from the
-list, and you should then be logged into your CMS. Cool huh?
-
-### Set Up Identity Email Templates
-
-In order for Netlify Identity service emails (Signup, Reset Password etc) to function correctly with Decap CMS, you will need to tell Netlify where your email templates are located.
-
-Inside this repo under `/admin/email-templates/` are four Netlify Identity email templates. Inside your Netlify site settings, you will need to navigate to: "Site Settings > Identity" and look there for the four email template configuration boxes: Invitation template, Confirmation template, Recovery template, and Email change template. Inside each, edit the "Path to template" field to match the root-relative path to each template. For example:
-
-`/admin/email-templates/invitation.html`
-
-Now you're all set; you can invite new CMS users and begin editing content!
-
-## Gotchas
-
-If you change the repo that was created at deploy time from public to private, you'll need to regenerate your token,
-as the token generated using the deploy to Netlify button can only access public repositories. To
-regenerate your token, head to "Settings" in your Netlify site dashboard, go to the "Identity"
-section, then scroll to "Services" where you'll see an "Edit settings" button. Click that and you'll
-see a text link to "Generate access token in GitHub".
-
-If you need any help with setting up Decap CMS, you can reach out to the Netlify team in the [Decap CMS Gitter](https://gitter.im/netlify/netlifycms).
-
-## Local development
-
-### 1. Clone this repository:
+1. Make a directory and navigate to it:
 
 ```
-git clone https://github.com/danurbanowicz/eleventy-netlify-boilerplate.git my-blog-name
-```
-
-
-### 2. Navigate to the directory
-
-```
+mkdir my-blog-name
 cd my-blog-name
 ```
 
-Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
-
-### 3. Install dependencies locally
+2. Clone this Repository
 
 ```
-npm install @11ty/eleventy
+git clone https://github.com/11ty/eleventy-base-blog.git .
 ```
 
-### 4. Edit _data/metadata.json
+_Optional:_ Review `eleventy.config.js` and `_data/metadata.js` to configure the site’s options and data.
 
-This file contains your site title and author details, and can be used to store any other commonly used site data.
+3. Install dependencies
 
-### 5. Run Eleventy (builds the site)
+```
+npm install
+```
+
+4. Run Eleventy
+
+Generate a production-ready build to the `_site` folder:
 
 ```
 npx @11ty/eleventy
 ```
 
-Or build automatically when a template changes:
-```
-npx @11ty/eleventy --watch
-```
+Or build and host on a local development server:
 
-Or build and host locally for local development:
 ```
 npx @11ty/eleventy --serve
 ```
 
-Or in debug mode:
-```
-DEBUG=* npx @11ty/eleventy
-```
+Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the internals.
 
-## Bug reports, feature requests, etc
+## Features
 
-This is an ongoing project and I welcome contributions and suggestions! Feel free to submit a PR.
+- Using [Eleventy v3](https://github.com/11ty/eleventy/releases/tag/v3.0.0) with zero-JavaScript output.
+	- Content is exclusively pre-rendered (this is a static site).
+	- Can easily [deploy to a subfolder without changing any content](https://www.11ty.dev/docs/plugins/html-base/)
+	- All URLs are decoupled from the content’s location on the file system.
+	- Configure templates via the [Eleventy Data Cascade](https://www.11ty.dev/docs/data-cascade/)
+- **Performance focused**: four-hundos Lighthouse score out of the box!
+	- _0 Cumulative Layout Shift_
+	- _0ms Total Blocking Time_
+- Local development live reload provided by [Eleventy Dev Server](https://www.11ty.dev/docs/dev-server/).
+- Content-driven [navigation menu](https://www.11ty.dev/docs/plugins/navigation/)
+- Fully automated [Image optimization](https://www.11ty.dev/docs/plugins/image/)
+	- Zero-JavaScript output.
+	- Support for modern image formats automatically (e.g. AVIF and WebP)
+	- Processes images on-request during `--serve` for speedy local builds.
+	- Prefers `<img>` markup if possible (single image format) but switches automatically to `<picture>` for multiple image formats.
+	- Automated `<picture>` syntax markup with `srcset` and optional `sizes`
+	- Includes `width`/`height` attributes to avoid [content layout shift](https://web.dev/cls/).
+	- Includes `loading="lazy"` for native lazy loading without JavaScript.
+	- Includes [`decoding="async"`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding)
+	- Images can be co-located with blog post files.
+- Per page CSS bundles [via `eleventy-plugin-bundle`](https://github.com/11ty/eleventy-plugin-bundle).
+- Built-in [syntax highlighter](https://www.11ty.dev/docs/plugins/syntaxhighlight/) (zero-JavaScript output).
+- Draft content: use `draft: true` to mark any template as a draft. Drafts are **only** included during `--serve`/`--watch` and are excluded from full builds. This is driven by the `addPreprocessor` configuration API in `eleventy.config.js`. Schema validator will show an error if non-boolean value is set in data cascade.
+- Blog Posts
+	- Automated next/previous links
+	- Accessible deep links to headings
+- Generated Pages
+	- Home, Archive, and About pages.
+	- [Atom feed included (with easy one-line swap to use RSS or JSON](https://www.11ty.dev/docs/plugins/rss/)
+	- `sitemap.xml`
+	- Zero-maintenance tag pages ([View on the Demo](https://eleventy-base-blog.netlify.app/tags/))
+	- Content not found (404) page
 
-If you need any help with setting up Decap CMS, you can reach out to the Netlify team in the [Decap CMS Gitter](https://gitter.im/netlify/netlifycms).
+## Demos
+
+- [Netlify](https://eleventy-base-blog.netlify.app/)
+- [Vercel](https://demo-base-blog.11ty.dev/)
+- [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
+- [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
+- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
+
+## Deploy this to your own site
+
+Deploy this Eleventy site in just a few clicks on these services:
+
+- Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
+- [Deploy this to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)
+- [Deploy this to **Vercel**](https://vercel.com/import/project?template=11ty%2Feleventy-base-blog)
+- Look in `.github/workflows/gh-pages.yml.sample` for information on Deploying to **GitHub Pages**.
+- [Try it out on **Stackblitz**](https://stackblitz.com/github/11ty/eleventy-base-blog)
+
+### Implementation Notes
+
+- `content/about/index.md` is an example of a content page.
+- `content/blog/` has the blog posts but really they can live in any directory. They need only the `posts` tag to be included in the blog posts [collection](https://www.11ty.dev/docs/collections/).
+- Use the `eleventyNavigation` key (via the [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)) in your front matter to add a template to the top level site navigation. This is in use on `content/index.njk` and `content/about/index.md`.
+- Content can be in _any template format_ (blog posts needn’t exclusively be markdown, for example). Configure your project’s supported templates in `eleventy.config.js` -> `templateFormats`.
+- The `public` folder in your input directory will be copied to the output folder (via `addPassthroughCopy` in the `eleventy.config.js` file). This means `./public/css/*` will live at `./_site/css/*` after your build completes.
+- This project uses three [Eleventy Layouts](https://www.11ty.dev/docs/layouts/):
+	- `_includes/layouts/base.njk`: the top level HTML structure
+	- `_includes/layouts/home.njk`: the home page template (wrapped into `base.njk`)
+	- `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
+- `_includes/postslist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `content/index.njk` has an example of how to use it.
+
+#### Content Security Policy
+
+If your site enforces a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (as public-facing sites should), you have a few choices (pick one):
+
+1. In `base.njk`, remove `<style>{% getBundle "css" %}</style>` and uncomment `<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">`
+2. Configure the server with the CSP directive `style-src: 'unsafe-inline'` (less secure).

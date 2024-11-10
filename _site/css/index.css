@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+:root {
+	--font: "Literata", "Times New Roman", Times, Baskerville, Georgia, serif;
+	--gap: 1.5em;
+	--fluid-gap: clamp(0.75em, 3vw, 1.5em);
+	--line-height: 1.75;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--tertiary: #f8f697;
+		--primary: #55C8B6;
+		--secondary: #089ce7;
+		--text: #ece2d4;
+		--body-bg: hsla(224deg, 68%, 10%, 1);
+		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
+		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--tertiary: #F5A227;
+		--primary: #089ce7;
+		--secondary: #f200ff;
+		--text: #2C1376;
+		--body-bg: #f4f3f1;
+		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
+		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+	}
+}
+
+/* Its 2024 why do I need this still? */
+*, *:before, *:after { box-sizing: border-box; }
+
+img, picture {
+	max-width: 100%;
+	height: auto;
+}
+body { 
+	font-family: var(--font);
+	font-size: 100%;
+	font-optical-sizing: auto;
+	font-style: normal;
+	background-color: var(--body-bg); 
+	padding: 0.5em;
+}
+
+/* Type Styles */
+.site-title {
+	font-family: var(--font);
+	font-weight: 800;
+    line-height: 1.5;
+	transform: skew(-5deg) rotate(-5deg);
+	width: 90cqw;
+}
+.site-title a {
+    color: var(--primary);
+    text-decoration: none;
+	text-shadow: 0 0 .75em var(--primary);
+}
+p {
+	line-height: var(--line-height);
+}
+
+a {
+	color: var(--primary);
+}
+
+
+
+nav ul li a {
+	box-shadow: inset 0 0 0 0 var(--text);
+	color: var(--text);
+	padding: 0 .25rem;
+	margin: 0 -.25rem;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+nav ul li a:hover {
+	color: var(--body-bg);
+	box-shadow: inset 200px 0 0 0 var(--tertiary);
+}
+
+main a:hover {
+	color: var(--tertiary);
+	transition: color .25s linear;
+}
+
+footer {
+	display: flex;
+	border-top: 1px solid rgba(0,0,0,.2);
+	text-align: right;
+	clear: both;
+	padding: .75em 4em;
+	align-items: stretch;
+	max-width: 1200px;
+	margin: 10em auto 0 auto;
+}
+
+footer>* { flex-grow: 2; }
+
+footer div {
+	display: flex;
+	margin: 0;
+	width: 50%;
+	padding: .5em 0 1em 0;
+	flex-direction: row;
+}
+
+footer p {
+	font-size: .75em;
+	margin-block-end: .25em;
+	margin-block-start: .25em;
+}
+
+.me {
+	text-align: left;
+}
+.me div {
+	display: flex;
+	align-items: flex-start;
+	flex-grow: 2;
+	font-size: 0.75em;
+	padding: .25em 0;
+	margin: .25em 0;
+
+}
+.me dt {
+	min-width: 3em;
+}
+
+@media screen and (min-width: 40em) {
+	header {
+		position: fixed;
+		width: 25vw;
+		max-width: 320px;
+		padding: 1em;
+	}	
+
+	.container {
+		display: grid;
+		grid-template-columns: minmax(250px, 20vw) 1fr;
+	}
+	 .container main {
+		max-width: 50vw;
+		grid-column-start: 2;
+		grid-column-gap: 2em;
+		position: relative;
+	 }
+	 .container footer {
+		grid-column-start: 2;
+	 }
+
+	nav ul {
+		display: grid;
+		grid-template-columns: none;
+	}
+}
+
+/* Nav Garbo */
+nav {
+	margin-top: 4ch;
+}
+
+nav ul {
+	justify-content: flex-start;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	padding-left: 0.65em;
+	margin-block-end: 0.5em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+nav ul li .active {
+	border-left: 3px solid var(--tertiary);
+	padding-left: 5px;
+}
+
+.post {
+	margin-block-end: 1.75em;
+}
+@media screen and (min-width: 48.125em) {
+	.post { margin-block-end: 2.25em; }
+}
+
+.post h2 {
+	margin-block-start: 0.5em;
+	margin-block-end: 0.25em;
+}
+
+.post h2 a {
+	color: var(--primary);
+	margin-block-start: 0;
+}
+
+.post p {
+	margin-block-start: 0;
+}
+
+/* Typetura v4.0.1 */
+
+/* Custom TT Styles */
+h1.site-title {
+	animation-name: site-title;
+}
+
+@keyframes site-title {
+	from {
+		font-size: 1.5em;
+	}
+	to {
+		font-size: 2em;
+	}
+}
+
+nav ul li a {
+	animation-name: nav-size
+}
+
+@keyframes nav-size {
+	from {
+		font-size: 0.8em;
+	}
+	to {
+		font-size: 0.95em;
+	}
+}
+
+main p {
+	animation-name: content-p;
+}
+
+@keyframes content-p {
+	from {
+		font-size: 1em;
+	}
+	to {
+		font-size: 1.25em;
+	}
+}
+
+/* Custom property behavior */
+@property --property {
+	syntax: "<integer>";
+	initial-value: 1;
+	inherits: false;
+  }
+  @property --tt-context {
+	syntax: "<length>";
+	initial-value: 100vi;
+	inherits: false;
+  }
+  @property --tt-min {
+	syntax: "<length>";
+	initial-value: 0px;
+	inherits: true;
+  }
+  @property --tt-max {
+	syntax: "<length>";
+	initial-value: 0px;
+	inherits: true;
+  }
+  
+  /* Selectors for Typetura elements */
+  @layer typetura {
+	:where(
+	  .tt,
+	  .rtt,
+	  .typetura,
+	  html
+	) {
+	  /* Use cqi when avalible, if not use vi. */
+	  /* Then normalize all units to run through the delay property */
+	  --tt-context: 100cqi;
+	  --TTCONTEXT: calc(tan(atan2(var(--tt-context,100vi),1px)));
+	  --TTMAX: calc(tan(atan2(var(--tt-max,60rem),1px)));
+	  --TTMIN: calc(tan(atan2(var(--tt-min,0rem),1px)));
+	  
+	  /* Durations need to be registered as <time> to work propertly in shorthand. Simpler and more clear to write individual property/values instead */
+	  animation-name: var(--tt-key, none);
+	  animation-timing-function: var(--tt-ease, linear);
+	  animation-delay: calc(-1s * var(--property) * (var(--TTCONTEXT) - var(--TTMIN)) / (var(--TTMAX) - var(--TTMIN)));
+	  animation-duration: calc(1s * var(--property));
+	  animation-iteration-count: 1;
+	  animation-fill-mode: both;
+	  animation-play-state: paused;
+	}
+	:where(html) {
+	  /* Reset defaults. Browsers like 0px in @property */
+	  --tt-min: 0rem;
+	  --tt-max: 60rem;	
+	}
+	:where(.rtt) {
+	  /* Root Typetura context if you explicitly want the viewport context */
+	  --tt-context: 100vi;
+	}
+	:where(.cq) {
+	  /* A container query class */
+	  container-type: inline-size;
+	}
+  }
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
