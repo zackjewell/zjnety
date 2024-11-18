@@ -36,6 +36,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy("_src/_assets");
 	eleventyConfig.addPassthroughCopy("_src/sw.js");
+	eleventyConfig.addPassthroughCopy(".well-known/atproto-did/verify.txt");
 
 	eleventyConfig.addFilter(
 		'cssmin',
