@@ -69,7 +69,13 @@ body {
     text-decoration: none;
 	text-shadow: 0 0 .75em var(--primary);
 }
+
+h2, h3, h4 {
+	color: var(--text);
+}
+
 p {
+	color: var(--text);
 	line-height: var(--line-height);
 }
 
@@ -391,7 +397,7 @@ code {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
+	color: var(--text);
 }
 .postlist-date {
 	word-spacing: -0.5px;

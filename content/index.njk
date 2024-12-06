@@ -7,7 +7,7 @@ const eleventyNavigation = {
 const numberOfLatestPostsToShow = 3;
 ---
 
-<h2 class="styled-intro">I am a Web Designer and Front-end Developer or as I sometimes say <em>"The Unholy Abomination of a Designer and a Developer"</em></h2>
+<h2 class="styled-intro">I am a Web Designer and Front-end Developer or <em>"The Unholy Abomination of a Designer and a Developer"</em></h2>
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
