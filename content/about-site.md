@@ -1,7 +1,7 @@
 ---js
 const eleventyNavigation = {
 	key: "About This Site",
-	order: 2
+	order: 4
 };
 ---
 ## About My Site
