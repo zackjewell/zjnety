@@ -6,6 +6,10 @@ const eleventyNavigation = {
 ---
 ## About My Site
 
-The concept for this site is not only as my little corner of the web but as a teste bed for new ideas and tehcniques. So if something acts weird, doesn't display right or is flat out broken drop me a line.
+This site is more than just my personal space on the web; it’s also a playground for experimenting with new ideas and techniques. It’s constantly evolving, so it might not always be perfect or polished. If you encounter any issues, like weird behavior, incorrect display, or outright brokenness, feel free to [let me know]().
 
-This website is built on [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com).
+I’m a big fan of the open web and its potential. I’ve always dreamed of creating something that can stand the test of time, unlike those siloed-off sites and services we use today. (Looking at you, MySpace and Twitter.) Content can disappear overnight, but this space will always be here.
+
+I’m also starting to put my words into action and practice what I believe in. 
+
+This website is built on [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com). Probably one of those fancy CMSes sometime. Who can say.
