@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Blog Title</title>
+  <subtitle>This is a longer description about your blog.</subtitle>
+  <link href="https://example.com/feed/feed.xml" rel="self" />
+  <link href="https://example.com/" />
+  <updated>2025-01-04T00:00:00Z</updated>
+  <id>https://example.com/</id>
+  <author>
+    <name>Your Name</name>
+  </author>
+  <entry>
+    <title>Welcome to my Weblog</title>
+    <link href="https://example.com/blog/welcome-to-my-weblog/" />
+    <updated>2025-01-04T00:00:00Z</updated>
+    <id>https://example.com/blog/welcome-to-my-weblog/</id>
+    <content type="html">&lt;p&gt;After many years of rambling about the open web and how I want to start writing more, I am finally starting that. I have enough brain space now to actually sit down and start getting thoughts out in this form. Also, time, but...you know...that is also a premium.&lt;/p&gt;
+&lt;p&gt;This whole process of getting from nothing to being able to write and get thoughts out has been an uphill battle. I really don&#39;t mind if anyone reads this. If you are reading this, &amp;quot;Hi!&amp;quot; I was trying to think about the goals for this and my site, and I went back into my reading list and remembered a post by &lt;a href=&quot;https://ethanmarcotte.com/wrote/let-a-website-be-a-worry-stone/&quot;&gt;Ethan Marcotte&lt;/a&gt; about his website being a &amp;quot;worry stone,&amp;quot; and when I reread that, it clicked with me.&lt;/p&gt;
+&lt;p&gt;What clicked is...this is mine. This is where I should tinker. I have been looking for something that I could use myself and learn new skills. It could be writing, a new CSS trick I want to try out, or some new JavaScript that I want to work on. I have a list of 100 things I want to do and learn but have never found the space to do it in my day job. But here...here I can do that. I had fought to give myself the permission.&lt;/p&gt;
+&lt;p&gt;The other thing that clicked with me recently was...I miss the old web. I miss the personal feel of sites and the ownership. Now everything is being siloed off or walls being put in place to make sharing harder, and it sucks. A lot of the modern web just sucks, and I want to feel like I own at least a little part of it where my voice is the only one. I want this space to reflect who I am and what I am. It is going to be dirty and messy, and that excites me.&lt;/p&gt;
+&lt;p&gt;I am going to work towards that excitement.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
