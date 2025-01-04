@@ -2,31 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://www.zackjewell.net/blog/firstpost/</loc>
-		<lastmod>2018-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.zackjewell.net/blog/secondpost/</loc>
-		<lastmod>2018-07-04</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.zackjewell.net/blog/thirdpost/</loc>
-		<lastmod>2018-08-24</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.zackjewell.net/blog/fourthpost/</loc>
-		<lastmod>2018-09-30</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://www.zackjewell.net/blog/fifthpost/</loc>
-		<lastmod>2023-01-23</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://www.zackjewell.net/about-site/</loc>
 		<lastmod>2025-01-03</lastmod>
 	</url>
@@ -57,7 +32,12 @@
 	</url>
 	
 	<url>
+		<loc>https://www.zackjewell.net/blog/welcome-to-my-weblog/</loc>
+		<lastmod>2025-01-04</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://www.zackjewell.net/feed/feed.xml</loc>
-		<lastmod>2025-01-03</lastmod>
+		<lastmod>2025-01-04</lastmod>
 	</url>
 </urlset>

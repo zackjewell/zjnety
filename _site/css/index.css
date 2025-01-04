@@ -70,7 +70,11 @@ body {
 	text-shadow: 0 0 .75em var(--primary);
 }
 
-h2, h3, h4 {
+.post-title, .post-title, .post-metadata, dt, h2, h3, h4 {
+	color: var(--text);
+}
+
+time {
 	color: var(--text);
 }
 
@@ -88,6 +92,8 @@ a {
 	font-weight: 400;
 	line-height: var(--line-height);
 	transform: skew(-5deg) rotate(-5deg);
+	background-clip: text;
+	color: var(--tertiary);
 }
 
 p > a {
@@ -384,7 +390,6 @@ code {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
 }
 .postlist-item {
 	display: flex;
