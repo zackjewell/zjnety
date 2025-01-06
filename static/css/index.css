@@ -131,11 +131,11 @@ main a:hover {
 }
 
 footer {
-	display: flex;
+	display: block;
 	border-top: 1px solid rgba(0,0,0,.2);
 	text-align: right;
 	clear: both;
-	padding: .75em 4em;
+	padding: .75em 0em;
 	align-items: stretch;
 	max-width: 1200px;
 	margin: 13em auto 0 auto;
@@ -146,10 +146,21 @@ footer > * { flex-grow: 2; }
 footer div {
 	display: flex;
 	margin: 0;
-	width: 50%;
+	width: 100%;
 	padding: .5em 0 1em 0;
-	flex-direction: row;
+	flex-direction: column;
 }
+
+@media screen and (min-width: 32.1875em) {
+	footer {
+		display: flex;
+	}
+	footer div {
+		flex-direction: row;
+		width: 50%;
+	}
+}
+
 
 footer p {
 	font-size: .75em;
@@ -198,6 +209,10 @@ footer p {
 	nav ul {
 		display: grid;
 		grid-template-columns: none;
+	}
+	footer {
+		padding: 0.75em 4em;
+
 	}
 }
 
