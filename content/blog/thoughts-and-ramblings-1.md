@@ -14,10 +14,10 @@ Again another series/topic I am ripping off from others. I love a behind the sce
 and keep track of all the media I consume...or at least try to.
 
 ## Movies
-[**Ghostbusters: Afterlife**](https://www.imdb.com/title/tt4513678/?ref_=nv_sr_srsg_6_tt_8_nm_0_in_0_q_Ghostbu)(Link to IMDB) ★★★☆☆
+[**Ghostbusters: Afterlife**](https://www.imdb.com/title/tt4513678/?ref_=nv_sr_srsg_6_tt_8_nm_0_in_0_q_Ghostbu) ★★★☆☆
 A movie I wanted to watch when it came out but missed. Overall I enjoyed it but felt like a movie for kids in a weird way. I did like McKenna Grace. Might watch Frozen Empire next. 
 ## Books
-[**Foundation and Empire**](https://bookshop.org/p/books/foundation-and-empire-isaac-asimov/11418077?ean=9780553293371&next=t&next=t)(Link to bookshop.org USA) ★★★★★
+[**Foundation and Empire**](https://bookshop.org/p/books/foundation-and-empire-isaac-asimov/11418077?ean=9780553293371&next=t&next=t) ★★★★★
 I have slowly been reading the original Asimov _Foundation_ series after watching the show on Apple TV. These are way better stories and setting than the show. Which I like for different reasons.
 
 ## TV
