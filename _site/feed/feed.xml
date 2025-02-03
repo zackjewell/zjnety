@@ -5,11 +5,32 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/feed/feed.xml" rel="self" />
   <link href="https://example.com/" />
-  <updated>2025-01-14T00:00:00Z</updated>
+  <updated>2025-02-03T00:00:00Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
   </author>
+  <entry>
+    <title>Thoughts &amp; Ramblings No. 1</title>
+    <link href="https://example.com/blog/thoughts-and-ramblings-1/" />
+    <updated>2025-02-03T00:00:00Z</updated>
+    <id>https://example.com/blog/thoughts-and-ramblings-1/</id>
+    <content type="html">&lt;p&gt;Again another series/topic I am ripping off from others. I love a behind the scenes look at what other writers are up too. Dave Rupert’s Vibe Check (&lt;a href=&quot;https://daverupert.com/tag/vibecheck&quot;&gt;https://daverupert.com/tag/vibecheck&lt;/a&gt;) series is one that I like a lot. When I ready these it reminds me to take a step back and work on myself as well.&lt;/p&gt;
+&lt;p&gt;and keep track of all the media I consume...or at least try to.&lt;/p&gt;
+&lt;h2 id=&quot;movies&quot;&gt;Movies&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.imdb.com/title/tt4513678/?ref_=nv_sr_srsg_6_tt_8_nm_0_in_0_q_Ghostbu&quot;&gt;&lt;strong&gt;Ghostbusters: Afterlife&lt;/strong&gt;&lt;/a&gt;(Link to IMDB) ★★★☆☆
+A movie I wanted to watch when it came out but missed. Overall I enjoyed it but felt like a movie for kids in a weird way. I did like McKenna Grace. Might watch Frozen Empire next.&lt;/p&gt;
+&lt;h2 id=&quot;books&quot;&gt;Books&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://bookshop.org/p/books/foundation-and-empire-isaac-asimov/11418077?ean=9780553293371&amp;amp;next=t&amp;amp;next=t&quot;&gt;&lt;strong&gt;Foundation and Empire&lt;/strong&gt;&lt;/a&gt;(Link to bookshop.org USA) ★★★★★
+I have slowly been reading the original Asimov &lt;em&gt;Foundation&lt;/em&gt; series after watching the show on Apple TV. These are way better stories and setting than the show. Which I like for different reasons.&lt;/p&gt;
+&lt;h2 id=&quot;tv&quot;&gt;TV&lt;/h2&gt;
+&lt;p&gt;I probably watch too much TV if I am honest but this month I mostly watched murder mysteries like Dagliesh from AcornTV. I recently started rewatching Dragonball Z as well! A real mix of shows. More to come.&lt;/p&gt;
+&lt;p&gt;I am working on creating and building out a regular schedule for posting and what to post about. I should have a regular series about this site and the work I want to do to improve my skills but also this site.&lt;/p&gt;
+&lt;h2 id=&quot;gym&quot;&gt;Gym&lt;/h2&gt;
+&lt;p&gt;I spend my evenings at the gym where I hangout with my friends but also working on my fitness. These days I am working on Olympic Weightlifting and Brazilian Jiu Jitsu. Both have a balance of what my body and mind needs. I need&lt;/p&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>2024</title>
     <link href="https://example.com/blog/2024/" />
