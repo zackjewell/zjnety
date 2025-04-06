@@ -1,5 +1,5 @@
 export default {
-	title: "The Personal Disquisition of Zachary Jewell",
+	title: "The Personal Ramblings of Zack Jewell",
 	url: "https://www.zackjewell.net/",
 	language: "en",
 	description: "Zack Jewell's special corner of the internet. Learn more about him and his work",

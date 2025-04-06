@@ -9,7 +9,13 @@ const numberOfLatestPostsToShow = 3;
 
 <h2 class="styled-intro">I am a Web Designer and Front-end Developer or <em>"The Unholy Abomination of a Designer and a Developer"</em></h2>
 
-{% set postsCount = collections.posts | length %}
+<h3>Latest Posts</h3>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
+
+
+{# {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h3>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h3>
 
@@ -20,5 +26,5 @@ const numberOfLatestPostsToShow = 3;
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
 	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
+{% endif %} #}
 

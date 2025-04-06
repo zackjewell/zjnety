@@ -6,9 +6,6 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
 		<meta name="generator" content="{{ eleventy.generator }}">
 
 		<link rel="stylesheet" as="style" href="/css/index.css" />
@@ -43,23 +40,22 @@
 
 		<footer>
 			<div>
-				<address class="me">
-				<div class="me">
-					<dt>Github:</dt>
-					<dd>
-					<a href="https://github.com/zackjewell">https://github.com/zackjewell</a>
-					</dd>
-				</div>
-				<div>
-					<dt>Mastodon:</dt>
-					<dd>
-					<a href="https://mas.to/@ohthatzack">https://mas.to/@ohthatzack</a>
-					</dd>
-				</div>
+				<address>
+					<ul>
+						<li class="me">
+							<span>Github: </span><a href="https://github.com/zackjewell">https://github.com/zackjewell</a>
+						</li>
+						<li>
+							<span>Mastodon: </span><a href="https://mas.to/@ohthatzack">https://mas.to/@ohthatzack</a>
+						</li>
+						<li>
+							<span>Feed: </span><a href="/feed/feed.xml">RSS</a>
+						</li>
+					</ul>
 				</address>
-			</div>
+				</div>
 			<div>
-				<p>If you see something broken, a problem or something, you can <a href="https://github.com/zackjewell/zjnety/issues">report an issue</a>. Or not, you do you.</p>
+				<p>If you see something broken, a problem or something, you can <a href="https://github.com/zackjewell/zjnety/issues">report an issue</a>.<br>Or not, you do you.</p>
 			</div>
 		</footer>
 

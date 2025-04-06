@@ -5,11 +5,34 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/feed/feed.xml" rel="self" />
   <link href="https://example.com/" />
-  <updated>2025-02-03T00:00:00Z</updated>
+  <updated>2025-03-17T00:00:00Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
   </author>
+  <entry>
+    <title>Thoughts &amp; Ramblings No. 2</title>
+    <link href="https://example.com/blog/thoughts-and-ramblings-2/" />
+    <updated>2025-03-17T00:00:00Z</updated>
+    <id>https://example.com/blog/thoughts-and-ramblings-2/</id>
+    <content type="html">&lt;p&gt;February (and January...) were hectic, and I didn&#39;t get a lot of writing done for the blog.&lt;/p&gt;
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Watched&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dragon Ball Z&lt;/em&gt;: Wanted to revisit an old classic. I thought about watching &lt;em&gt;Kai&lt;/em&gt;, but went with the OG and skipped some of the filler. Still a classic.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Doc Martin&lt;/em&gt;: A British comedy-drama that my parents enjoy. Good characters and great scenery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Read&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Started &lt;em&gt;Second Foundation&lt;/em&gt;. No notes yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ve started working on my journaling and note-taking habits. I really enjoyed Peter McKinnon&#39;s video about how he uses his system. I adapted his to mine, and so far, I&#39;ve really liked it. It&#39;s nice to keep track of things.&lt;/p&gt;
+&lt;h2 id=&quot;the-other-stuff&quot;&gt;The Other Stuff&lt;/h2&gt;
+&lt;p&gt;Still hitting the gym consistently. BJJ has been up and down—I’ve hit a plateau in my training and am looking for the next techniques to work on. Picked up a small injury, which doesn’t help. Started walking more!&lt;/p&gt;
+&lt;p&gt;Looking ahead, I&#39;m hoping to get more writing and work done on my site. More on that soon.&lt;/p&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Thoughts &amp; Ramblings No. 1</title>
     <link href="https://example.com/blog/thoughts-and-ramblings-1/" />

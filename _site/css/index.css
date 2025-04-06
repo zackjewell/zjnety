@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 
 /* Global stylesheet */
 * {
@@ -10,7 +10,7 @@
 }
 
 :root {
-	--font: "Literata", "Times New Roman", Times, Baskerville, Georgia, serif;
+	--font: "Cormorant", "Times New Roman", Times, Baskerville, Georgia, serif;
 	--gap: 1.5em;
 	--fluid-gap: clamp(0.75em, 3vw, 1.5em);
 	--line-height: 1.75;
@@ -19,22 +19,20 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--tertiary: #f8f697;
-		--primary: #55C8B6;
-		--secondary: #089ce7;
-		--text: #ece2d4;
-		--body-bg: hsla(224deg, 68%, 10%, 1);
+		--primary: hsl(0, 0%, 95%);
+		--secondary: hsl(0, 0%, 100%);
+		--body-bg: hsl(0, 0%, 15%);
 		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
-		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+		--gradient: linear-gradient(to right, var(--tertiary), var(--primary), var(--tertiary));
 	}
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--tertiary: #F5A227;
-		--primary: #089ce7;
-		--secondary: #f200ff;
-		--text: #2C1376;
-		--body-bg: #f4f3f1;
+		--tertiary: hsl(0, 90%, 55%);
+		--primary: hsl(0, 0%, 15%);
+		--secondary: hsl(0, 0%, 100%);
+		--body-bg: hsl(0, 0%, 95%);
 		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
 		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
 	}
@@ -54,32 +52,40 @@ body {
 	font-style: normal;
 	background-color: var(--body-bg); 
 	padding: 0.5em;
+	margin: 0.75em 0 0 0;
+}
+
+.post-list {
+	list-style: none;
+	padding: 0;
+	margin: 2em 0;
 }
 
 /* Type Styles */
 .site-title {
 	font-family: var(--font);
-	font-weight: 800;
+	font-weight: 700;
     line-height: 1.5;
-	transform: skew(-5deg) rotate(-5deg);
-	width: 90cqw;
-}
-.site-title a {
-    color: var(--primary);
-    text-decoration: none;
+	color: var(--primary);
 	text-shadow: 0 0 .75em var(--primary);
+	width: 85cqw;
+	margin: 0;
+}
+
+.site-title a {
+	text-decoration: none;
 }
 
 .post-title, .post-title, .post-metadata, dt, h2, h3, h4 {
-	color: var(--text);
+	color: var(--primary);
 }
 
 time {
-	color: var(--text);
+	color: var(--primary);
 }
 
 p {
-	color: var(--text);
+	color: var(--primary);
 	line-height: var(--line-height);
 }
 
@@ -88,12 +94,13 @@ a {
 }
 
 .styled-intro {
-	margin: 3em 0;
-	font-weight: 400;
+	margin: 2em 0;
+	font-weight: 700;
 	line-height: var(--line-height);
 	transform: skew(-5deg) rotate(-5deg);
 	background-clip: text;
 	color: var(--tertiary);
+	text-shadow: 0 0 0.75em var(--tertiary);
 }
 
 p > a {
@@ -113,10 +120,10 @@ a.external:after {
 }
 
 nav ul li a {
-	box-shadow: inset 0 0 0 0 var(--text);
-	color: var(--text);
-	padding: 0 .25rem;
-	margin: 0 -.25rem;
+	box-shadow: inset 0 0 0 0 var(--primary);
+	color: var(--primary);
+	padding: 0 .25em;
+	margin: 0 -.25em;
 	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
@@ -130,25 +137,26 @@ main a:hover {
 	transition: color .25s linear;
 }
 
+.container h2 {
+ 	margin: 0;
+}
+
 footer {
 	display: block;
 	border-top: 1px solid rgba(0,0,0,.2);
-	text-align: right;
-	clear: both;
-	padding: .75em 0em;
-	align-items: stretch;
-	max-width: 1200px;
-	margin: 13em auto 0 auto;
+	text-align: center;
+	font-size: 0.75em;
+	padding: 1.2em 0;
 }
 
-footer > * { flex-grow: 2; }
-
-footer div {
-	display: flex;
+footer ul {
+	list-style: none;
 	margin: 0;
-	width: 100%;
-	padding: .5em 0 1em 0;
-	flex-direction: column;
+	padding: 0;
+}
+
+footer span {
+	color: var(--primary);
 }
 
 @media screen and (min-width: 32.1875em) {
@@ -168,28 +176,12 @@ footer p {
 	margin-block-start: .25em;
 }
 
-.me {
-	text-align: left;
-}
-.me div {
-	display: flex;
-	align-items: flex-start;
-	flex-grow: 2;
-	font-size: 0.75em;
-	padding: .25em 0;
-	margin: .25em 0;
-
-}
-.me dt {
-	min-width: 3em;
-}
-
 @media screen and (min-width: 40em) {
 	header {
 		position: fixed;
 		width: 25vw;
 		max-width: 320px;
-		padding: 1em;
+		padding: 0 1em;
 	}	
 
 	.container {
@@ -210,6 +202,14 @@ footer p {
 		display: grid;
 		grid-template-columns: none;
 	}
+	nav ul li {
+		width: 75cqw;
+	}
+	nav ul li a {
+		color: var(--primary);
+		padding: 0;
+		margin: 0;
+	}
 	footer {
 		padding: 0.75em 4em;
 
@@ -224,18 +224,18 @@ nav {
 nav ul {
 	justify-content: flex-start;
 	list-style: none;
-	margin: 0;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
 	padding: 0;
 }
 
 nav ul li {
-	padding-left: 0.65em;
 	margin-block-end: 0.5em;
 }
 
 nav ul li a {
 	text-decoration: none;
-	color: var(--text);
+	color: var(--primary);
 }
 
 nav ul li .active {
@@ -273,7 +273,7 @@ h1.site-title {
 
 @keyframes site-title {
 	from {
-		font-size: 1.5em;
+		font-size: 1.25em;
 	}
 	to {
 		font-size: 2em;
@@ -286,10 +286,10 @@ nav ul li a {
 
 @keyframes nav-size {
 	from {
-		font-size: 0.8em;
+		font-size: 0.75em;
 	}
 	to {
-		font-size: 0.95em;
+		font-size: 1em;
 	}
 }
 
@@ -302,7 +302,7 @@ main p {
 		font-size: 1em;
 	}
 	to {
-		font-size: 1.25em;
+		font-size: 1.5em;
 	}
 }
 
@@ -340,8 +340,8 @@ main p {
 	  /* Then normalize all units to run through the delay property */
 	  --tt-context: 100cqi;
 	  --TTCONTEXT: calc(tan(atan2(var(--tt-context,100vi),1px)));
-	  --TTMAX: calc(tan(atan2(var(--tt-max,60rem),1px)));
-	  --TTMIN: calc(tan(atan2(var(--tt-min,0rem),1px)));
+	  --TTMAX: calc(tan(atan2(var(--tt-max,60em),1px)));
+	  --TTMIN: calc(tan(atan2(var(--tt-min,0em),1px)));
 	  
 	  /* Durations need to be registered as <time> to work propertly in shorthand. Simpler and more clear to write individual property/values instead */
 	  animation-name: var(--tt-key, none);
@@ -354,8 +354,8 @@ main p {
 	}
 	:where(html) {
 	  /* Reset defaults. Browsers like 0px in @property */
-	  --tt-min: 0rem;
-	  --tt-max: 60rem;	
+	  --tt-min: 0em;
+	  --tt-max: 60em;	
 	}
 	:where(.rtt) {
 	  /* Root Typetura context if you explicitly want the viewport context */
@@ -410,14 +410,14 @@ code {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	counter-increment: start-from -1;
+	counter-incement: start-from -1;
 	margin-bottom: 1em;
 }
 
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--text);
+	color: var(--primary);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -425,7 +425,7 @@ code {
 .postlist-link {
 	font-size: 1.1875em; /* 19px /16 */
 	font-weight: 700;
-	flex-basis: calc(100% - 1.5rem);
+	flex-basis: calc(100% - 1.5em);
 	padding-left: .25em;
 	padding-right: .5em;
 	text-underline-position: from-font;
