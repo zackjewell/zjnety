@@ -7,10 +7,11 @@ const eleventyNavigation = {
 ## About Me
 
 <picture>
-    <source media="(min-width: 50em)" srcset="../static/img/zack-about.jpg, ../static//img/zack-about@2x.jpg 2x" type="image/jpeg">
-    <source srcset="../static/img/zack-about-small.webp, ../static/img/zack-about-small@2x.webp 2x" type="image/webp">
-    <img srcset="../static/img/zack-about-small.jpg, ../static/img/zack-about-small@2x.jpg 2x" src="../static/img/zack-about-small.jpg" alt="" width="400" height="225">
+  <source srcset="../static/img/zack-about.jpg 1x, ../static/img/zack-about@2x.jpg 2x" media="(min-width: 768px)">
+  <source srcset="../static/img/zack-about-small.jpg 1x, ../static/img/zack-about-small@2x.jpg 2x" media="(max-width: 767px)">
+  <img src="../static/img/zack-about.jpg" srcset="zack-about@2x.jpg 2x" alt="A photo of Zack Jewell">
 </picture>
+
 
 Hey. Hi. I am Zachary or Zack (Why a K? Long story.) I am Web and UI Designer and Developer for [Bindable](https://www.bindable.com). I live in Boston, MA. 
 
