@@ -9,10 +9,11 @@ const numberOfLatestPostsToShow = 3;
 
 <h2 class="styled-intro">I am a Web Designer and Front-end Developer or <em>"The Unholy Abomination of a Designer and a Developer"</em></h2>
 
-<h3>Latest Posts</h3>
-
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<div class="postlist">
+	<h3>Latest Posts</h3>
+	{% set postslist = collections.posts %}
+	{% include "postslist.njk" %}
+</div>
 
 
 {# {% set postsCount = collections.posts | length %}

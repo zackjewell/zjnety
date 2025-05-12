@@ -93,7 +93,15 @@ a {
 	color: var(--primary);
 }
 
+/* main section {
+	grid-column: 1 / 4;
+} */
+.postlist {
+	grid-column: 1 / 3;
+}
+
 .styled-intro {
+	grid-column: 1 / 4;
 	margin: 2em 0;
 	font-weight: 700;
 	line-height: var(--line-height);
@@ -188,8 +196,10 @@ footer p {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-main p {
+main p, main h1, main h2, main h3, main h4, main h5, main h6 {
 	grid-column: 1 / 4;
+	padding: 0;
+	margin: 0 0 clamp(0.5em, 1vw, 2em) 0;
 }
 
 main picture,
