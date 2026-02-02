@@ -1,116 +1,238 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 
-/* Global stylesheet */
-* {
-	box-sizing: border-box;
-}
+/* TODO: Clean up and organize CSS file into Cascade Layers and clean up/modernize layout*/
+@layer reset, base, layout, components, utilities;
 
-@view-transition {
-	navigation: auto;
-}
-
-:root {
-	--font: "Cormorant", "Times New Roman", Times, Baskerville, Georgia, serif;
-	--gap: 1.5em;
-	--fluid-gap: clamp(0.75em, 3vw, 1.5em);
-	--line-height: 1.75;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--tertiary: #f8f697;
-		--primary: hsl(0, 0%, 95%);
-		--secondary: hsl(0, 0%, 100%);
-		--body-bg: hsl(0, 0%, 15%);
-		--box-shadow: 20px 20px 60px #1d1d1d, -20px -20px 60px #272727;
-		--gradient: linear-gradient(to right, var(--tertiary), var(--primary), var(--tertiary));
+@layer reset {
+	/* CSS Reset based on https://piccalil.li/blog/a-modern-css-reset/ */
+	
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	
+	body {
+		line-height: 1;
+	}
+	
+	ol, ul {
+		list-style: none;
+	}
+	
+	blockquote, q {
+		quotes: none;
+	}
+	
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
 	}
 }
 
-@media (prefers-color-scheme: light) {
+@layer base {
+
+	* {
+		box-sizing: border-box;
+	}
+
+	@media screen and (prefers-reduced-motion: no-preference) {
+		@view-transition {
+			navigation: auto
+		}
+	}
+	
+	/* TODO: Update gaps/padding/margins to use fluid gap system */
 	:root {
-		--tertiary: hsl(0, 90%, 55%);
-		--primary: hsl(0, 0%, 15%);
-		--secondary: hsl(0, 0%, 100%);
-		--body-bg: hsl(0, 0%, 95%);
-		--box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff;
-		--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+		--font: "Cormorant", "Times New Roman", Times, Baskerville, Georgia, serif;
+		--gap: 1.5em;
+		--gap-fluid: 1em;
+		--gap-fluid-least: calc( var(--gap-fluid) * 0.5 );
+		--gap-fluid-less: calc( var(--gap-fluid) * 0.75 );
+		--gap-fluid-more: calc( var(--gap-fluid) * 1.5 );
+		--gap-fluid-most: calc( var(--gap-fluid) * 4.5 );
+		--line-height: 1.75;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--tertiary: hsl(59, 87%, 78%);
+			--primary: hsl(0, 0%, 95%);
+			--secondary: hsl(0, 0%, 100%);
+			--body-bg: hsl(0, 0%, 15%);
+			--box-shadow: 20px 20px 60px hsl(0, 0%, 11%), -20px -20px 60px hsl(0, 0%, 15%);
+			--gradient: linear-gradient(to right, var(--tertiary), var(--primary), var(--tertiary));
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--tertiary: hsl(0, 90%, 55%);
+			--primary: hsl(0, 0%, 15%);
+			--secondary: hsl(0, 0%, 100%);
+			--body-bg: hsl(0, 0%, 95%);
+			--box-shadow: 20px 20px 60px hsl(0, 0%, 79%), -20px -20px 60px hsl(0, 0%, 100%);
+			--gradient: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+		}
+	}
+
+	img, picture, svg {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* TODO: Clean up Body styles */
+	body { 
+		font-family: var(--font);
+		font-size: 100%;
+		font-optical-sizing: auto;
+		font-style: normal;
+		background-color: var(--body-bg); 
+		padding: 0.5em;
+		margin: 0.75em 0 0 0;
+	}
+
+	.post-list {
+		list-style: none;
+		padding: 0;
+		margin: 2em 0;
+	}
+
+	/* TODO: make actual type styles */
+	.site-title {
+		font-family: var(--font);
+		font-weight: 700;
+		line-height: 1.5;
+		color: var(--primary);
+		text-shadow: 0 0 .75em var(--primary);
+		width: 80cqw;
+		margin: 0;
+	}
+
+	.site-title a {
+		text-decoration: none;
+	}
+
+	/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+	.visually-hidden {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
 	}
 }
 
-/* Its 2024 why do I need this still? */
-*, *:before, *:after { box-sizing: border-box; }
+@layer layout {
+	@media screen and (min-width: 41.875em) {
+		.container {
+			grid-template-columns: minmax(200px, 20vw) 1fr;
+			max-width: 100vw;
+		}
+	}
+	/* main section {
+		grid-column: 1 / 4;
+	} */
+	.postlist {
+		grid-column: 1 / 3;
+	}
+	main picture, main img {
+		grid-column: 3 / 5;
+	}
+	footer {
+		display: block;
+		border-top: 1px solid rgba(0,0,0,.2);
+		/* text-align: center; */
+		font-size: 0.75em;
+		padding: 1.2em 0;
+		margin: 0 auto;
+		width: 60vw;
+	}
 
-img, picture {
-	max-width: 100%;
-	height: auto;
-}
-body { 
-	font-family: var(--font);
-	font-size: 100%;
-	font-optical-sizing: auto;
-	font-style: normal;
-	background-color: var(--body-bg); 
-	padding: 0.5em;
-	margin: 0.75em 0 0 0;
+	footer ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	footer span {
+		color: var(--primary);
+	}
+
+	.container {
+		max-width: 100vw;
+	}
+
+	.container main {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	/* TODO: Refactor to use fluid gap system and clean up */
+	main p, main h1, main h2, main h3, main h4, main h5, main h6 {
+		grid-column: 1 / 4;
+		padding: 0;
+		margin: 0 0 var(--gap-fluid) 0;
+	}
+
+	@media screen and (min-width: 32.1875em) {
+		footer {
+			display: flex;
+		}
+		footer div {
+			flex-direction: row;
+			width: 50%;
+		}
+	}
 }
 
-.post-list {
-	list-style: none;
-	padding: 0;
-	margin: 2em 0;
+/* TODO: Clean up Grid styles */
+/* TODO: Refactor all this to be simpler */
+
+@layer components {
+	.styled-intro {
+		grid-column: 1 / 4;
+		margin: 2em 0;
+		font-weight: 700;
+		line-height: var(--line-height);
+		transform: skew(-5deg) rotate(-5deg);
+		background-clip: text;
+		color: var(--tertiary);
+		text-shadow: 0 0 0.75em var(--tertiary);
+		padding-block-start: 2em;
+	}
 }
 
-/* Type Styles */
-.site-title {
-	font-family: var(--font);
-	font-weight: 700;
-    line-height: 1.5;
-	color: var(--primary);
-	text-shadow: 0 0 .75em var(--primary);
-	width: 80cqw;
-	margin: 0;
-}
 
-.site-title a {
-	text-decoration: none;
-}
 
-.post-title, .post-title, .post-metadata, dt, h2, h3, h4 {
-	color: var(--primary);
-}
-
-time {
-	color: var(--primary);
-}
-
-p {
-	color: var(--primary);
-	line-height: var(--line-height);
-}
-
-a {
-	color: var(--primary);
-}
-
-/* main section {
-	grid-column: 1 / 4;
-} */
-.postlist {
-	grid-column: 1 / 3;
-}
-
-.styled-intro {
-	grid-column: 1 / 4;
-	margin: 2em 0;
-	font-weight: 700;
-	line-height: var(--line-height);
-	transform: skew(-5deg) rotate(-5deg);
-	background-clip: text;
-	color: var(--tertiary);
-	text-shadow: 0 0 0.75em var(--tertiary);
-	padding: 2em 0;
-}
 
 p > a {
 	color: var(--primary);
@@ -150,35 +272,7 @@ main a:hover {
  	margin: 0;
 }
 
-footer {
-	display: block;
-	border-top: 1px solid rgba(0,0,0,.2);
-	/*! text-align: center; */
-	font-size: 0.75em;
-	padding: 1.2em 0;
-	margin: 0 auto;
-	width: 60vw;
-}
 
-footer ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-footer span {
-	color: var(--primary);
-}
-
-@media screen and (min-width: 32.1875em) {
-	footer {
-		display: flex;
-	}
-	footer div {
-		flex-direction: row;
-		width: 50%;
-	}
-}
 
 
 footer p {
@@ -187,32 +281,10 @@ footer p {
 	margin-block-start: .25em;
 }
 
-.container {
-	max-width: 100vw;
-}
 
-.container main {
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
-main p, main h1, main h2, main h3, main h4, main h5, main h6 {
-	grid-column: 1 / 4;
-	padding: 0;
-	margin: 0 0 clamp(0.5em, 1vw, 2em) 0;
-}
-
-main picture,
-main img {
-	grid-column: 3 / 5;
-}
-
-@media screen and (min-width: 41.875em) {
-	.container {
-		grid-template-columns: minmax(200px, 20vw) 1fr;
-		max-width: 100vw;
-	}
-	
-}
+ 
+/* Break into multiple MQs and clean up + reorganize + expand layout */
 
 @media screen and (min-width: 40em) {
 	header {
@@ -305,119 +377,23 @@ nav ul li .active {
 	margin-block-start: 0;
 }
 
-/* Typetura v4.0.1 */
-
-/* Custom TT Styles */
-h1.site-title {
-	animation-name: site-title;
+.post-title, .post-title, .post-metadata, dt, h2, h3, h4 {
+	color: var(--primary);
 }
 
-@keyframes site-title {
-	from {
-		font-size: 1.25em;
-	}
-	to {
-		font-size: 2em;
-	}
+time {
+	color: var(--primary);
 }
 
-nav ul li a {
-	animation-name: nav-size
+p {
+	color: var(--primary);
+	line-height: var(--line-height);
 }
 
-@keyframes nav-size {
-	from {
-		font-size: 0.75em;
-	}
-	to {
-		font-size: 1em;
-	}
+a {
+	color: var(--primary);
 }
 
-main p {
-	animation-name: content-p;
-}
-
-@keyframes content-p {
-	from {
-		font-size: 1em;
-	}
-	to {
-		font-size: 1.5em;
-	}
-}
-
-/* Custom property behavior */
-@property --property {
-	syntax: "<integer>";
-	initial-value: 1;
-	inherits: false;
-  }
-  @property --tt-context {
-	syntax: "<length>";
-	initial-value: 100vi;
-	inherits: false;
-  }
-  @property --tt-min {
-	syntax: "<length>";
-	initial-value: 0px;
-	inherits: true;
-  }
-  @property --tt-max {
-	syntax: "<length>";
-	initial-value: 0px;
-	inherits: true;
-  }
-  
-  /* Selectors for Typetura elements */
-  @layer typetura {
-	:where(
-	  .tt,
-	  .rtt,
-	  .typetura,
-	  html
-	) {
-	  /* Use cqi when avalible, if not use vi. */
-	  /* Then normalize all units to run through the delay property */
-	  --tt-context: 100cqi;
-	  --TTCONTEXT: calc(tan(atan2(var(--tt-context,100vi),1px)));
-	  --TTMAX: calc(tan(atan2(var(--tt-max,60em),1px)));
-	  --TTMIN: calc(tan(atan2(var(--tt-min,0em),1px)));
-	  
-	  /* Durations need to be registered as <time> to work propertly in shorthand. Simpler and more clear to write individual property/values instead */
-	  animation-name: var(--tt-key, none);
-	  animation-timing-function: var(--tt-ease, linear);
-	  animation-delay: calc(-1s * var(--property) * (var(--TTCONTEXT) - var(--TTMIN)) / (var(--TTMAX) - var(--TTMIN)));
-	  animation-duration: calc(1s * var(--property));
-	  animation-iteration-count: 1;
-	  animation-fill-mode: both;
-	  animation-play-state: paused;
-	}
-	:where(html) {
-	  /* Reset defaults. Browsers like 0px in @property */
-	  --tt-min: 0em;
-	  --tt-max: 60em;	
-	}
-	:where(.rtt) {
-	  /* Root Typetura context if you explicitly want the viewport context */
-	  --tt-context: 100vi;
-	}
-	:where(.cq) {
-	  /* A container query class */
-	  container-type: inline-size;
-	}
-  }
-
-/* https://www.a11yproject.com/posts/how-to-hide-content/ */
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
 pre,
 code {
 	font-family: var(--font-family-monospace);
@@ -451,7 +427,7 @@ code {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	counter-incement: start-from -1;
+	counter-increment: start-from -1;
 	margin-bottom: 1em;
 }
 
