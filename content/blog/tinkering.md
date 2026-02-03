@@ -2,7 +2,7 @@
 title: Starting again.
 description: Again? You barely started before.
 lede: "Again? You barely started before."
-date: "2026-1-11"
+date: "2026-01-11"
 tags:
   - update
   - personal
