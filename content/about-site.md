@@ -1,10 +1,10 @@
 ---js
 const eleventyNavigation = {
-	key: "About This Site",
+	key: "This Site",
 	order: 4
 };
 ---
-## About My Site
+<h2 class="page-title">This Site</h2>
 
 This site is more than just my personal space on the web; it’s also a playground for experimenting with new ideas and techniques. It’s constantly evolving, so it might not always be perfect or polished. If you encounter any issues, like weird behavior, incorrect display, or outright brokenness, feel free to [let me know](https://github.com/zackjewell/zjnety/issues).
 

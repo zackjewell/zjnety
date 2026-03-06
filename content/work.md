@@ -4,7 +4,7 @@ const eleventyNavigation = {
 	order: 3
 };
 ---
-## My Work
+<h2 class="page-title">About Me</h2>
 
 ### Websites...mostly
 I started my web design career as Responsive Web Design was bursting onto the World Wide Web. I have worked on many web projects and the vast majority have been responsive web sites. I want to build sites that follow best practices and are as accessible to as many people as they can be. I also have extensive experience building/maintaining pattern libraries and working with existing code bases and branding guidelines. 
