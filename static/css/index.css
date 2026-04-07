@@ -211,6 +211,8 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+
+
 	.col-span-1 { grid-column: span 1; }
 	.col-span-2 { grid-column: span 2; }
 
@@ -309,10 +311,15 @@
 	header {
 		padding: var(--gap-large-fluid) var(--gap-large-fluid) 0 var(--gap-large-fluid);
 	}
-	 nav ul li {
+
+	.content {
+		padding: 0 var(--gap-large-fluid);
+	}
+
+	nav ul li {
 		display: inline-block;
 		margin: 0 var(--gap-small-fluid) 0 0;
-	 }
+	}
 
 	.main-content {
     	container-type: inline-size;
@@ -476,11 +483,6 @@
 		font-weight: 900;
 		width: 60cqw;
 		line-height: var(--line-height);
-	}
-
-	.styled-intro { 
-		text-align: center;
-		margin: 0 auto;
 	}
 
 	@media screen and (min-width: 40em) {
