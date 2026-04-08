@@ -299,7 +299,7 @@
 
 	/* Nav */
 	nav {
-		margin-top: 10ch;
+		margin-top: 3em;
 	}
 
 	nav ul {
@@ -323,7 +323,7 @@
 
 	@media screen and (min-width: 40em) {
 		nav {
-			margin-top: 4ch;
+			margin-top: 5em;
 		}
 
 		nav ul li {
@@ -359,8 +359,18 @@
 		flex-wrap: wrap;
 	}
 
-	footer div{
-    	width: 50%;
+	footer div {
+		width: 50%;
+	}
+
+	footer address ul {
+		padding-left: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	footer address ul li {
+		margin-bottom: 0.75em;
 	}
 
 	@media screen and (min-width: 40em) {
