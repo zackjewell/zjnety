@@ -93,7 +93,7 @@
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--tertiary: hsl(59, 87%, 78%);
+			--tertiary: hsl(271, 87%, 78%);
 			--primary: hsl(0, 0%, 95%);
 			--secondary: hsl(0, 0%, 100%);
 			--body-bg: hsl(0, 0%, 15%);
@@ -104,7 +104,7 @@
 
 	@media (prefers-color-scheme: light) {
 		:root {
-			--tertiary: hsl(0, 90%, 55%);
+			--tertiary: hsl(258, 90%, 55%);
 			--primary: hsl(0, 0%, 15%);
 			--secondary: hsl(0, 0%, 100%);
 			--body-bg: hsl(0, 0%, 95%);
@@ -203,8 +203,30 @@
 @layer layout {
 	.container {
 		display: grid;
-		gap: var(--spacing-medium, 1rem);
+		gap: var(--gap, 1rem);
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.logo-grid {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		gap: var(--gap, 1rem);
+		justify-items: center;
+		align-items: center;
+		margin: 1em 0;
+	}
+
+	.logo-grid picture {
+		display: block;
+		max-width: 128px;
+	}
+
+	.logo-grid picture img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-width: 128px;
+		max-height: 128px;
 	}
 
 	.col-span-1 { grid-column: span 1; }
@@ -220,17 +242,21 @@
 			gap: var(--gap-fluid);
 		}
 
+		.logo-grid {
+			grid-template-columns: repeat(2, minmax(0, 128px));
+		}
+
 		.header,
 		.content {
 			grid-row: 1;
 		}
 
-		.col-md-span-1 { grid-column: span 1; }
-		.col-md-span-2 { grid-column: span 2; }
-		.col-md-span-3 { grid-column: span 3; }
-		.col-md-span-4 { grid-column: span 4; }
-		.col-md-span-5 { grid-column: span 5; }
-		.col-md-span-6 { grid-column: span 6; }
+		.col-md-span-1 { grid-column-end: span 1; }
+		.col-md-span-2 { grid-column-end: span 2; }
+		.col-md-span-3 { grid-column-end: span 3; }
+		.col-md-span-4 { grid-column-end: span 4; }
+		.col-md-span-5 { grid-column-end: span 5; }
+		.col-md-span-6 { grid-column-end: span 6; }
 
 		.col-md-start-1 { grid-column-start: 1; }
 		.col-md-start-2 { grid-column-start: 2; }
@@ -474,7 +500,6 @@
 	h2 {
 		font-size: 1.75em;
 		font-weight: 800;
-		line-height: var(--line-height);
 		color: var(--primary);
 		margin-block-end: 0.75em;
 	}
@@ -482,14 +507,14 @@
 	h3 {
 		font-size: 1.5em;
 		font-weight: 700;
-		line-height: var(--line-height);
+		margin-block-end: 1em;
 		color: var(--primary);
 	}
 
 	h4 {
 		font-size: 1.25em;
 		font-weight: 600;
-		line-height: var(--line-height);
+		margin-block-end: 1em;
 		color: var(--primary);
 	}
 }

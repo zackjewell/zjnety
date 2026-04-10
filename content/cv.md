@@ -14,33 +14,33 @@ I hold an MFA in Emergent Media from Champlain College and a background in digit
 ## UI Designer and Front-end Developer
 ### Bindable
 #### Feb. 2020 - April 2026
-Designed, developed, and maintained interfaces and complex workflows for auto, home, and renters insurance products. Collaborated with engineers and stakeholders to create cohesive and scalable solutions. I also led efforts for building and customizing white-label experiences for partners, both internal and external. Led efforts to expand usability, accessibility, and performance across all products and platforms.
+Designed, developed, and maintained interfaces and complex workflows for auto, home, and renters’ insurance products. Collaborated with engineers and stakeholders to create cohesive and scalable solutions. I also led efforts for building and customizing white-label experiences for partners, both internal and external. Led efforts to expand usability, accessibility, and performance across all products and platforms.
 
 
 ## Principal
 ### Zack Jewell Design
 #### Jan. 2007 - present
-Web/Graphic Design and Web Development for a variety of clients, from creative entrepreneurs to small non-profits and large institutions. Projects include designing and developing websites, updating established sites to keep them fresh and contemporary, developing content strategies, designing ads/E-mail Newsletter templates, Branding and producing photography and videos.
+Web/Graphic Design and Web Development for a variety of clients, from creative entrepreneurs to small non-profits and large institutions. Projects include designing and developing websites, updating established sites to keep them fresh and contemporary, developing content strategies, designing ads/E-mail Newsletter templates, branding and producing photography and videos.
 
 ## Web Designer and Front-End Developer
 ### Strategis
 #### September 2018 - January 2019
-Worked with Account and Project Managers on various types of projects like website projects, print and digital marketing ads, as well as direct mail campaigns for clients ranging from Dentists to Credit Unions. Most work was done solo and needed to be executed on tight deadlines.
+Worked with Account and Project Managers on various types of projects like website projects, print and digital marketing ads, as well as direct mail campaigns for clients ranging from dentists to credit unions. Most work was done solo and needed to be executed on tight deadlines.
 
 ## Design and Development Mentor
 ### Bloc
 #### June 2017 - September 2018
-I worked with Bloc to teach, coach and instruct students on UX and Visual Design and Front-end Development fundamentals. Along with other mentors I showed and taught students how design and development work together while also presenting best practices in development, design, usability and accessibility. While also working on helping with platform updates for both technical (Front-End) and content issues.
+I worked with Bloc to teach, coach, and instruct students on UX and Visual Design and Front-end Development fundamentals. Along with other mentors, I showed and taught students how design and development work together while also presenting best practices in development, design, usability, and accessibility while also working on helping with platform updates for both technical (Front-End) and content issues.
 
 ## Web Designer and Front-End Developer
 ### The Laidlaw Group
 #### Feb. 2015 - Nov. 2016
-Lead website design and development, specializing in responsive design, working with clients ranging from a water taxi service to an architectural shelving company. Team leadership includes implementing best practices, managing interns and junior staff, improving design and development workflows and streamlining communications as well as managing some project timelines and client communication
+Led website design and development, specializing in responsive design, working with clients ranging from a water taxi service to an architectural shelving company. Team leadership includes implementing best practices, managing interns and junior staff, improving design and development workflows, and streamlining communications as well as managing some project timelines and client communication.
 
 ## Interactive Designer and Developer
 ### Wild Honey Social Media / Bespoke House
-May 2013 - September 2014
-Designed and developed projects for residential-resort communities, real estate developers and boutique hotels, including desktop, mobile-only and responsive websites, ads and email newsletters. Worked on teams on tight deadlines to solve design and development problems in a small, fast-paced marketing company.
+#### May 2013 - September 2014
+Designed and developed projects for residential-resort communities, real estate developers, and boutique hotels, including desktop, mobile-only, and responsive websites, ads, and email newsletters. Worked on teams on tight deadlines to solve design and development problems in a small, fast-paced marketing company.
 
 ## Skills
 HTML, CSS/SASS/SCSS/LESS, JavaScript (ES6+, Vue), Adobe Creative Design Suite, Sketch, Figma, Typography, photography
@@ -51,3 +51,5 @@ B.A. Digital Media, A.S. Graphic Design Lyndon State College, Lyndonville, VT.
 
 ## References/Accolades
 Won the DDT Pro Ironman HeavyMetalWeight Title, Rescued a baby from a burning house (legit true)</p>
+
+[Printable](../pdf/) and [Bulleted](../pdf/) versions available.

@@ -6,10 +6,10 @@ const eleventyNavigation = {
 ---
 <h2 class="page-title">This Site</h2>
 
-This site is more than just my personal space on the web; it’s also a playground for experimenting with new ideas and techniques. It’s constantly evolving, so it might not always be perfect or polished. If you encounter any issues, like weird behavior, incorrect display, or outright brokenness, feel free to [let me know](https://github.com/zackjewell/zjnety/issues).
+I’m beginning to bring my ideas to life and practice what I believe in. I’m hoping this space will be a dynamic test ground and showcase, as well as my online haven for writing, exploring, and learning. This site is always growing, so it might not always be perfect or completely polished. If you run into any problems, like strange behavior, display issues, or outright glitches, please [let me know](https://github.com/zackjewell/zjnety/issues).
 
-I’m a big fan of the open web and its potential. I’ve always dreamed of creating something that will stand the test of time, unlike those siloed-off sites and services we use today. (Looking at you, MySpace and Twitter.) Content can disappear overnight, but this space will always be here.
+I’m a big believer in the open web and its incredible potential. I’ve always dreamed of creating something that will last, unlike the isolated sites and services we use today. (Looking at you, MySpace and Twitter.) Content can vanish overnight, but this space will always be here in some form. I want it to be a home for as long as I need it to be.
 
-I’m also starting to put my words into action and practice what I believe in. 
+This website is built on [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com). Maybe one of those fancy CMSes someday. Who knows?
 
-This website is built on [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com). Probably one of those fancy CMSes sometime. Who can say.
+If you run into any problems, like strange behavior, display issues, or outright glitches, please [let me know](https://github.com/zackjewell/zjnety/issues).
