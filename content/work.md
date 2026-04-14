@@ -33,4 +33,6 @@ Right now? Probably working on something because I sometimes can't turn my brain
   </picture>
 </div>
 
-Arsenal Performance, Barnsley Gardens Resort, Black Dolphin Inn, Bogue Watch, Browns Landing, Combat Zone Wrestling, Daily Precast, DebtX, Farmers Insurance Group, Gallagher, Holyoke Credit Union, HUB, Huntington Bank, Luso Credit Union, Mapfre, Mario Russo Salon, Mechanics Cooperative Bank, Modern Funding, NeoFight Pro, New Seabury, NFP, PCT Credit Union, Peckham Industries, Rakks, Riverworks Credit Union, Rough Hollow Lakeway, Sisters Cove/Nest Homes, SoFi, Strategis, Ullico Select, Unipower, WASDA, Water Taxi of Fort Lauderdale, Windmill Press
+Arsenal Performance, Barnsley Gardens Resort, Black Dolphin Inn, Bogue Watch, Browns Landing, Combat Zone Wrestling, Daily Precast, DebtX, Farmers Insurance Group, Gallagher, Holyoke Credit Union, HUB, Huntington Bank, Luso Credit Union, Mapfre, Mario Russo Salon, Mechanics Cooperative Bank, Modern Funding, New Seabury, NFP, PCT Credit Union, Peckham Industries, Rakks, Riverworks Credit Union, Rough Hollow Lakeway, Sisters Cove/Nest Homes, SoFi, Strategis, Ullico Select, Unipower, WASDA, Water Taxi of Fort Lauderdale, Windmill Press.
+
+Samples of work [available](../static/pdf/work-samples.pdf)

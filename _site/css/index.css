@@ -80,6 +80,8 @@
 		}
 	}
 
+	/* light-dark() ???? https://daverupert.com/2026/04/inverted-light-dark/ */
+
 	:root {
 		--font: "CabinetGrotesk", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 		--gap: 1em;
@@ -139,7 +141,7 @@
 		font-weight: 700;
 		line-height: 1.5;
 		color: var(--primary);
-		text-shadow: 0 0 .75em var(--primary);
+		text-shadow: 0 0 .75em var(--tertiary);
 		margin: 0;
 	}
 
@@ -523,7 +525,7 @@
 	.styled-intro {
 		margin: 0 0 3em 0;
 		font-weight: 900;
-		width: 60cqw;
+		width: 75cqw;
 		line-height: var(--line-height);
 	}
 
