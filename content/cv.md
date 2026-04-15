@@ -52,4 +52,4 @@ B.A. Digital Media, A.S. Graphic Design Lyndon State College, Lyndonville, VT.
 ## References/Accolades
 Won the DDT Pro Ironman HeavyMetalWeight Title, Rescued a baby from a burning house (legit true)</p>
 
-<!-- [Bulleted](../pdf/) versions available. -->
+[Bulleted PDF](../static/pdf/zachary-jewell-resume.pdf) version available.
