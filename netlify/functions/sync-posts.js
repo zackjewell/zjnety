@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
 };
 
 async function getFileSha(path) {
-  const response = await fetch('https://api.github.com/repos/zackjewell/zjnety/contents/' + path, {
+ const response = await fetch(`https://api.github.com/repos/zackjewell/zjnety/contents/${path}?ref=master`, {
     headers: {
       'Authorization': 'token ' + process.env.GITHUB_TOKEN
     }
@@ -52,6 +52,7 @@ async function getFileSha(path) {
 async function updateFile(path, content, sha, message) {
   const response = await fetch('https://api.github.com/repos/zackjewell/zjnety/contents/' + path, {
     method: 'PUT',
+    branch: 'master',
     headers: {
       'Authorization': 'token ' + process.env.GITHUB_TOKEN,
       'Content-Type': 'application/json'
