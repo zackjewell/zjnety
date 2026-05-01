@@ -14,7 +14,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy(".well-known/atproto-did/verify.txt");
 	eleventyConfig.addPassthroughCopy({ '_src/robots.txt': '/robots.txt' });
 	eleventyConfig.addPassthroughCopy("src/_data");
-
+	eleventyConfig.addPassthroughCopy("admin");
 
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
