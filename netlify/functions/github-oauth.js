@@ -1,10 +1,12 @@
+const fetch = require('node-fetch');
+
 exports.handler = async (event) => {
   const code = event.queryStringParameters.code;
   
   if (!code) {
     return {
       statusCode: 400,
-      body: 'Missing code parameter'
+      body: JSON.stringify({ error: 'Missing code parameter' })
     };
   }
   
@@ -29,12 +31,13 @@ exports.handler = async (event) => {
         statusCode: 302,
         headers: {
           Location: `/admin/#access_token=${data.access_token}`
-        }
+        },
+        body: ''
       };
     } else {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: 'Failed to get access token' })
+        body: JSON.stringify({ error: 'Failed to get access token', details: data })
       };
     }
   } catch (error) {
