@@ -35,6 +35,7 @@
 	},
 	"dependencies": {
 		"@zachleat/heading-anchors": "^1.0.1",
-		"dark-mode-toggle": "^0.16.2"
+		"dark-mode-toggle": "^0.16.2",
+		"node-fetch": "^2.7.0"
 	}
 }

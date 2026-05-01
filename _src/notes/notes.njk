@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: Notes
+permalink: /notes/
+eleventyComputed:
+  posts: "{{ posts or [] }}"
+---
+
+<div class="notes-container">
+  <h1>{{ title }}</h1>
+  <p class="subtitle">Quick thoughts and social posts</p>
+  
+  {% if posts and posts.length > 0 %}
+    <div class="notes-list">
+      {% for note in posts %}
+        {% if note.type == "note" and note.status == "posted" %}
+          <article class="note">
+            <p>{{ note.content }}</p>
+            <div class="note-meta">
+              <time datetime="{{ note.updatedAt }}">
+                {{ note.updatedAt | dateFormat }}
+              </time>
+              {% if note.postedToMastodon %}
+                <span class="badge mastodon">Mastodon</span>
+              {% endif %}
+              {% if note.postedToThreads %}
+                <span class="badge threads">Threads</span>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty-state">No notes yet. Check back soon!</p>
+  {% endif %}
+</div>
+

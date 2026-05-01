@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netlify CMS</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+    .app { max-width: 1200px; margin: 0 auto; }
+    .login { background: white; max-width: 450px; margin: 100px auto; padding: 40px; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+    .login h1 { margin-bottom: 20px; color: #333; }
+    .login p { color: #666; margin-bottom: 20px; line-height: 1.6; }
+    .login button { width: 100%; padding: 14px; background: #00ad9f; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: 600; margin-bottom: 10px; }
+    .login button:hover { background: #009688; }
+    .login .note { margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 5px; font-size: 13px; color: #0369a1; }
+    .login button + button { margin-top: 10px; }
+    .main { background: white; border-radius: 10px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px; }
+    .header h1 { color: #333; font-size: 28px; }
+    .user-info { display: flex; align-items: center; gap: 15px; color: #666; font-size: 14px; }
+    .user-info img { width: 32px; height: 32px; border-radius: 50%; }
+    .tabs { display: flex; gap: 5px; margin-bottom: 20px; border-bottom: 2px solid #e9ecef; }
+    .tab { padding: 10px 20px; background: none; border: none; cursor: pointer; color: #666; font-size: 15px; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+    .tab.active { color: #00ad9f; border-bottom-color: #00ad9f; font-weight: 600; }
+    .tab:hover { color: #00ad9f; }
+    .buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+    button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; }
+    .btn-primary { background: #00ad9f; color: white; }
+    .btn-primary:hover { background: #009688; }
+    .btn-secondary { background: #6c757d; color: white; }
+    .btn-secondary:hover { background: #5a6268; }
+    .btn-outline { background: white; border: 1px solid #ddd; color: #666; }
+    .btn-outline:hover { background: #f8f9fa; }
+    .btn-danger { background: #dc3545; color: white; }
+    .btn-danger:hover { background: #c82333; }
+    .btn-social { display: inline-flex; align-items: center; gap: 8px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    .section h2 { color: #666; margin-bottom: 15px; font-size: 18px; }
+    .post { background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-radius: 5px; border-left: 4px solid transparent; }
+    .post.draft { border-left-color: #ffc107; }
+    .post.synced { border-left-color: #28a745; }
+    .post.note { border-left-color: #6f42c1; }
+    .post h3 { color: #333; margin-bottom: 8px; font-size: 16px; }
+    .post-date { color: #999; font-size: 13px; margin-bottom: 10px; }
+    .post-meta { display: flex; gap: 10px; font-size: 12px; color: #999; margin-bottom: 10px; }
+    .post-meta .badge { padding: 2px 8px; border-radius: 3px; background: #e9ecef; }
+    .post-meta .badge.mastodon { background: #6364ff; color: white; }
+    .post-meta .badge.threads { background: black; color: white; }
+    .post-actions { display: flex; gap: 10px; }
+    .post-actions button { padding: 5px 10px; font-size: 13px; background: none; border: none; color: #00ad9f; cursor: pointer; }
+    .post-actions button:hover { text-decoration: underline; }
+    .post-actions .delete { color: #dc3545; }
+    .empty { color: #999; font-style: italic; }
+    .editor { max-width: 800px; margin: 0 auto; }
+    .editor h2 { margin-bottom: 20px; color: #333; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 5px; color: #666; font-weight: 500; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+    .form-group textarea { font-family: monospace; min-height: 200px; }
+    .form-group textarea.short { min-height: 120px; }
+    .char-count { text-align: right; font-size: 12px; color: #999; margin-top: 5px; }
+    .char-count.warning { color: #ffc107; }
+    .char-count.error { color: #dc3545; }
+    .checkbox-group { display: flex; gap: 20px; margin-top: 10px; }
+    .checkbox-group label { display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; }
+    .checkbox-group input[type="checkbox"] { width: auto; }
+    .form-actions { display: flex; gap: 10px; margin-top: 20px; }
+    .status { padding: 10px 15px; border-radius: 5px; margin-bottom: 20px; }
+    .status.success { background: #d4edda; color: #155724; }
+    .status.error { background: #f8d7da; color: #721c24; }
+    .status.info { background: #d1ecf1; color: #0c5460; }
+    .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #f3f3f3; border-top: 2px solid #00ad9f; border-radius: 50%; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .settings-panel { background: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+    .settings-panel h3 { margin-bottom: 15px; color: #333; }
+    .settings-panel .form-group { margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const STORAGE_KEY = 'netlify-cms-posts';
+    const MASTODON_CHAR_LIMIT = 500;
+    const THREADS_CHAR_LIMIT = 500;
+    
+    let state = {
+      posts: [],
+      isAuth: false,
+      user: null,
+      token: null,
+      repo: null,
+      editing: null,
+      status: null,
+      syncing: false,
+      activeTab: 'blog',
+      mastodonInstance: localStorage.getItem('mastodon_instance') || '',
+      mastodonToken: localStorage.getItem('mastodon_token') || '',
+      threadsToken: localStorage.getItem('threads_token') || ''
+    };
+
+    async function init() {
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      const accessToken = params.get('access_token');
+      
+      if (accessToken) {
+        state.token = accessToken;
+        localStorage.setItem('github_token', accessToken);
+        window.location.hash = '';
+        await loadUser();
+      } else {
+        const storedToken = localStorage.getItem('github_token');
+        if (storedToken) {
+          state.token = storedToken;
+          await loadUser();
+        }
+      }
+      
+      try {
+        const result = await window.storage.get(STORAGE_KEY);
+        if (result && result.value) {
+          state.posts = JSON.parse(result.value);
+        }
+      } catch (e) {
+        state.posts = [];
+      }
+      
+      render();
+    }
+
+    async function loadUser() {
+      try {
+        const response = await fetch('https://api.github.com/user', {
+          headers: { 'Authorization': 'Bearer ' + state.token }
+        });
+        
+        if (response.ok) {
+          state.user = await response.json();
+          state.isAuth = true;
+          
+          const repoGuess = await guessRepo();
+          if (repoGuess) {
+            state.repo = repoGuess;
+          }
+        } else {
+          localStorage.removeItem('github_token');
+          state.token = null;
+        }
+      } catch (e) {
+        console.error('Failed to load user:', e);
+      }
+    }
+
+    async function guessRepo() {
+      try {
+        const response = await fetch('/.netlify/functions/get-repo');
+        if (response.ok) {
+          const data = await response.json();
+          return data.repo;
+        }
+      } catch (e) {
+        // Function doesn't exist
+      }
+      return null;
+    }
+
+    async function save() {
+      await window.storage.set(STORAGE_KEY, JSON.stringify(state.posts));
+    }
+
+    async function syncToGitHub() {
+      if (!state.repo) {
+        state.status = { type: 'error', msg: 'Repository not configured.' };
+        render();
+        return;
+      }
+      
+      state.syncing = true;
+      state.status = { type: 'info', msg: 'Syncing to GitHub...' };
+      render();
+      
+      try {
+        const filePath = '_data/posts.json';
+        const url = 'https://api.github.com/repos/' + state.repo + '/contents/' + filePath;
+        
+        let sha = null;
+        const getResponse = await fetch(url, {
+          headers: { 'Authorization': 'Bearer ' + state.token }
+        });
+        
+        if (getResponse.ok) {
+          const fileData = await getResponse.json();
+          sha = fileData.sha;
+        }
+        
+        const content = btoa(unescape(encodeURIComponent(JSON.stringify(state.posts, null, 2))));
+        
+        const commitResponse = await fetch(url, {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'Bearer ' + state.token,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: 'Update posts from CMS',
+            content: content,
+            sha: sha
+          })
+        });
+        
+        if (commitResponse.ok) {
+          state.status = { type: 'success', msg: 'Successfully synced to GitHub!' };
+          state.posts.forEach(p => p.synced = true);
+          await save();
+        } else {
+          const error = await commitResponse.json();
+          state.status = { type: 'error', msg: 'Failed to sync: ' + error.message };
+        }
+      } catch (e) {
+        state.status = { type: 'error', msg: 'Sync failed: ' + e.message };
+      }
+      
+      state.syncing = false;
+      render();
+    }
+
+    async function postToMastodon(content) {
+      if (!state.mastodonInstance || !state.mastodonToken) {
+        state.status = { type: 'error', msg: 'Mastodon not configured. Please add your instance and token in settings.' };
+        render();
+        return false;
+      }
+
+      try {
+        const response = await fetch('https://' + state.mastodonInstance + '/api/v1/statuses', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + state.mastodonToken,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            status: content,
+            visibility: 'public'
+          })
+        });
+
+        if (response.ok) {
+          return true;
+        } else {
+          const error = await response.json();
+          state.status = { type: 'error', msg: 'Mastodon post failed: ' + (error.error || 'Unknown error') };
+          render();
+          return false;
+        }
+      } catch (e) {
+        state.status = { type: 'error', msg: 'Mastodon post failed: ' + e.message };
+        render();
+        return false;
+      }
+    }
+
+    async function postToThreads(content) {
+      if (!state.threadsToken) {
+        state.status = { type: 'error', msg: 'Threads not configured. Please add your access token in settings.' };
+        render();
+        return false;
+      }
+
+      try {
+        // Note: Threads API requires creating a container first, then publishing
+        const createResponse = await fetch('https://graph.threads.net/v1.0/me/threads', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + state.threadsToken,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            media_type: 'TEXT',
+            text: content
+          })
+        });
+
+        if (createResponse.ok) {
+          const createData = await createResponse.json();
+          
+          // Publish the container
+          const publishResponse = await fetch('https://graph.threads.net/v1.0/me/threads_publish', {
+            method: 'POST',
+            headers: {
+              'Authorization': 'Bearer ' + state.threadsToken,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              creation_id: createData.id
+            })
+          });
+
+          if (publishResponse.ok) {
+            return true;
+          }
+        }
+        
+        state.status = { type: 'error', msg: 'Threads post failed' };
+        render();
+        return false;
+      } catch (e) {
+        state.status = { type: 'error', msg: 'Threads post failed: ' + e.message };
+        render();
+        return false;
+      }
+    }
+
+    function render() {
+      const root = document.getElementById('root');
+      root.innerHTML = state.isAuth ? (state.editing ? editorView() : mainView()) : loginView();
+    }
+
+    function loginView() {
+      return '<div class="login"><h1>🚀 Netlify CMS</h1><p>Manage blog posts and social media notes in one place.</p><button onclick="loginWithGitHub()">Login with GitHub</button><div class="note"><strong>Features:</strong><br>• Write blog posts synced to GitHub<br>• Post short notes to Mastodon & Threads<br>• Auto-trigger Netlify rebuilds</div></div>';
+    }
+
+    function mainView() {
+      let statusHTML = '';
+      if (state.status) {
+        statusHTML = '<div class="status ' + state.status.type + '">' + state.status.msg + '</div>';
+      }
+      
+      let repoHTML = '';
+      if (state.repo) {
+        repoHTML = '<div style="color:#666;font-size:13px;">📁 ' + state.repo + '</div>';
+      } else {
+        repoHTML = '<div style="color:#999;font-size:13px;">⚠️ Repository not set <button class="btn-outline" style="margin-left:10px;padding:5px 10px;font-size:12px;" onclick="setRepo()">Set Repo</button></div>';
+      }
+
+      const blogPosts = state.posts.filter(p => p.type === 'blog' || !p.type);
+      const notes = state.posts.filter(p => p.type === 'note');
+      
+      const published = blogPosts.filter(p => p.status === 'published');
+      const drafts = blogPosts.filter(p => p.status === 'draft');
+      
+      let pubHTML = '';
+      if (published.length === 0) {
+        pubHTML = '<p class="empty">No published posts</p>';
+      } else {
+        for (let i = 0; i < published.length; i++) {
+          pubHTML += postCard(published[i], false);
+        }
+      }
+      
+      let draftHTML = '';
+      if (drafts.length === 0) {
+        draftHTML = '<p class="empty">No drafts</p>';
+      } else {
+        for (let i = 0; i < drafts.length; i++) {
+          draftHTML += postCard(drafts[i], true);
+        }
+      }
+
+      let notesHTML = '';
+      if (notes.length === 0) {
+        notesHTML = '<p class="empty">No notes yet</p>';
+      } else {
+        for (let i = 0; i < notes.length; i++) {
+          notesHTML += noteCard(notes[i]);
+        }
+      }
+
+      const unsyncedCount = state.posts.filter(p => !p.synced).length;
+      const syncBtnText = state.syncing ? '<span class="spinner"></span> Syncing...' : '🔄 Sync to GitHub' + (unsyncedCount > 0 ? ' (' + unsyncedCount + ')' : '');
+
+      const blogView = '<div class="buttons"><button class="btn-primary" onclick="newPost(\'blog\')">➕ New Blog Post</button><button class="btn-secondary" onclick="syncToGitHub()" ' + (state.syncing ? 'disabled' : '') + '>' + syncBtnText + '</button><button class="btn-outline" onclick="exportPosts()">💾 Export JSON</button></div><div class="grid"><div class="section"><h2>Published (' + published.length + ')</h2>' + pubHTML + '</div><div class="section"><h2>Drafts (' + drafts.length + ')</h2>' + draftHTML + '</div></div>';
+
+      const notesView = '<div class="buttons"><button class="btn-primary" onclick="newPost(\'note\')">➕ New Note</button><button class="btn-outline" onclick="showSettings()">⚙️ Social Settings</button></div><div style="margin-top:20px;"><div class="section"><h2>Notes (' + notes.length + ')</h2>' + notesHTML + '</div></div>';
+
+      return '<div class="app"><div class="main">' + statusHTML + '<div class="header"><div><h1>Content Manager</h1>' + repoHTML + '</div><div><div class="user-info"><img src="' + state.user.avatar_url + '" alt="avatar"><span>' + state.user.login + '</span><button class="btn-outline" onclick="logout()">Logout</button></div></div></div><div class="tabs"><button class="tab ' + (state.activeTab === 'blog' ? 'active' : '') + '" onclick="switchTab(\'blog\')">📝 Blog Posts</button><button class="tab ' + (state.activeTab === 'notes' ? 'active' : '') + '" onclick="switchTab(\'notes\')">💭 Notes</button></div>' + (state.activeTab === 'blog' ? blogView : notesView) + '</div></div>';
+    }
+
+    function postCard(post, isDraft) {
+      const date = new Date(post.updatedAt).toLocaleDateString();
+      const cls = isDraft ? ' draft' : (post.synced ? ' synced' : '');
+      const syncBadge = post.synced ? '' : '<span style="color:#ffc107;font-size:11px;"> ● unsaved</span>';
+      return '<div class="post' + cls + '"><h3>' + esc(post.title) + syncBadge + '</h3><p class="post-date">' + date + '</p><div class="post-actions"><button onclick="edit(\'' + post.id + '\')">Edit</button><button class="delete" onclick="del(\'' + post.id + '\')">Delete</button></div></div>';
+    }
+
+    function noteCard(note) {
+      const date = new Date(note.updatedAt).toLocaleDateString();
+      let badges = '';
+      if (note.postedToMastodon) badges += '<span class="badge mastodon">Mastodon</span>';
+      if (note.postedToThreads) badges += '<span class="badge threads">Threads</span>';
+      
+      return '<div class="post note"><h3>' + esc(note.content.substring(0, 60)) + (note.content.length > 60 ? '...' : '') + '</h3><div class="post-meta">' + badges + '</div><p class="post-date">' + date + '</p><div class="post-actions"><button onclick="edit(\'' + note.id + '\')">Edit</button><button class="delete" onclick="del(\'' + note.id + '\')">Delete</button></div></div>';
+    }
+
+    function editorView() {
+      const isNew = !state.editing.createdAt;
+      const isNote = state.editing.type === 'note';
+      
+      if (isNote) {
+        const charCount = (state.editing.content || '').length;
+        const mastodonOver = charCount > MASTODON_CHAR_LIMIT;
+        const threadsOver = charCount > THREADS_CHAR_LIMIT;
+        const countClass = mastodonOver || threadsOver ? 'error' : (charCount > MASTODON_CHAR_LIMIT * 0.9 ? 'warning' : '');
+        
+        return '<div class="app"><div class="main"><div class="editor"><h2>' + (isNew ? 'New Note' : 'Edit Note') + '</h2><div class="form-group"><label>Content</label><textarea id="content" class="short" oninput="updateCharCount()">' + esc(state.editing.content || '') + '</textarea><div class="char-count ' + countClass + '" id="char-count">' + charCount + ' / ' + MASTODON_CHAR_LIMIT + ' characters</div></div><div class="form-group"><label>Post to:</label><div class="checkbox-group"><label><input type="checkbox" id="post-mastodon" ' + (state.editing.postToMastodon ? 'checked' : '') + '> Mastodon</label><label><input type="checkbox" id="post-threads" ' + (state.editing.postToThreads ? 'checked' : '') + '> Threads</label></div></div><div class="form-actions"><button class="btn-primary" onclick="saveNote()">💾 Save & Post</button><button class="btn-outline" onclick="cancel()">Cancel</button></div></div></div></div>';
+      } else {
+        return '<div class="app"><div class="main"><div class="editor"><h2>' + (isNew ? 'New Blog Post' : 'Edit Post') + '</h2><div class="form-group"><label>Title</label><input type="text" id="title" value="' + esc(state.editing.title || '') + '"></div><div class="form-group"><label>Content (Markdown supported)</label><textarea id="content">' + esc(state.editing.content || '') + '</textarea></div><div class="form-group"><label>Status</label><select id="status"><option value="draft"' + (state.editing.status === 'draft' ? ' selected' : '') + '>Draft</option><option value="published"' + (state.editing.status === 'published' ? ' selected' : '') + '>Published</option></select></div><div class="form-actions"><button class="btn-primary" onclick="savePost()">💾 Save</button><button class="btn-outline" onclick="cancel()">Cancel</button></div></div></div></div>';
+      }
+    }
+
+    function updateCharCount() {
+      const content = document.getElementById('content').value;
+      const charCount = content.length;
+      const countEl = document.getElementById('char-count');
+      
+      if (charCount > MASTODON_CHAR_LIMIT) {
+        countEl.className = 'char-count error';
+      } else if (charCount > MASTODON_CHAR_LIMIT * 0.9) {
+        countEl.className = 'char-count warning';
+      } else {
+        countEl.className = 'char-count';
+      }
+      
+      countEl.textContent = charCount + ' / ' + MASTODON_CHAR_LIMIT + ' characters';
+    }
+
+    function showSettings() {
+      const instance = prompt('Enter your Mastodon instance (e.g., mastodon.social):', state.mastodonInstance);
+      if (instance !== null) {
+        state.mastodonInstance = instance;
+        localStorage.setItem('mastodon_instance', instance);
+      }
+      
+      const mastodonToken = prompt('Enter your Mastodon access token:', state.mastodonToken);
+      if (mastodonToken !== null) {
+        state.mastodonToken = mastodonToken;
+        localStorage.setItem('mastodon_token', mastodonToken);
+      }
+      
+      const threadsToken = prompt('Enter your Threads access token:', state.threadsToken);
+      if (threadsToken !== null) {
+        state.threadsToken = threadsToken;
+        localStorage.setItem('threads_token', threadsToken);
+      }
+      
+      state.status = { type: 'success', msg: 'Settings saved!' };
+      render();
+    }
+
+    function switchTab(tab) {
+      state.activeTab = tab;
+      state.status = null;
+      render();
+    }
+
+    function loginWithGitHub() {
+      const clientId = 'Ov23liIwlhJb1CAQDmB3';
+      const redirectUri = window.location.origin + window.location.pathname;
+      const scope = 'repo';
+      window.location.href = 'https://github.com/login/oauth/authorize?client_id=' + clientId + '&redirect_uri=' + redirectUri + '&scope=' + scope;
+    }
+
+    function logout() {
+      localStorage.removeItem('github_token');
+      state = { posts: state.posts, isAuth: false, user: null, token: null, repo: null, editing: null, status: null, syncing: false, activeTab: 'blog', mastodonInstance: state.mastodonInstance, mastodonToken: state.mastodonToken, threadsToken: state.threadsToken };
+      render();
+    }
+
+    function setRepo() {
+      const repo = prompt('Enter your GitHub repository (format: username/repo-name):\n\nExample: john/my-blog');
+      if (repo && repo.includes('/')) {
+        state.repo = repo;
+        localStorage.setItem('github_repo', repo);
+        state.status = { type: 'success', msg: 'Repository set to ' + repo };
+        render();
+      }
+    }
+
+    function newPost(type) {
+      state.editing = { 
+        id: Date.now().toString(), 
+        type: type,
+        title: '', 
+        content: '', 
+        status: 'draft', 
+        createdAt: new Date().toISOString(), 
+        updatedAt: new Date().toISOString(),
+        synced: false,
+        postToMastodon: type === 'note',
+        postToThreads: type === 'note'
+      };
+      render();
+    }
+
+    function edit(id) {
+      state.editing = state.posts.find(p => p.id === id);
+      render();
+    }
+
+    async function savePost() {
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+      const status = document.getElementById('status').value;
+      
+      if (!title.trim()) {
+        alert('Title required');
+        return;
+      }
+      
+      state.editing.title = title;
+      state.editing.content = content;
+      state.editing.status = status;
+      state.editing.updatedAt = new Date().toISOString();
+      state.editing.synced = false;
+      
+      const idx = state.posts.findIndex(p => p.id === state.editing.id);
+      if (idx >= 0) {
+        state.posts[idx] = state.editing;
+      } else {
+        state.posts.push(state.editing);
+      }
+      
+      await save();
+      state.editing = null;
+      state.status = { type: 'success', msg: 'Post saved! Click "Sync to GitHub" to publish.' };
+      render();
+    }
+
+    async function saveNote() {
+      const content = document.getElementById('content').value;
+      const postMastodon = document.getElementById('post-mastodon').checked;
+      const postThreads = document.getElementById('post-threads').checked;
+      
+      if (!content.trim()) {
+        alert('Content required');
+        return;
+      }
+      
+      if (content.length > MASTODON_CHAR_LIMIT && postMastodon) {
+        alert('Content exceeds Mastodon character limit (' + MASTODON_CHAR_LIMIT + ')');
+        return;
+      }
+      
+      if (content.length > THREADS_CHAR_LIMIT && postThreads) {
+        alert('Content exceeds Threads character limit (' + THREADS_CHAR_LIMIT + ')');
+        return;
+      }
+      
+      state.editing.content = content;
+      state.editing.updatedAt = new Date().toISOString();
+      state.editing.synced = false;
+      
+      let posted = [];
+      
+      if (postMastodon) {
+        const success = await postToMastodon(content);
+        if (success) {
+          state.editing.postedToMastodon = true;
+          posted.push('Mastodon');
+        }
+      }
+      
+      if (postThreads) {
+        const success = await postToThreads(content);
+        if (success) {
+          state.editing.postedToThreads = true;
+          posted.push('Threads');
+        }
+      }
+      
+      const idx = state.posts.findIndex(p => p.id === state.editing.id);
+      if (idx >= 0) {
+        state.posts[idx] = state.editing;
+      } else {
+        state.posts.push(state.editing);
+      }
+      
+      await save();
+      state.editing = null;
+      
+      if (posted.length > 0) {
+        state.status = { type: 'success', msg: 'Note saved and posted to ' + posted.join(' and ') + '!' };
+      } else {
+        state.status = { type: 'success', msg: 'Note saved locally.' };
+      }
+      
+      render();
+    }
+
+    function cancel() {
+      state.editing = null;
+      state.status = null;
+      render();
+    }
+
+    async function del(id) {
+      if (confirm('Delete this item?')) {
+        state.posts = state.posts.filter(p => p.id !== id);
+        await save();
+        render();
+      }
+    }
+
+    function exportPosts() {
+      const blob = new Blob([JSON.stringify(state.posts, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'posts.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function esc(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    const savedRepo = localStorage.getItem('github_repo');
+    if (savedRepo) {
+      state.repo = savedRepo;
+    }
+
+    init();
+  </script>
+</body>
+</html>

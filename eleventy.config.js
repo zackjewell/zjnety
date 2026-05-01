@@ -1,3 +1,4 @@
+
 import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -5,18 +6,40 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
+import markdownIt from "markdown-it";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy(".well-known/atproto-did/verify.txt");
 	eleventyConfig.addPassthroughCopy({ '_src/robots.txt': '/robots.txt' });
-	
+	eleventyConfig.addPassthroughCopy("src/_data");
+
+
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
+	});
+
+	const md = markdownIt({
+		html: true,
+		breaks: true,
+		linkify: true
+	});
+
+	eleventyConfig.addFilter('markdown', (content) => {
+		return md.render(content || '');
+	});
+
+	eleventyConfig.addFilter('dateFormat', (dateString) => {
+		const date = new Date(dateString);
+		return date.toLocaleDateString('en-US', { 
+			year: 'numeric', 
+			month: 'long', 
+			day: 'numeric' 
+		});
 	});
 
 	// Copy the contents of the `static` folder to the output folder
